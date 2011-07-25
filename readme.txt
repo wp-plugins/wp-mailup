@@ -17,9 +17,9 @@ WP MailUp allows enabling double opt-in (i.e. subscriber receives an email with 
 Unsubscription from distribution list can be done by pressing the unsubscribe link that is placed in the footer of each received newsletter.
 Since MailUp can send also text messages (SMS), you can ask for the mobile number too. If you prefer to use sign-up with a Social Account, please refer to MailUp documentation (it's a paid service).
   
-## How to use this plugin  
+## __How to use this plugin__
 
-1. Activate a MailUp console, free trial available: [English] (http://www.mailup.com/mailup-free-trial.asp) - [Italiano] (http://www.mailup.it/p/pc/campagne-dem-prova-gratuita-d44.htm)  
+1. Activate a MailUp console, free trial available: [English] (http://www.mailup.com/mailup-free-trial.asp) [Italiano] (http://www.mailup.it/p/pc/campagne-dem-prova-gratuita-d44.htm)  
 2. Configure more Lists environments if this plugin is used in different wordpress web sites.  
 3. Install this plugin  
 4. Customize confirmation request email, welcome message and messages web page (if needed) in each List environment.  
@@ -31,7 +31,7 @@ Since MailUp can send also text messages (SMS), you can ask for the mobile numbe
 
   
 
-## About MailUp  
+## __About MailUp__
 
 MailUp is a service created in 2002, fully web-based, which allows you to send e-mail, newsletters, sms, fax, letter paper and pre-recorded voice messages. The solution is specifically designed for the professional management and sending high volumes of messages, with bandwidth management, deliverability consulting and monitoring.  
 The e-mails are sent from servers MailUp, this ensures high rates of deliverability.  MailUp is used by thousand of clients, including Valentino, Pirelli, Amnesty International, Peugeot.  
@@ -44,6 +44,7 @@ Included in MailUp (Marketing+ option) also a sophisticated feature that allows 
 *	define when they are active  
 *	define when how often they will be sent (e.g. daily, monthly, annually, one-time)  
 *	define which events trigger the sending of the message by combining multiple filters (e.g. send second message if first message was not opened; or send a welcome message N days after subscription)  
+
 *	send the event-based message to a specific group or to any subscriber  
 *	send triggered email messages based on recipient behavior (open, click, bounce, time, subscription)  
 *	send triggered sms messages based on email and ecommerce data  

@@ -19,7 +19,7 @@ Since MailUp can send also text messages (SMS), you can ask for the mobile numbe
   
 ## __How to use this plugin__
 
-1. Activate a MailUp console, free trial available: [English] (http://www.mailup.com/mailup-free-trial.asp) [Italiano] (http://www.mailup.it/p/pc/campagne-dem-prova-gratuita-d44.htm)  
+1. Activate a MailUp console, free trial available: [English](http://www.mailup.com/mailup-free-trial.asp "Free trial MailUp") / [Italiano](http://www.mailup.it/p/pc/campagne-dem-prova-gratuita-d44.htm "Prova gratuita MailUp")  
 2. Configure more Lists environments if this plugin is used in different wordpress web sites.  
 3. Install this plugin  
 4. Customize confirmation request email, welcome message and messages web page (if needed) in each List environment.  

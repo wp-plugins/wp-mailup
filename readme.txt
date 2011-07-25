@@ -83,13 +83,15 @@ In most of cases configuration is set once and no more changes are required.
 
 You can select between four available styles (CSS), if no one matches with your need you can edit one of existing CSS files (Style1.css, ..., Style4.css). Please note that editing is allowed only for users who have read/write access to those files.
 
-= May I have a one-click sign-up using a social account (ie Facebook) ?
+= May I have a one-click sign-up using a social account (ie Facebook) ? =
+
 Yes, MailUp provide a simple integration with all the most used social networks. You could insert into your web site a simple banner "Click here to subscribe to our newsletter using your Facebook account". This features is a standard one and you don't need to install any plugin, just activate a MailUp account.
 
-= Is it possible to translate this plugin =
+= Is it possible to translate this plugin? =
 Yes, just edit each string within the settings panel. No need to edit any file. MailUp supports all the chartset.
 
-= Why using this plugin and not other services, like feedburner ?
+= Why using this plugin and not other services, like feedburner? =
+
 MailUp allows you to take control on subscribers (view, import, edit, delete, export) and on messages (define scheduling, content and recipients).
 
 = Can I disable the plugin? =

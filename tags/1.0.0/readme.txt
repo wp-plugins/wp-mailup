@@ -106,10 +106,12 @@ Yes, just delete reference to console host.
 1. Admin page
 2. Subscriber page
 
+
 == Changelog ==
 
 = 1.0.0 =
 * first issue. Developed by themexgroup (July 2011)
+
 
 == Italiano ==
 
@@ -122,6 +124,7 @@ Con questo nuovo plugin, MailUp è stata in grado di sviluppare un sistema sempli
 ## __Cos'è MailUp__  
 
 MailUp è una piattaforma totalmente web-based per la gestione e l’invio professionale di newsletter, SMS, Fax, Messaggi Vocali e Posta Ordinaria e non richiede l’installazione di software o hardware. Le email vengono inviate dai server di proprietà di MailUp in modo completamente trasparente, garantendo prestazioni elevate, totale libertà del cliente, statistiche dettagliate ed elevati tassi di consegna. Per maggiori informazioni o per una prova gratuita: [www.mailup.it](http://www.mailup.it)  
+
 
 == Upgrade Notice ==
 

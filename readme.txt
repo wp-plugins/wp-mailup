@@ -115,15 +115,15 @@ Yes, just delete reference to console host.
 
 == Italiano ==
 
-L’integrazione realizzata da MailUp per WordPress consente di inserire all’interno del proprio sito o blog un form a cui gli utenti possono facilmente iscriversi per ricevere una vera e propria newsletter dal proprio sito o blog preferito.  
+L'integrazione realizzata da MailUp per WordPress consente di inserire all'interno del proprio sito o blog un form a cui gli utenti possono facilmente iscriversi per ricevere una vera e propria newsletter dal proprio sito o blog preferito.  
 
-Utilizzando la funzione di MailUp “Nuovo messaggio da RSS”, il gestore potrà inoltre creare un template scegliendo i contenuti da inserire nella propria newsletter direttamente dagli RSS feed dei siti selezionati, ordinandoli in base alle proprie preferenze.  
+Utilizzando la funzione di MailUp 'Nuovo messaggio da RSS', il gestore potra' inoltre creare un template scegliendo i contenuti da inserire nella propria newsletter direttamente dagli RSS feed dei siti selezionati, ordinandoli in base alle proprie preferenze.  
 
-Con questo nuovo plugin, MailUp è stata in grado di sviluppare un sistema semplicissimo che non richiede la conoscenza di programmazione per il web e quindi accessibile e realizzabile da tutti in pochi click.  
+Con questo nuovo plugin, MailUp e' stato in grado di sviluppare un sistema semplicissimo che non richiede la conoscenza di programmazione per il web e quindi accessibile e realizzabile da tutti in pochi click.  
 
 ## __Cos'è MailUp__  
 
-MailUp è una piattaforma totalmente web-based per la gestione e l’invio professionale di newsletter, SMS, Fax, Messaggi Vocali e Posta Ordinaria e non richiede l’installazione di software o hardware. Le email vengono inviate dai server di proprietà di MailUp in modo completamente trasparente, garantendo prestazioni elevate, totale libertà del cliente, statistiche dettagliate ed elevati tassi di consegna. Per maggiori informazioni o per una prova gratuita: [www.mailup.it](http://www.mailup.it)  
+MailUp e' una piattaforma totalmente web-based per la gestione e l'invio professionale di Newsletter, SMS, Fax, Messaggi Vocali e Posta Ordinaria e non richiede l’installazione di software o hardware. Le email vengono inviate dai server di proprietà di MailUp in modo completamente trasparente, garantendo prestazioni elevate, totale libertà del cliente, statistiche dettagliate ed elevati tassi di consegna. Per maggiori informazioni o per una prova gratuita: [www.mailup.it](http://www.mailup.it)  
 
 
 == Upgrade Notice ==

@@ -117,47 +117,47 @@ Yes, just delete reference to console host.
 
 L'integrazione realizzata da MailUp per WordPress consente di inserire all'interno del proprio sito o blog un form a cui gli utenti possono facilmente iscriversi per ricevere una vera e propria newsletter dal proprio sito o blog preferito.  
 
-Grazie a questo plugin d'iscrizione i dati personali degli iscritti vengono aggiunti alla lista distribuzione, che è gestita dal proprietario del sito attraverso MailUp. Solo il proprietario del sito può accedere alla lista degli iscritti.
+Grazie a questo plugin d'iscrizione i dati personali degli iscritti vengono aggiunti alla lista distribuzione, che e' gestita dal proprietario del sito attraverso MailUp. Solo il proprietario del sito puo' accedere alla lista degli iscritti.
 WP MailUp consente di attivare un doppio opt-in (l'iscritto riceve un'email con un link di conferma che dev'essere cliccato) per evitare spamtrap ed indirizzi email incorretti.  
-La cancellazione dalla lista distribuzione può avvenire attraverso il link di disiscrizione apposito che si trova nel piè di pagina di ogni newsletter ricevuta.  
-Dal momento che MailUp può inviare anche messaggi di testo (SMS), si può richiedere anche il numero di telefono nel form di iscrizione, obbligatorio o facoltativo.  
-Se si preferisce utilizzare la modalità d'iscrizione attraverso l'account social, cioè permettere all'utente di iscriversi con un solo click (es. Iscriviti con Facebook) senza form da compilare, si prega di far riferimento alla documentazione MailUp (è un servizio a pagamento).
+La cancellazione dalla lista distribuzione puo' avvenire attraverso il link di disiscrizione apposito che si trova nel pie' di pagina di ogni newsletter ricevuta.  
+Dal momento che MailUp puo' inviare anche messaggi di testo (SMS), si puo' richiedere anche il numero di telefono nel form di iscrizione, obbligatorio o facoltativo.  
+Se si preferisce utilizzare la modalita' d'iscrizione attraverso l'account social, cioe' permettere all'utente di iscriversi con un solo click (es. Iscriviti con Facebook) senza form da compilare, si prega di far riferimento alla documentazione MailUp (e' un servizio a pagamento).
   
 ## __Come utilizzare questo plugin__
 
-1. Attivare una console MailUp, è disponibile la versione [prova gratuita](http://www.mailup.it/p/pc/campagne-dem-prova-gratuita-d44.htm "Prova gratuita MailUp")  
-2. Configurare più ambienti (cioè Liste) se il plugin è utilizzato in diversi siti wordpress.  
+1. Attivare una console MailUp, e' disponibile la versione [prova gratuita](http://www.mailup.it/p/pc/campagne-dem-prova-gratuita-d44.htm "Prova gratuita MailUp")  
+2. Configurare piu' ambienti (cioe' Liste) se il plugin e' utilizzato in diversi siti wordpress.  
 3. Installare questo plugin (v. Installation)
 4. Personalizzare l'email di richiesta conferma, messaggio di benvenuto e pagina messaggi (se necessario) in ogni ambiente (Lista).  
-4. Fare un test, iscrivendo un proprio nominativo. Fino a che l'indirizzo non è confermato, rimane nell'Elenco Sospesi.
+4. Fare un test, iscrivendo un proprio nominativo. Fino a che l'indirizzo non e' confermato, rimane nell'Elenco Sospesi.
 5. Iniziare la registrazione delle sottoscrizioni e monitorare le statistiche attraverso il menu Statistiche su MailUp.  
 6. Creare e inviare SMS (messaggi di testo) o email/newsletters ai propri iscritti.  
-7. E' possibile anche utilizzare la funzione "NUOVO MESSAGGIO DA  RSS" per creare newsletter partendo dai propri RSS feed. Basterà selezionare i post desiderati, scegliere il template e ordinare le notizie. Sarà possibile modificare la newsletter dopo che verrà automaticamente creata, senza alcun copia e incolla.  
-8. MailUp gestisce automaticamente le disiscrizioni e permette di monitorare l'attività dell'utente, attraverso statistiche relative ad aperture, clicks e condivisione sui social.  
+7. E' possibile anche utilizzare la funzione "NUOVO MESSAGGIO DA  RSS" per creare newsletter partendo dai propri RSS feed. Bastera' selezionare i post desiderati, scegliere il template e ordinare le notizie. Sara' possibile modificare la newsletter dopo che verra' automaticamente creata, senza alcun copia e incolla.  
+8. MailUp gestisce automaticamente le disiscrizioni e permette di monitorare l'attivita' dell'utente, attraverso statistiche relative ad aperture, clicks e condivisione sui social.  
   
 
   
 
 ## __Riguardo MailUp__
 
-MailUp è un servizio creato 2002, completamente web-based, che permette l'invio di email, newsletters, sms, fax, lettere cartacee e messaggi vocali registrati. E' una soluzione appositamente progettata per la gestione professionale e l'invio di elevati volumi di messaggi, con garanzia sui tempi di recapito e servizi di consulenza sulla deliverability e l'html.  
-Le email vengono inviate dai servers MailUp, ciò garantisce alti tassi di recapito.  MailUp è utilizzato da migliaia di clienti, tra cui Valentino, Pirelli, Amnesty International, Peugeot.  
+MailUp e' un servizio creato 2002, completamente web-based, che permette l'invio di email, newsletters, sms, fax, lettere cartacee e messaggi vocali registrati. E' una soluzione appositamente progettata per la gestione professionale e l'invio di elevati volumi di messaggi, con garanzia sui tempi di recapito e servizi di consulenza sulla deliverability e l'html.  
+Le email vengono inviate dai servers MailUp, cio' garantisce alti tassi di recapito.  MailUp e' utilizzato da migliaia di clienti, tra cui Valentino, Pirelli, Amnesty International, Peugeot.  
   
-MailUp è un servizio in abbonamento con tariffa flat e messaggi email, liste e destinatari illimitati. E' possibile disdire in qualunque momento e c'è la possibilità di un iniziale prova gratuita di 30 giorni. Solo la velocità d'invio è limitata, in relazione al valore del canonedi abbonamento.  
+MailUp e' un servizio in abbonamento con tariffa flat e messaggi email, liste e destinatari illimitati. E' possibile disdire in qualunque momento e c'e' la possibilita' di un iniziale prova gratuita di 30 giorni. Solo la velocita' d'invio e' limitata, in relazione al valore del canonedi abbonamento.  
   
-MailUp include l'opzione [Marketing+](http://www.mailup.it/p/pc/profilazione-utenti-p216.htm "profilazione utenti"), una funzione sofisticata che consente di inviare messaggi automatici al verificarsi di determinate circostanze. Ad esempio, è possibile inviare automaticamente un coupon di sconto speciale il giorno del compleanno di una persona. La funzione include:  
+MailUp include l'opzione [Marketing+](http://www.mailup.it/p/pc/profilazione-utenti-p216.htm "profilazione utenti"), una funzione sofisticata che consente di inviare messaggi automatici al verificarsi di determinate circostanze. Ad esempio, e' possibile inviare automaticamente un coupon di sconto speciale il giorno del compleanno di una persona. La funzione include:  
   
 *	creazione illimitata di particolari messaggi per specifici eventi   
 *	definire quando i messaggi vengono attivati  
 *	definire la frequenza con la quale i messaggi verranno inviati(es. giornalmente, mensilmente, annualmente, una sola volta)  
-*	definire quali eventi attivano l'invio del messaggio combinando più filtri (es. inviare un secondo messaggio se il primo messaggio non è stato aperto; oppure inviare un messaggio di benvenuto N giorni dopo l'iscrizione)  
+*	definire quali eventi attivano l'invio del messaggio combinando piu' filtri (es. inviare un secondo messaggio se il primo messaggio non e' stato aperto; oppure inviare un messaggio di benvenuto N giorni dopo l'iscrizione)  
 
 *	inviare lo specifico messaggio ad un gruppo specifico o ad un qualsiasi iscritto  
 *	inviare un messaggio automatico in base al comportamento del destinatario (apertura, click, rimbalzo, tempo, iscrizione)  
-*	inviare un sms automatico sulla base di attività attraverso l'email o l'inserimento di dati sull'ecommerce   
+*	inviare un sms automatico sulla base di attivita' attraverso l'email o l'inserimento di dati sull'ecommerce   
 
   
-Per esempio, è possibile memorizzare in un campo personalizzato la data dell'ultimo ordine fatto attraverso l' e-commerce, quindi inviare un messaggio di indagine di soddisfazione al cliente N giorni dopo che l'ordine è stato evaso.  
+Per esempio, e' possibile memorizzare in un campo personalizzato la data dell'ultimo ordine fatto attraverso l' e-commerce, quindi inviare un messaggio di indagine di soddisfazione al cliente N giorni dopo che l'ordine e' stato evaso.  
 
 
 ## __Installazione__
@@ -166,21 +166,21 @@ Per esempio, è possibile memorizzare in un campo personalizzato la data dell'ult
 2. Copiarlo nella cartella /wp-content/plugins/ 
 3. Attivare il plugin attraverso la pagina Plugins(wp-admin/plugins.php)
 4. Aggiungere il  widget alla barra laterale sulla pagina Widgets (wp-admin/widgets.php)
-5. Configurare il plugin "WP MailUp" attraverso la pagina di amministrazione. Utilizzare il bottone "?" per ottenere maggiori informazioni quando qualcosa non è chiaro. Nessun file richiede modifiche.
+5. Configurare il plugin "WP MailUp" attraverso la pagina di amministrazione. Utilizzare il bottone "?" per ottenere maggiori informazioni quando qualcosa non e' chiaro. Nessun file richiede modifiche.
 
 ## __Domande Frequenti__
 
 = Devo esser cliente MailUp per utilizzarlo? =
 
-E' necessario aver attivato una console MailUp (normale o in prova gratuita 30 giorni) e quindi specificare l'URL della console nelle impostazioni plugin. Non è richiesto nessun intervento attraverso MailUp per abilitare il plugin
+E' necessario aver attivato una console MailUp (normale o in prova gratuita 30 giorni) e quindi specificare l'URL della console nelle impostazioni plugin. Non e' richiesto nessun intervento attraverso MailUp per abilitare il plugin
 
 = Come configurare il mio plugin? =
 
-Attraverso il pannello di controllo, cliccare su "Settings" e quindi selezionare "WP MailUp". Compilare o controllare i campi richiesti usando i pulsanti d'aiuto se qualcosa non è chiaro.
+Attraverso il pannello di controllo, cliccare su "Settings" e quindi selezionare "WP MailUp". Compilare o controllare i campi richiesti usando i pulsanti d'aiuto se qualcosa non e' chiaro.
 
 = Come posso controllare se il mio plugin funziona? =
 
-Basta compilare i campi richiesti e premere INVIO per iscriversi. Il contatto indicato sarà aggiunto nella lista di distribuzione MailUp specificata nelle impostazioni di sistema (l'utente figurera' nei "Sospesi" e una volta che conferma cliccando l'iscrizione cliccando su link di verifica ricevuto via email, viene spostato negli "Iscritti").  
+Basta compilare i campi richiesti e premere INVIO per iscriversi. Il contatto indicato sara' aggiunto nella lista di distribuzione MailUp specificata nelle impostazioni di sistema (l'utente figurera' nei "Sospesi" e una volta che conferma cliccando l'iscrizione cliccando su link di verifica ricevuto via email, viene spostato negli "Iscritti").  
 
 = Ogni quanto devo cambiare la configurazione? =
 
@@ -188,22 +188,22 @@ Nella maggior parte dei casi la configurazione una volta impostata non necessita
 
 = Vorrei cambiare l'aspetto del plugin: come posso fare? =
 
-E' possibile scegliere tra quattro stili disponibili(CSS), se nessuno di questi è adatto, si potrà modificare uno dei file CSS esistenti (Style1.css, ..., Style4.css). Si prega di notare che la modifica è permessa solo agli utenti che hanno accesso alla lettura/scrittura di questi files.
+E' possibile scegliere tra quattro stili disponibili(CSS), se nessuno di questi e' adatto, si potra' modificare uno dei file CSS esistenti (Style1.css, ..., Style4.css). Si prega di notare che la modifica e' permessa solo agli utenti che hanno accesso alla lettura/scrittura di questi files.
 
 = Posso avere l'iscrizione alla newsletter tramite un solo clock, usando un account social o un OpenID (es Facebook) ? =
 
-Sì, MailUp fornisce una semplice integrazione con i canali social più diffusi. E' possibile inserire sul proprio sito un semplice banner "Clicca qui per iscriverti alla nostra newsletter utilizzando il tuo account Facebook". Questa è una funzione standard che non necessita l'installazione di plugin, ma basta attivare un account MailUp.
+Si', MailUp fornisce una semplice integrazione con i canali social piu' diffusi. E' possibile inserire sul proprio sito un semplice banner "Clicca qui per iscriverti alla nostra newsletter utilizzando il tuo account Facebook". Questa e' una funzione standard che non necessita l'installazione di plugin, ma basta attivare un account MailUp.
 
 = E' possibile tradurre questo plugin? =
-sì, è sufficiente modificare ogni stringa nel pannello delle impostazioni (Settings) in Wordpress. Non c'è bisogno di modificare alcun file. MailUp supporta tutti i charset, compreso il cinese e l'arabo.
+si', e' sufficiente modificare ogni stringa nel pannello delle impostazioni (Settings) in Wordpress. Non c'e' bisogno di modificare alcun file. MailUp supporta tutti i charset, compreso il cinese e l'arabo.
 
-= Perchè utilizzare questo plugin e non un altro servizio, come feedburner? =
+= Perche' utilizzare questo plugin e non un altro servizio, come feedburner? =
 
 MailUp permette di mantenere il controllo degli iscritti (visualizzazione, importazione, modifica, cancellazione, esportazione) e sui messaggi (definire la programmazione, i contenuti e i destinatari).
 
 = Posso disabilitare il plugin? =
 
-Sì, basta cancellare il riferimento dalla console.
+Si', basta cancellare il riferimento dalla console.
 
 
 == Upgrade Notice ==

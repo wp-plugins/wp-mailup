@@ -123,7 +123,7 @@ Con questo nuovo plugin, MailUp e' stato in grado di sviluppare un sistema sempl
 
 ## __Cos'è MailUp__  
 
-MailUp e' una piattaforma totalmente web-based per la gestione e l'invio professionale di Newsletter, SMS, Fax, Messaggi Vocali e Posta Ordinaria e non richiede l’installazione di software o hardware. Le email vengono inviate dai server di proprieta' di MailUp in modo completamente trasparente, garantendo prestazioni elevate, totale liberta' del cliente, statistiche dettagliate ed elevati tassi di consegna. Per maggiori informazioni o per una prova gratuita: [www.mailup.it](http://www.mailup.it)  
+MailUp e' una piattaforma totalmente web-based per la gestione e l'invio professionale di Newsletter, SMS, Fax, Messaggi Vocali e Posta Ordinaria e non richiede l'installazione di software o hardware. Le email vengono inviate dai server di proprieta' di MailUp in modo completamente trasparente, garantendo prestazioni elevate, totale liberta' del cliente, statistiche dettagliate ed elevati tassi di consegna. Per maggiori informazioni o per una prova gratuita: [www.mailup.it](http://www.mailup.it)  
 
 
 == Upgrade Notice ==

@@ -18,8 +18,8 @@
 
 .wrap-right h3{
 	background:#DFDFDF url("../../../wp-admin/images/gray-grad.png") repeat-x scroll left top;
-	text-shadow:0 1px 0 #FFFFFF;
-	margin:0;
+	text-shadow:0 1px 0 #fff;
+	margin:0 0 0 0;
 	-moz-border-radius:6px 6px 0px 0px;
 	-webkit-border-radius:6px 6px 0px 0px;
 	border-radius:6px 6px 0px 0px;
@@ -45,16 +45,19 @@
 	background-color:#015361;
 	padding:5px;
 	border:2px solid #CCC;
-	color:#FFFFFF;
+	color:#fff;
 }
 .menu_head {
+	display:block;
 	padding: 5px 10px;
 	cursor: pointer;
 	position: relative;
-	margin:2px 1px;
-	font-weight:bold;
-	border:1px solid #FFFFFF;
-	color:#FFFFFF;
+	margin:4px 1px;
+	font-weight: bold;
+	font-size: 120%;
+	border:1px solid #fff;
+	color:#fff;
+	height:28px;
 }
 .menu_body {
 	display:none;
@@ -100,7 +103,7 @@ td.setting-label{
 }
 
 table.setting-table td label, table.setting-table th{
-	color:#FFFFFF;
+	color:#fff;
 }
 
 .setting-table .setting-target{
@@ -121,7 +124,7 @@ table.setting-table td label, table.setting-table th{
 
 #setting-reset-btn, #setting-save-btn{
 	background-color:#ED8001;
-	color:#FFFFFF;
+	color:#fff;
 }
 
 img.help_icon{

@@ -115,7 +115,7 @@ Yes, just delete reference to console host.
 
 == Italiano ==
 
-L'integrazione realizzata da MailUp per WordPress consente di inserire all'interno del proprio sito o blog un form a cui gli utenti possono facilmente iscriversi per ricevere una vera e propria newsletter dal proprio sito o blog preferito.  
+L'integrazione realizzata da MailUp per WordPress consente di inserire all'interno del proprio sito o blog un form a cui gli utenti possono facilmente iscriversi per ricevere una vera e propria newsletter dal proprio sito o blog preferito. [Vedi la presentazione in pdf](http://www.mailup.it/p/pc/risorse/Integrazione%20WordPress.pdf "MailUp e Wordpress")).
 
 Grazie a questo plugin d'iscrizione i dati personali degli iscritti vengono aggiunti alla lista distribuzione, che e' gestita dal proprietario del sito attraverso MailUp. Solo il proprietario del sito puo' accedere alla lista degli iscritti.
 WP MailUp consente di attivare un doppio opt-in (l'iscritto riceve un'email con un link di conferma che dev'essere cliccato) per evitare spamtrap ed indirizzi email incorretti.  

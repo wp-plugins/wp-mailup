@@ -5,7 +5,7 @@ Donate link: http://wordpress.org
 Tags: mailup, newsletter, email, smtp, bulk, sms, send, list, subscribe, form, marketing, widget, plugin, feedburner, subscription, email marketing, email newsletter form, email widget, emails, newsletter form, newsletter plugin, newsletter signup, newsletter widget, newsletters, signup, widget, contact form, checkbox, sign up, sign-up, subscription form, subscribe form, registration form, sms signup, subscribe widget, subscribers, contacts, iscrizione 
 Requires at least: 3.0
 Tested up to: 3.2.1
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 
 WP MailUp is a signup plugin that can be used to subscribe to newsletter that websites owner periodically delivers using MailUp. 
 
@@ -216,7 +216,7 @@ MailUp permette di mantenere il controllo degli iscritti (visualizzazione, impor
 
 Si', basta cancellare il riferimento dalla console.
 
-= Il plugin restituisce il messaggio "Invalid IP address" =
+= La configurazione sembra corretta, ma il plugin continua a restituire un messaggio del tipo "generic error" =
 
 A partire dalla versione 7.4 MailUp introduce restrizioni di sicurezza che consentono solo chiamate dai server il cui indirizzo IP e' registrato sulla console MailUp ("Gestione->Web service" e poi selezionare "frontend" nel menu a tendina per iniziare la registrazione dell'indirizzo IP. E' possibile registrare piu' di un'indirizzo IP.
 

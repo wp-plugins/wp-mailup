@@ -6,7 +6,7 @@
 	Plugin name: WP-MailUp
 	Plugin URI: http://wordpress.org/#
 	Description: Wordpress plugin for MailUp Newsletter Service.
-	Version: 1.0
+	Version: 1.1.0
 	Author: N. I. Biz Soft Solutions
 	Author URI: http://www.nibizsoft.com/
 	License: GPLv2

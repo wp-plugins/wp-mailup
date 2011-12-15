@@ -8,66 +8,11 @@
 ?>
 <style type="text/css">
 <!--	
-	#subscribeForm{
-		width:100%;
-		padding:10px 0px;
-		margin-left:5px;
-		font-style:normal;
-		font-variant:normal;
-		font-weight:normal;
-		font-size:0.9em;
-		line-height:18px;
+	fieldset#subscribeDataTable label {
+		display:block;
+		margin-bottom:3px;
 	}
 	
-	#subscribeDataTable{
-		width:100%;
-	}
-	
-	#subscribeDataTable th{
-	}
-	
-	#subscribeDataTable td{
-		padding:3px 3px;
-	}
-	
-	#subscribeForm label{
-	}
-	
-	#subscribeDataTable .mailup-widget-label{
-		text-align:right;
-		width:35%;
-	}
-	
-	#subscribeDataTable .mailup-widget-single{
-		text-align:right;
-		padding-top:6px;
-		padding-bottom:6px;
-	}
-	
-	#subscribeDataTable .mailup-widget-button{
-		text-align:right;
-	}
-	
-	#subscribeForm input[type=checkbox]{
-		vertical-align:bottom;
-	}
-	
-	#subscribeForm textarea{
-		width:90%;
-	}
-	
-	#subscribeDataTable .mailup-widget-description{
-		padding-top:5px;
-		padding-right:10px;
-		padding-bottom:5px;
-		padding-left:25px;
-		text-align:left;
-	}
-	
-	#show-response{
-		color:#FF0000;
-		font-weight:bold;
-	}
 <?php
 	switch($wpmailup['cssCombination']){
 		case 'style1':
@@ -94,92 +39,55 @@
 <?php endif; */ ?>
 <form action="" method="get" name="subscribeForm" id="subscribeForm" onsubmit="return false;">
 	<input type="hidden" name="wpmailup-subscribe" id="wpmailup-subscribe" value="subscribe" />
-    <table id="subscribeDataTable">
-    	<tbody>
-            <tr>
-                <th colspan="2">
-                <?php 
+    <fieldset id="subscribeDataTable">
+                <h3><?php 
                     if ( $title ) {
                         echo $before_title . $title . $after_title;
                     } else {
                         echo $before_title . $wpmailup['pluginTitle'] . $after_title;
                     }
-                ?>
-                </th>
-            </tr>
-            <tr>
-                <th class="mailup-widget-description" colspan="2"><label><?php echo $wpmailup['pluginDescription']; ?></label></th>
-            </tr>
+                ?></h3>
+                <p><?php echo $wpmailup['pluginDescription']; ?></p>
             <?php if($wpmailup['emailShow'] == 'yes'): ?>
-            <tr>
-                <td class="mailup-widget-label">
-                	<?php if($wpmailup['emailRequired'] == 'yes'): ?>
+            
+                	<p><label><?php if($wpmailup['emailRequired'] == 'yes'): ?>
                     <span style="color:#FF0000;">*</span>
                     <?php endif; ?>
-                    <label><?php echo $wpmailup['emailDisplayedName']; ?>:</label>
-                </td>
-                <td><input type="text" name="sub-email" id="sub-email" size="<?php echo $text_field_size; ?>" maxlength="<?php echo $text_field_maxlength; ?>" /></td>
-            </tr>
-            <?php endif; ?>
+                    <?php echo $wpmailup['emailDisplayedName']; ?>:</label>
+                	<input type="text" name="sub-email" id="sub-email" />
+            <?php endif; ?></p>
             
-            <?php if($wpmailup['mobileShow'] == 'yes'): ?>
-            <tr>
-                <td class="mailup-widget-label">
+            <p><label><?php if($wpmailup['mobileShow'] == 'yes'): ?>
                 	<?php if($wpmailup['mobileRequired'] == 'yes'): ?>
                     <span style="color:#FF0000;">*</span>
                     <?php endif; ?>
-                	<label><?php echo $wpmailup['mobileDisplayedName']; ?>:</label>
-                </td>
-                <td><input type="text" name="sub-phone" id="sub-phone" size="<?php echo $text_field_size; ?>" maxlength="<?php echo $text_field_maxlength; ?>" /></td>
-            </tr>
-            <?php endif; ?>
+                	<?php echo $wpmailup['mobileDisplayedName']; ?>:</label>
+                	<input type="text" name="sub-phone" id="sub-phone" maxlength="<?php echo $text_field_maxlength; ?>" />
+            <?php endif; ?></p>
             
-            <?php if($wpmailup['extfield1Show'] == 'yes'): ?>
-            <tr>
-                <td class="mailup-widget-label">
+            <p><label><?php if($wpmailup['extfield1Show'] == 'yes'): ?>
                 	<?php if($wpmailup['extfield1Required'] == 'yes'): ?>
                     <span style="color:#FF0000;">*</span>
                     <?php endif; ?>
-                	<label><?php echo $wpmailup['extfield1DisplayedName']; ?>:</label>
-                </td>
-                <td><input type="text" name="sub-ext1" id="sub-ext1" size="<?php echo $text_field_size; ?>" maxlength="<?php echo $text_field_maxlength; ?>" /></td>
-            </tr>
-            <?php endif; ?>
+                	<?php echo $wpmailup['extfield1DisplayedName']; ?>:</label>
+                	<input type="text" name="sub-ext1" id="sub-ext1" maxlength="<?php echo $text_field_maxlength; ?>" />
+            <?php endif; ?></p>
             
-            <?php if($wpmailup['extfield2Show'] == 'yes'): ?>
-            <tr>
-                <td class="mailup-widget-label">
+            <p><label><?php if($wpmailup['extfield2Show'] == 'yes'): ?>
                 	<?php if($wpmailup['extfield2Required'] == 'yes'): ?>
                     <span style="color:#FF0000;">*</span>
                     <?php endif; ?>
-                    <label><?php echo $wpmailup['extfield2DisplayedName']; ?>:</label>
-                </td>
-                <td><input type="text" name="sub-ext2" id="sub-ext2" size="<?php echo $text_field_size; ?>" maxlength="<?php echo $text_field_maxlength; ?>" /></td>
-            </tr>
+                    <?php echo $wpmailup['extfield2DisplayedName']; ?>:</label>
+                	<input type="text" name="sub-ext2" id="sub-ext2" maxlength="<?php echo $text_field_maxlength; ?>" />
+            <?php endif; ?></p>
+            
+            <center><?php if($wpmailup['termsConfirm'] == 'yes'): ?>
+                	<?php echo $wpmailup['termsNcon']; ?></center>
+            <center><label><input name="terms-confirm" id="terms-confirm" type="checkbox" value="yes" /> <?php echo $wpmailup['acceptanceMsg']; ?></label></center>
             <?php endif; ?>
-            <?php if($wpmailup['termsConfirm'] == 'yes'): ?>
-            <tr>
-                <td class="mailup-widget-single" colspan="2">
-                	<textarea disabled="disabled" name="terms-n-con" id="terms-n-con" cols="28" rows="5"><?php echo $wpmailup['termsNcon']; ?></textarea>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <center><label><input name="terms-confirm" id="terms-confirm" type="checkbox" value="yes" /><?php echo $wpmailup['acceptanceMsg']; ?></label></center>
-                </td>
-            </tr>
-            <?php endif; ?>
-            <tr>
-            	<td rowspan="2" colspan="2" style="padding-left:15px;"><img id="loading-img" style="visibility:hidden;vertical-align:middle;padding:4px;background:none;" src="<?php echo get_bloginfo('wpurl').'/wp-content/plugins/wp-mailup/images/indicator.white.gif'; ?>" border="0" /><span id="show-response"><noscript><?php _e('Please enable javascript to work with this subscription form.'); ?></noscript></span></td>
-            </tr>
-            <tr><td colspan="2"></td></tr>
-            <tr>
-                <td class="mailup-widget-button" colspan="2">
+            	<center><img id="loading-img" style="visibility:hidden;vertical-align:middle;padding:4px;background:none;" src="<?php echo get_bloginfo('wpurl').'/wp-content/plugins/wp-mailup/images/indicator.white.gif'; ?>" border="0" /><span id="show-response"><noscript><?php _e('Please enable javascript to work with this subscription form.'); ?></noscript></span></center>
                 	<center><input type="submit" name="submit" value="<?php echo $wpmailup['submitButton']; ?>" /></center>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    </fieldset>
 </form>
 <script type="text/javascript">
 	<!--

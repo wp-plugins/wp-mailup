@@ -4,7 +4,7 @@ Donate link: http://wordpress.org
 
 Tags: mailup, newsletter, email, smtp, bulk, sms, send, list, subscribe, form, marketing, widget, plugin, feedburner, subscription, email marketing, email newsletter form, email widget, emails, newsletter form, newsletter plugin, newsletter signup, newsletter widget, newsletters, signup, widget, contact form, checkbox, sign up, sign-up, subscription form, subscribe form, registration form, sms signup, subscribe widget, subscribers, contacts, iscrizione 
 Requires at least: 3.0
-Tested up to: 3.1.3
+Tested up to: 3.2.1
 Stable tag: 1.0.0
 
 WP MailUp is a signup plugin that can be used to subscribe to newsletter that websites owner periodically delivers using MailUp. 
@@ -60,16 +60,17 @@ For example, you could store in a custom field the date of the last order placed
 3. Activate the plugin through the Plugins page (wp-admin/plugins.php)
 4. Add the widget to your sidebar on the Widgets page (wp-admin/widgets.php)
 5. Configure "WP MailUp" plugin through admin page. Please use "?" buttoms to obtain help when something is not clear. No file editing required.
+6. Open MailUp console and register IP address of your server (go to "Manage->Web service" and then select "frontend" in the dropdown menu to insert IP address of your server. More than one address could be registered)
 
 == Frequently Asked Questions ==
 
 = Do I have to be a MailUp customer to use it? =
 
-You must have activated a MailUp console (a regular one or a 30 days trial) and then specify console URL in plugin settings. No action is required on MailUp in order to enable the plugin
+You must have activated a MailUp console (a regular one or a 30 days trial) and then specify console URL in plugin settings. On MailUp you must enable requests coming from the server that hosts your Wordpress site (go to "Manage->Web service" and then select "frontend" in the dropdown menu to insert IP address of your server. More than one address could be registered).
 
 = How can I configure my plugin? =
 
-Go to admin panel, press "Settings" and then select "WP MailUp". Fill in or check al the fields using help buttons if something is not clear
+Go to admin panel, press "Settings" and then select "WP MailUp". Fill in or check all the fields using help buttons if something is not clear
 
 
 = How can I check if my plugin is working? =
@@ -82,14 +83,14 @@ In most of cases configuration is set once and no more changes are required.
 
 = I would change plugin appearance: how can I do? =
 
-You can select between four available styles (CSS), if no one matches with your need you can edit one of existing CSS files (Style1.css, ..., Style4.css). Please note that editing is allowed only for users who have read/write access to those files.
+You can select between four available styles (CSS), if no one matches with your need you can edit one of existing CSS files (style1.css, ..., style4.css). Please note that editing is allowed only for users who have read/write access to those files.
 
 = May I have a one-click sign-up using a social account (ie Facebook) ? =
 
-Yes, MailUp provide a simple integration with all the most used social networks. You could insert into your web site a simple banner "Click here to subscribe to our newsletter using your Facebook account". This features is a standard one and you don't need to install any plugin, just activate a MailUp account.
+Yes, MailUp provides a simple integration with all the most used social networks. You could insert into your web site a simple banner "Click here to subscribe to our newsletter using your Facebook account". This features is a standard one and you don't need to install any plugin, just activate a MailUp account.
 
 = Is it possible to translate this plugin? =
-Yes, just edit each string within the settings panel. No need to edit any file. MailUp supports all the chartset.
+Yes, just edit each string within the settings panel. No need to edit any file. MailUp supports all the charsets.
 
 = Why using this plugin and not other services, like feedburner? =
 
@@ -100,14 +101,22 @@ MailUp allows you to take control on subscribers (view, import, edit, delete, ex
 Yes, just delete reference to console host.
 
 
+= Configuration seems to be correct, but plugin always return a "generic error" message =
+
+Starting from v.7.4, MailUp introduces a security restriction that allows only calls from servers whose IP address is registered on MailUp console (go to "Manage->Web service" and then select "frontend" in the dropdown menu to start registering IP). More than one address could be registered. Even if it is not recommended, you can disable this restriction by selecting "IP address check disabled" option
+
 
 == Screenshots ==
 
 1. Admin page
 2. Subscriber page
+3. Select option to disable security check (not recommended)
 
 
 == Changelog ==
+
+= 1.1.0 =
+* Extended instructions to explain how to register on MailUp the IP address of the server that hosts Wordpress site (mandatory). Minor graphical changes to better fit with most of Wordpress themes.
 
 = 1.0.0 =
 * first issue. Developed by themexgroup (July 2011)
@@ -127,7 +136,7 @@ Se si preferisce utilizzare la modalita' d'iscrizione attraverso l'account socia
 
 1. Attivare una console MailUp, e' disponibile la versione [prova gratuita](http://www.mailup.it/p/pc/campagne-dem-prova-gratuita-d44.htm "Prova gratuita MailUp")  
 2. Configurare piu' ambienti (cioe' Liste) se il plugin e' utilizzato in diversi siti wordpress.  
-3. Installare questo plugin (v. Installation)
+3. Installare questo plugin (v. Installazione)
 4. Personalizzare l'email di richiesta conferma, messaggio di benvenuto e pagina messaggi (se necessario) in ogni ambiente (Lista).  
 4. Fare un test, iscrivendo un proprio nominativo. Fino a che l'indirizzo non e' confermato, rimane nell'Elenco Sospesi.
 5. Iniziare la registrazione delle sottoscrizioni e monitorare le statistiche attraverso il menu Statistiche su MailUp.  
@@ -167,12 +176,14 @@ Per esempio, e' possibile memorizzare in un campo personalizzato la data dell'ul
 3. Attivare il plugin attraverso la pagina Plugins(wp-admin/plugins.php)
 4. Aggiungere il  widget alla barra laterale sulla pagina Widgets (wp-admin/widgets.php)
 5. Configurare il plugin "WP MailUp" attraverso la pagina di amministrazione. Utilizzare il bottone "?" per ottenere maggiori informazioni quando qualcosa non e' chiaro. Nessun file richiede modifiche.
+6. Accedere alla console MailUp e registrare l'indirizzo del server che ospita il sito Wordpress (Andare su "Gestione->Web service", selezionare poi "frontend" e infine inserire l'indirizzo IP del server. E' possibile registrare piu' di un server)
+
 
 ## __Domande Frequenti__
 
 = Devo esser cliente MailUp per utilizzarlo? =
 
-E' necessario aver attivato una console MailUp (normale o in prova gratuita 30 giorni) e quindi specificare l'URL della console nelle impostazioni plugin. Non e' richiesto nessun intervento attraverso MailUp per abilitare il plugin
+E' necessario aver attivato una console MailUp (normale o in prova gratuita 30 giorni) e quindi specificare l'URL della console nelle impostazioni plugin. Sulla console MailUp deve essere registrato l'indirizzo IP del server che ospita il sito Wordpress (v. Installazione) 
 
 = Come configurare il mio plugin? =
 
@@ -188,9 +199,9 @@ Nella maggior parte dei casi la configurazione una volta impostata non necessita
 
 = Vorrei cambiare l'aspetto del plugin: come posso fare? =
 
-E' possibile scegliere tra quattro stili disponibili(CSS), se nessuno di questi e' adatto, si potra' modificare uno dei file CSS esistenti (Style1.css, ..., Style4.css). Si prega di notare che la modifica e' permessa solo agli utenti che hanno accesso alla lettura/scrittura di questi files.
+E' possibile scegliere tra quattro stili disponibili(CSS), se nessuno di questi e' adatto, si potra' modificare uno dei file CSS esistenti (style1.css, ..., style4.css). Si prega di notare che la modifica e' permessa solo agli utenti che hanno accesso alla lettura/scrittura di questi files.
 
-= Posso avere l'iscrizione alla newsletter tramite un solo clock, usando un account social o un OpenID (es Facebook) ? =
+= Posso avere l'iscrizione alla newsletter tramite un solo click, usando un account social o un OpenID (es Facebook) ? =
 
 Si', MailUp fornisce una semplice integrazione con i canali social piu' diffusi. E' possibile inserire sul proprio sito un semplice banner "Clicca qui per iscriverti alla nostra newsletter utilizzando il tuo account Facebook". Questa e' una funzione standard che non necessita l'installazione di plugin, ma basta attivare un account MailUp.
 
@@ -205,12 +216,18 @@ MailUp permette di mantenere il controllo degli iscritti (visualizzazione, impor
 
 Si', basta cancellare il riferimento dalla console.
 
+= Il plugin restituisce il messaggio "Invalid IP address" =
+
+A partire dalla versione 7.4 MailUp introduce restrizioni di sicurezza che consentono solo chiamate dai server il cui indirizzo IP e' registrato sulla console MailUp ("Gestione->Web service" e poi selezionare "frontend" nel menu a tendina per iniziare la registrazione dell'indirizzo IP. E' possibile registrare piu' di un'indirizzo IP.
+
 
 == Upgrade Notice ==
 
 = 1.0.0 =
 * first issue.
-  
+
+= 1.1.0 =
+* Extended instructions to explain how to register on MailUp the IP address of the server that hosts Wordpress site (mandatory). Minor graphical changes to better fit with most of Wordpress themes.
   
 
 

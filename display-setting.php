@@ -56,10 +56,10 @@
                                 <td class="setting-label"><label for="css-combination"><?php _e('Select preloaded CSS for widget'); ?> : </label></td>
                                 <td class="setting-target">
                                 <select name="css-combination" id="css-combination" class="select-box">
-                                    <option value="style1">Style - 1</option>
-                                    <option value="style2">Style - 2</option>
-                                    <option value="style3">Style - 3</option>
-                                    <option value="style4">Style - 4</option>
+                                    <option value="style1">Default</option>
+                                    <option value="style2">Rounded corners</option>
+                                    <option value="style3">Rounded Black</option>
+                                    <option value="style4">Blacklicious</option>
                                 </select>
                                 </td>
                             </tr>

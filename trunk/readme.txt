@@ -103,7 +103,7 @@ Yes, just delete reference to console host.
 
 = Configuration seems to be correct, but plugin always return a "generic error" message =
 
-Starting from v.7.4, MailUp introduces a security restriction that allows only calls from servers whose IP address is registered on MailUp console (go to "Manage->Web service" and then select "frontend" in the dropdown menu to start registering IP). More than one address could be registered. Even if it is not recommended, you can disable this restriction by selecting "IP address check disabled" option
+Starting from v.7.4, MailUp introduces a security restriction that allows only calls from servers whose IP address is registered on MailUp console (go to "Manage->Web service" and then select "frontend" in the dropdown menu to start registering IP). More than one address could be registered. Even if it is not recommended, you can disable this restriction by deselecting "IP address check enabled" option
 
 
 == Screenshots ==
@@ -218,7 +218,7 @@ Si', basta cancellare il riferimento dalla console.
 
 = La configurazione sembra corretta, ma il plugin continua a restituire un messaggio del tipo "generic error" =
 
-A partire dalla versione 7.4 MailUp introduce restrizioni di sicurezza che consentono solo chiamate dai server il cui indirizzo IP e' registrato sulla console MailUp ("Gestione->Web service" e poi selezionare "frontend" nel menu a tendina per iniziare la registrazione dell'indirizzo IP. E' possibile registrare piu' di un'indirizzo IP.
+A partire dalla versione 7.4 MailUp introduce restrizioni di sicurezza che consentono solo chiamate dai server il cui indirizzo IP e' registrato sulla console MailUp ("Gestione->Web service" e poi selezionare "frontend" nel menu a tendina per iniziare la registrazione dell'indirizzo IP. E' possibile registrare piu' di un'indirizzo IP. Anche se sconsigliato, è possibile disabilitare questa restrizione deselezionando l'opzione "Controllo IP abilitato"
 
 
 == Upgrade Notice ==

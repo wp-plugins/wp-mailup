@@ -59,7 +59,7 @@ For example, you could store in a custom field the date of the last order placed
 2. Copy it to /wp-content/plugins/ folder
 3. Activate the plugin through the Plugins page (wp-admin/plugins.php)
 4. Add the widget to your sidebar on the Widgets page (wp-admin/widgets.php)
-5. Configure "WP MailUp" plugin through admin page. Please use "?" buttoms to obtain help when something is not clear. No file editing required.
+5. Configure "WP MailUp" plugin through [admin page](http://assistenza.mailup.it/KB/a371/wordpress-plugin-configuring-the-mailup-plugin-for-wordpress.aspx?trans=1). Please use "?" buttoms to obtain help when something is not clear. No file editing required.
 6. Open MailUp console and register IP address of your server (go to "Manage->Web service" and then select "frontend" in the dropdown menu to insert IP address of your server. More than one address could be registered)
 
 == Frequently Asked Questions ==

@@ -4,7 +4,7 @@ Donate link: http://wordpress.org
 
 Tags: mailup, newsletter, email, smtp, bulk, sms, send, list, subscribe, form, marketing, widget, plugin, feedburner, subscription, email marketing, email newsletter form, email widget, emails, newsletter form, newsletter plugin, newsletter signup, newsletter widget, newsletters, signup, widget, contact form, checkbox, sign up, sign-up, subscription form, subscribe form, registration form, sms signup, subscribe widget, subscribers, contacts, iscrizione 
 Requires at least: 3.0
-Tested up to: 3.2.1
+Tested up to: 3.3.1
 Stable tag: 1.1.0
 
 WP MailUp is a signup plugin that can be used to subscribe to newsletter that websites owner periodically delivers using MailUp. 

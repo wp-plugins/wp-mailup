@@ -1,4 +1,4 @@
-=== WP MailUp ===
+=== MailUp Newsletter sign-up form ===
 Contributors: mailup
 Donate link: http://wordpress.org
 
@@ -7,13 +7,13 @@ Requires at least: 3.0
 Tested up to: 3.3.1
 Stable tag: 1.1.0
 
-WP MailUp is a signup plugin that can be used to subscribe to newsletter that websites owner periodically delivers using MailUp. 
+The MailUp signup plugin can be used to subscribe to newsletter that websites owner periodically delivers using MailUp. 
 
 == Description ==
 
 By means of this plugin subscribers provide their personal data in order to be added to a distribution list, which is managed by website owner through MailUp. Only website owner can access to subscribers list.  
 
-WP MailUp allows enabling double opt-in (i.e. subscriber receives an email with a confirmation link that has to be clicked) to avoid spam traps or wrong emails.
+The MailUp plugin allows enabling double opt-in (i.e. subscriber receives an email with a confirmation link that has to be clicked) to avoid spam traps or wrong emails.
 Unsubscription from distribution list can be done by pressing the unsubscribe link that is placed in the footer of each received newsletter.
 Since MailUp can send also text messages (SMS), you can ask for the mobile number too. If you prefer to use sign-up with a Social Account, please refer to MailUp documentation (it's a paid service).
   

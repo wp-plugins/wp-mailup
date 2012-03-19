@@ -7,13 +7,13 @@ Requires at least: 3.0
 Tested up to: 3.3.1
 Stable tag: 1.1.0
 
-With the MailUp plugin you can easily add a newsletter sign-up form to your Web site or blog, and then send and track email and text messages with MailUp 
+With the MailUp plugin you can easily add a newsletter sign-up form to your Web site or blog, and then send and track email and sms with MailUp 
 
 == Description ==
 
 Visitors to your WordPress-powered blog or Web site will be able to subscribe to your newsletter using a configurable sign-up form. Their information will be saved in your MailUp account. You will use your MailUp admin console to manage those subscribers, create and send messages to them, view statistics on sent messages, and more.
 
-The MailUp plugin supports the recommended “confirmed opt-in” subscription method (i.e. subscriber receives an email with a confirmation link that has to be clicked to confirm the subscription). This method ensures that spam traps or wrong email addresses are never added to your list. The unsubscription process will be managed automatically by MailUp (e.g. unsubscribe link in the footer of your messages). 
+The MailUp plugin supports the recommended 'confirmed opt-in' subscription method (i.e. subscriber receives an email with a confirmation link that has to be clicked to confirm the subscription). This method ensures that spam traps or wrong email addresses are never added to your list. The unsubscription process will be managed automatically by MailUp (e.g. unsubscribe link in the footer of your messages). 
 
 MailUp supports SMS (text messaging) too, so you can choose to collect a mobile phone number as well. 
 

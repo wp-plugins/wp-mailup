@@ -7,38 +7,42 @@ Requires at least: 3.0
 Tested up to: 3.3.1
 Stable tag: 1.1.0
 
-The MailUp signup plugin can be used to subscribe to newsletter that websites owner periodically delivers using MailUp. 
+With the MailUp plugin you can easily add a newsletter sign-up form to your Web site or blog, and then send and track email and text messages with MailUp 
 
 == Description ==
 
-By means of this plugin subscribers provide their personal data in order to be added to a distribution list, which is managed by website owner through MailUp. Only website owner can access to subscribers list.  
+Visitors to your WordPress-powered blog or Web site will be able to subscribe to your newsletter using a configurable sign-up form. Their information will be saved in your MailUp account. You will use your MailUp admin console to manage those subscribers, create and send messages to them, view statistics on sent messages, and more.
 
-The MailUp plugin allows enabling double opt-in (i.e. subscriber receives an email with a confirmation link that has to be clicked) to avoid spam traps or wrong emails.
-Unsubscription from distribution list can be done by pressing the unsubscribe link that is placed in the footer of each received newsletter.
-Since MailUp can send also text messages (SMS), you can ask for the mobile number too. If you prefer to use sign-up with a Social Account, please refer to MailUp documentation (it's a paid service).
+The MailUp plugin supports the recommended “confirmed opt-in” subscription method (i.e. subscriber receives an email with a confirmation link that has to be clicked to confirm the subscription). This method ensures that spam traps or wrong email addresses are never added to your list. The unsubscription process will be managed automatically by MailUp (e.g. unsubscribe link in the footer of your messages). 
+
+MailUp supports SMS (text messaging) too, so you can choose to collect a mobile phone number as well. 
+
+It also supports sign-up via a social networking account (additional fees apply: see the MailUp web site for details).
+
   
-## __How to use this plugin__
+## __How to use the MailUp plugin__
 
-1. Activate a MailUp console, free trial available: [English](http://www.mailup.com/mailup-free-trial.asp "Free trial MailUp") / [Italiano](http://www.mailup.it/p/pc/campagne-dem-prova-gratuita-d44.htm "Prova gratuita MailUp")  
-2. Configure more Lists environments if this plugin is used in different wordpress web sites.  
-3. Install this plugin  
-4. Customize confirmation request email, welcome message and messages web page (if needed) in each List environment.  
-4. Start registering subscribes and monitor statistics on MailUp Statistics menu.  
-5. Create and send SMS (text messages) or Email newsletters to you subscribers.  
-6. You may also use NEW MESSAGE FROM RSS in order to create a newsletter starting from your RSS feeds. Just select posts and choose the template and priority. You will be able to edit the newsletter after it's automatically created, without any copy and paste.  
-7. MailUp automatically manages unsubscriptions and let you monitor user level detailed statistics about opens, clicks, social sharings  
+1. Signup for a free trial (no credit card required): [English](http://www.mailup.com/mailup-free-trial.asp "Free trial MailUp") / [Italiano](http://www.mailup.it/p/pc/campagne-dem-prova-gratuita-d44.htm "Prova gratuita MailUp")  
+2. Create one or more Lists (e.g. two WordPress sites: you will create two Lists in MailUp).  
+3. Install the plugin in your WordPress admin area.  
+4. Configure settings such as the header, footer, message templates, confirmation request email, welcome message, etc.  
+5. Visitors to your Web site will start signing up, and you will be able to track the subscription trend over time in your MailUp admin console.  
+6. Create and send email and/or text (SMS) messages to your subscribers.  
+7. Use the NEW MESSAGE FROM RSS feature to create a newsletter from RSS feeds. Just select the posts and choose a template and priority. You will be able to edit the newsletter after it has been automatically created, before you send it, without any copying and pasting.  
+8. MailUp automatically manages the unsubscribe process  and gives you access to statistics down to the individual recipient level (opens, clicks, social sharing, etc.)  
   
 
   
 
 ## __About MailUp__
 
-MailUp is a service created in 2002, fully web-based, which allows you to send e-mail, newsletters, sms, fax, letter paper and pre-recorded voice messages. The solution is specifically designed for the professional management and sending high volumes of messages, with bandwidth management, deliverability consulting and monitoring.  
-The e-mails are sent from servers MailUp, this ensures high rates of deliverability.  MailUp is used by thousand of clients, including Valentino, Pirelli, Amnesty International, Peugeot.  
+MailUp is a multi-channel marketing platform, used by thousands of companies around the world to send targeted email and text messages.
+Robust and scalable, MailUp can handle large volumes and has long-term relationships with all the major international ISPs, including automatic Feedback Loop management and support for List-Unsubscribe. Over 10 billion messages were sent with MailUp in 2011.
+Your e-mails will be sent from servers that are constantly monitored and managed to ensure high deliverability. Over 3,000 companies around the world count on MailUp to deliver their e-mail campaigns, including many well-known brands such as Valentino, Pirelli, DeCecco, Dainese, Amnesty International, Peugeot, JobRapido, Emerson, Santander, and many others.  
   
-MailUp is a subscription service with a flat fee and unlimited messages, lists and recipients. You can cancel at any time, and there is an initial, 30-day free trial. Only sending bandwidth is limited by the subscription fee.  
+MailUp subscriptions feature a flat fee and unlimited messages, lists and recipients. You can cancel at any time, and there is an initial, 30-day free trial. The speed at which messages can be sent is set by the bandwidth you subscribe to. [See the MailUp Web site for details.](http://www.mailup.com/p/pc/pay-per-speed-email-marketing-d57.htm "Pay-per-Speed Pricing")  
   
-Included in MailUp (Marketing+ option) also a sophisticated feature that allows you to automatically send messages based when a certain event occurs. For example, you could automatically send a special discount coupon on a person's birthday. The feature includes:  
+Add the optional Marketing+ feature package to take advantage of advanced capabilities such as triggered messages (e.g. automatically send a customer a discount on his/her birthday). The feature includes:  
   
 *	create unlimited event-based messages  
 *	define when they are active  

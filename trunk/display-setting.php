@@ -11,22 +11,18 @@
         <form name="mailUpSettingForm" id="mailUpSettingForm" action="" method="post" onsubmit="return false;">
             <div id="firstpane" class="menu_list">
                 <h3>
-					<span style="vertical-align:middle;display:inline-block;float:left;">Setup<br />
+					<span style="vertical-align:middle;display:inline-block;float:left;">
+					
                     <span class="about-mailup">
-        	<?php
-				echo '<a href="#" title="'._('About MailUp.').'" onclick=\'window.open("'.$mailup_path.'help/mailup.html'.'", "_blank", "height=700,width=700,location=0,left=10,top=10,resizable=0,scrollbars=yes,toolbar=0", true);\'>'._('About MailUp.').'</a>';
-			?>		
-            		</span>
+                    	<a href="https://mailup.atlassian.net/wiki/display/mailupUserGuide/WordPress" target="_blank">Documentation</a>
+                    	&nbsp;|&nbsp; 
+                    	<a href="http://www.mailup.com" target="_blank">About MailUp</a>
+                    </span>
                     
                     </span>
-					<img border="0" style="vertical-align:middle;display:inline-block;float:right;" src="<?php echo $image_path; ?>Logo_transparent.png" />
+					<img border="0" style="display:inline-block;float:right; margin-top:-40px;" src="<?php echo $image_path; ?>Logo_transparent.png" />
 					<br class="clear"/>
 				</h3>
-                
-                
-                
-            
-                
                 <p class="menu_head">
 					<?php _e('General data'); ?>
                     <img class="help_icon" src="<?php echo $image_path; ?>HelpIcon.gif" />
@@ -37,45 +33,46 @@
                     <table class="setting-table setting-general">
                     	<tbody>
                             <tr>
-                                <td class="setting-label"><label for="console-host"><?php _e('MailUp console host'); ?> : </label></td>
+                                <td class="setting-label"><label for="console-host"><?php _e('MailUp console host'); ?>: </label></td>
                                 <td class="setting-target"><input name="console-host" id="console-host" class="setting-text general-data" type="text" maxlength="<?php echo $text_field_maxlength; ?>" /></td>
                             </tr>
                             <tr>
-                                <td class="setting-label"><label for="subscribe-path"><?php _e('Subscribe path'); ?> : </label></td>
+                                <td class="setting-label"><label for="subscribe-path"><?php _e('Subscribe path'); ?>: </label></td>
                                 <td class="setting-target"><input name="subscribe-path" id="subscribe-path" class="setting-text  general-data" type="text" maxlength="<?php echo $text_field_maxlength; ?>" /></td>
                             </tr>
                             <tr>
-                                <td class="setting-label"><label for="plugin-title"><?php _e('Plugin title'); ?> : </label></td>
+                                <td class="setting-label"><label for="plugin-title"><?php _e('Plugin title'); ?>: </label></td>
                                 <td class="setting-target"><input name="plugin-title" id="plugin-title" class="setting-text  general-data" type="text" maxlength="<?php echo $text_field_maxlength; ?>" /></td>
                             </tr>
                             <tr>
-                                <td class="setting-label"><label for="plugin-description"><?php _e('Description'); ?> : </label></td>
+                                <td class="setting-label"><label for="plugin-description"><?php _e('Description'); ?>: </label></td>
                                 <td class="setting-target"><input name="plugin-description" id="plugin-description" class="setting-text  general-data" type="text" maxlength="<?php echo $text_field_maxlength; ?>" /></td>
                             </tr>
                             <tr>
-                                <td class="setting-label"><label for="css-combination"><?php _e('Select preloaded CSS for widget'); ?> : </label></td>
+                                <td class="setting-label"><label for="css-combination"><?php _e('Select preloaded CSS for widget'); ?>: </label></td>
                                 <td class="setting-target">
                                 <select name="css-combination" id="css-combination" class="select-box">
                                     <option value="style1">Default</option>
                                     <option value="style2">Rounded corners</option>
-                                    <option value="style3">Rounded Black</option>
-                                    <option value="style4">Blacklicious</option>
+                                    <option value="style3">Rounded black</option>
+                                    <option value="style4">No style</option>
                                 </select>
                                 </td>
                             </tr>
                             <tr>
-                                <td class="setting-label"><label><?php _e('Submit button'); ?> : </label></td>
+                                <td class="setting-label"><label><?php _e('Submit button'); ?>: </label></td>
                                 <td class="setting-target"><input name="submit-button" id="submit-button" class="setting-text  general-data" type="text" maxlength="<?php echo $text_field_maxlength; ?>" /></td>
                             </tr>
                             <tr>
-                                <td colspan="2"><label for="request-confirm"><?php _e('Request confirmation by email'); ?> : </label><input name="request-confirm" id="request-confirm" value="yes" class="setting-checkbox" type="checkbox" /></td>
+                                <td class="setting-label"><label for="request-confirm"><?php _e('Request confirmation by email'); ?>:</label></td>
+                                <td class="setting-target"><input name="request-confirm" id="request-confirm" value="yes" class="setting-checkbox" type="checkbox" /></td>
                             </tr>
                         </tbody>
                     </table>
                     <div style="clear:both;"></div>
                 </div>
                 <p class="menu_head">
-					<?php _e('User lists'); ?>
+					<?php _e('Recipient list'); ?>
                     <img class="help_icon" src="<?php echo $image_path; ?>HelpIcon.gif" />
                     <img class="toggle_icon" src="<?php echo $image_path; ?>bullet_toggle_plus.png" />
                     <br class="clear"/>
@@ -84,18 +81,18 @@
                     <table class="setting-table setting-userlists">
                         <tbody>
                             <tr>
-                                <th colspan="2"><?php _e('Subscribers will be saved in'); ?></th>
+                                <td colspan="2"><?php _e('Site visitors will be subscribed to the following list:'); ?></td>
                             </tr>
                             <tr>
-                                <td class="setting-label"><label for="list-id"><?php _e('List ID'); ?> : </label></td>
+                                <td class="setting-label"><label for="list-id"><?php _e('List ID'); ?>:</label></td>
                                 <td class="setting-target"><input name="list-id" id="list-id" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
                             </tr>
                             <tr>
-                                <td class="setting-label"><label for="list-displayed-name"><?php _e('List displayed Name'); ?> : </label></td>
+                                <td class="setting-label"><label for="list-displayed-name"><?php _e('Displayed list name'); ?>:</label></td>
                                 <td class="setting-target"><input name="list-displayed-name" id="list-displayed-name" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
                             </tr>
                             <tr>
-                                <td class="setting-label"><label><?php _e('Group ID'); ?> : </label></td>
+                                <td class="setting-label"><label><?php _e('Group ID'); ?>:</label></td>
                                 <td class="setting-target"><input name="group-id" id="group-id" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
                             </tr>
                         </tbody>
@@ -103,55 +100,55 @@
                     <div style="clear:both;"></div>
                 </div>
                 <p class="menu_head">
-					<?php _e('User fields'); ?>
+					<?php _e('Recipient fields'); ?>
                     <img class="help_icon" src="<?php echo $image_path; ?>HelpIcon.gif" />
                     <img class="toggle_icon" src="<?php echo $image_path; ?>bullet_toggle_plus.png" />
                     <br class="clear"/>
                 </p>
                 <div class="menu_body">
-                    <table class="setting-table setting-userfields">
+                    <table class="setting-table setting-userfields" style="width: 650px;">
                         <tbody>
                             <tr>
                                 <th>&nbsp;</th>
                                 <th>Show</th>
                                 <th>Req.</th>
                                 <th>Field code</th>
-                                <th>Displayed Name</th>
+                                <th>Displayed name</th>
                             </tr>
                             <tr>
-                                <td class="setting-target"><label>E-mail : </label></td>
+                                <td class="setting-target"><label>Email:</label></td>
                                 <td class="setting-target"><input name="email-show" id="email-show" class="setting-checkbox" type="checkbox" value="yes" /></td>
                                 <td class="setting-target"><input name="email-required" id="email-required" class="setting-checkbox" type="checkbox" value="yes" /></td>
                                 <td class="setting-target"><input readonly="readonly" name="email-fieldcode" id="email-fieldcode" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" value="Email" /></td>
                                 <td class="setting-target"><input name="email-displayed-name" id="email-displayed-name" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
                             </tr>
                             <tr>
-                                <td class="setting-target"><label>Ext. 1 : </label></td>
+                                <td class="setting-target"><label>Mobile number:</label></td>
+                                <td class="setting-target"><input name="mobile-show" id="mobile-show" class="setting-checkbox" type="checkbox" value="yes" /></td>
+                                <td class="setting-target"><input name="mobile-required" id="mobile-required" class="setting-checkbox" type="checkbox" value="yes" /></td>
+                                <td class="setting-target"><input readonly="readonly" name="mobile-fieldcode" id="mobile-fieldcode" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" value="sms" /></td>
+                                <td class="setting-target"><input name="mobile-displayed-name" id="mobile-displayed-name" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
+                            </tr>
+                            <tr>
+                                <td class="setting-target"><label>Custom field 1:</label></td>
                                 <td class="setting-target"><input name="extfield1-show" id="extfield1-show" class="setting-checkbox" type="checkbox" value="yes" /></td>
                                 <td class="setting-target"><input name="extfield1-required" id="extfield1-required" class="setting-checkbox" type="checkbox" value="yes" /></td>
                                 <td class="setting-target"><input name="extfield1-fieldcode" id="extfield1-fieldcode" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
                                 <td class="setting-target"><input name="extfield1-displayed-name" id="extfield1-displayed-name" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
                             </tr>
                             <tr>
-                                <td class="setting-target"><label>Ext. 2 : </label></td>
+                                <td class="setting-target"><label>Custom field 2:</label></td>
                                 <td class="setting-target"><input name="extfield2-show" id="extfield2-show" class="setting-checkbox" type="checkbox" value="yes" /></td>
                                 <td class="setting-target"><input name="extfield2-required" id="extfield2-required" class="setting-checkbox" type="checkbox" value="yes" /></td>
                                 <td class="setting-target"><input name="extfield2-fieldcode" id="extfield2-fieldcode" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
                                 <td class="setting-target"><input name="extfield2-displayed-name" id="extfield2-displayed-name" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
-                            </tr>
-                            <tr>
-                                <td class="setting-target"><label>Mobile : </label></td>
-                                <td class="setting-target"><input name="mobile-show" id="mobile-show" class="setting-checkbox" type="checkbox" value="yes" /></td>
-                                <td class="setting-target"><input name="mobile-required" id="mobile-required" class="setting-checkbox" type="checkbox" value="yes" /></td>
-                                <td class="setting-target"><input readonly="readonly" name="mobile-fieldcode" id="mobile-fieldcode" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" value="sms" /></td>
-                                <td class="setting-target"><input name="mobile-displayed-name" id="mobile-displayed-name" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
                             </tr>
                         </tbody>
                     </table>
                     <div style="clear:both;"></div>
                 </div>
                 <p class="menu_head">
-					<?php _e('Errors'); ?>
+					<?php _e('Messages'); ?>
                     <img class="help_icon" src="<?php echo $image_path; ?>HelpIcon.gif" />
                     <img class="toggle_icon" src="<?php echo $image_path; ?>bullet_toggle_plus.png" />
                     <br class="clear"/>
@@ -160,19 +157,19 @@
                     <table class="setting-table setting-userlists">
                         <tbody>
                             <tr>
-                                <td class="setting-label"><label>Success : </label></td>
+                                <td class="setting-label"><label>Success:</label></td>
                                 <td class="setting-target"><input name="success-message" id="success-message" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
                             </tr>
                             <tr>
-                                <td class="setting-label"><label>Generic error : </label></td>
+                                <td class="setting-label"><label>Generic error:</label></td>
                                 <td class="setting-target"><input name="generic-error" id="generic-error" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
                             </tr>
                             <tr>
-                                <td class="setting-label"><label>Invalid address : </label></td>
+                                <td class="setting-label"><label>Invalid address:</label></td>
                                 <td class="setting-target"><input name="invalid-address" id="invalid-address" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
                             </tr>
                             <tr>
-                                <td class="setting-label"><label>Already present : </label></td>
+                                <td class="setting-label"><label>Recipient already exists:</label></td>
                                 <td class="setting-target"><input name="already-present" id="already-present" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
                             </tr>
                         </tbody>
@@ -189,22 +186,26 @@
                     <table class="setting-table setting-userlists">
                         <tbody>
                             <tr>
-                                <td colspan="2" class=""><label>Include acceptance of terms and conditions</label>&nbsp;<input name="terms-confirm" id="terms-confirm" class="setting-checkbox" type="checkbox" value="yes" /></td>
+                                <td class="setting-label" nowrap="nowrap"><label>Require acceptance of terms and conditions:</label></td>
+                                <td class="setting-target"><input name="terms-confirm" id="terms-confirm" class="setting-checkbox" type="checkbox" value="yes" /></td>
                             </tr>
                             <tr>
-                                <td class="setting-label"><label>Terms and condition : </label></td>
-                                <td class="setting-target"><textarea name="terms-n-con" id="terms-n-con" cols="25" rows="5"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td class="setting-label"><label>Acceptance : </label></td>
+                                <td class="setting-label"><label>Text to show:</label></td>
                                 <td class="setting-target"><input name="acceptance-msg" id="acceptance-msg" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
+                            </tr>
+
+                            <tr>
+                                <td class="setting-label" valign="top"><label>Terms:</label></td>
+                                <td class="setting-target"><textarea name="terms-n-con" id="terms-n-con" cols="50" rows="10"></textarea></td>
                             </tr>
                         </tbody>
                     </table>
                     <div style="clear:both;"></div>
                 </div>
                 <div class="setting-save-container">
-                	<input id="setting-reset-btn" type="button" value="Reset" />&nbsp;<input id="setting-save-btn" type="submit" value="Save" />
+                	<input id="setting-save-btn" type="submit" value="Save" class="button-primary" />
+                	&nbsp;
+                	<input id="setting-reset-btn" type="button" value="Reset" class="button-secondary" />
                 </div>
                 <div style="clear:both;"></div>
             </div>
@@ -250,7 +251,7 @@
 			show status if input changes
 		*/
 		jQ("input,textarea,select").change(function(){
-			jQ("#save-message").css("color", "#F00").html("<?php _e('** Settings have changed. Click <b>Save</b> to save the configuration.'); ?>");
+			jQ("#save-message").css("color", "#F00").html("<?php _e('** Settings have changed. Click <b>Save</b> to save the new settings.'); ?>");
 		});
 		
 		/*
@@ -299,30 +300,30 @@
 			}
 			if(!jQ('#email-required').is(':checked') && !jQ('#mobile-required').is(':checked')) // Either email or sms field is required for the xmlSubscribe.aspx API
 			{
-				jQ("#save-message").css("color", "#F00").html("<?php _e('** Either <b>E-mail</b> or <b>Mobile</b> field is mandatory'); ?>");
+				jQ("#save-message").css("color", "#F00").html("<?php _e('** Either <b>Email</b> or <b>Mobile number</b> must be used'); ?>");
 				return false;
 			}
 			if(jQ('#email-required').is(':checked') && !jQ('#email-show').is(':checked')) // If email field is required, must be 'check' show also
 			{
-				jQ("#save-message").css("color", "#F00").html("<?php _e('** <b>E-mail</b> field need to shown on form as it is required'); ?>");
+				jQ("#save-message").css("color", "#F00").html("<?php _e('** <b>Email</b> must be displayed since it is required'); ?>");
 				return false;
 			}
 			
 			if(jQ('#mobile-required').is(':checked') && !jQ('#mobile-show').is(':checked')) // If sms field is required, must be 'check' show also
 			{
-				jQ("#save-message").css("color", "#F00").html("<?php _e('** <b>Mobile</b> field need to shown on form as it is required'); ?>");
+				jQ("#save-message").css("color", "#F00").html("<?php _e('** <b>Mobile number</b> must be displayed since it is required'); ?>");
 				return false;
 			}
 			
 			if(jQ('#extfield1-required').is(':checked') && !jQ('#extfield1-show').is(':checked')) // If additional field 1 is required, must be 'check' show also
 			{
-				jQ("#save-message").css("color", "#F00").html("<?php _e('** <b>Ext. 1</b> field need to shown on form as it is required'); ?>");
+				jQ("#save-message").css("color", "#F00").html("<?php _e('** <b>Custom field 1</b> must be displayed since it is required'); ?>");
 				return false;
 			}
 			
 			if(jQ('#extfield2-required').is(':checked') && !jQ('#extfield2-show').is(':checked')) // If additional field 2 is required, must be 'check' show also
 			{
-				jQ("#save-message").css("color", "#F00").html("<?php _e('** <b>Ext. 2</b> field need to shown on form as it is required'); ?>");
+				jQ("#save-message").css("color", "#F00").html("<?php _e('** <b>Custom field 2</b> must be displayed since it is required'); ?>");
 				return false;
 			}
 			
@@ -337,7 +338,7 @@
 			*/
 			form_values = jQuery(this).serialize();
 			jQ.post('<?php echo $_SERVER['PHP_SELF']; ?>?formData=save', form_values, function(returned_data){
-				jQ("#save-message").css("color", "#00F").html("<?php _e('* Configuration saved successfully.'); ?>");
+				jQ("#save-message").css("color", "#00F").html("<?php _e('* Settings saved successfully.'); ?>");
 				fillFormData();
 			});
 			jQ('.setting-text').css("borderColor", "#DFDFDF");

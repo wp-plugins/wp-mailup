@@ -5,7 +5,7 @@ Donate link: http://wordpress.org
 Tags: mailup, newsletter, email, smtp, bulk, sms, send, list, subscribe, form, marketing, widget, plugin, feedburner, subscription, email marketing, email newsletter form, email widget, emails, newsletter form, newsletter plugin, newsletter signup, newsletter widget, newsletters, signup, widget, contact form, checkbox, sign up, sign-up, subscription form, subscribe form, registration form, sms signup, subscribe widget, subscribers, contacts, iscrizione 
 Requires at least: 3.0
 Tested up to: 3.3.1
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 
 With the MailUp plugin you can easily add a newsletter sign-up form to your Web site or blog, and then send and track email and text messages with MailUp 
 
@@ -233,6 +233,8 @@ A partire dalla versione 7.4 MailUp introduce restrizioni di sicurezza che conse
 = 1.1.0 =
 * Extended instructions to explain how to register on MailUp the IP address of the server that hosts Wordpress site (mandatory). Minor graphical changes to better fit with most of Wordpress themes.
   
+= 1.1.1 =
+* Redesigned admin interface. Updated subscription form CSS styles.
 
-
-
+= 1.1.2 =
+* Fixed links to Help documents.

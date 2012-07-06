@@ -24,7 +24,7 @@
 					<br class="clear"/>
 				</h3>
                 <p class="menu_head">
-					<?php _e('General data'); ?>
+					<?php _e('General settings'); ?>
                     <img class="help_icon" src="<?php echo $image_path; ?>HelpIcon.gif" />
                     <img class="toggle_icon" src="<?php echo $image_path; ?>bullet_toggle_plus.png" />
                     <br class="clear"/>
@@ -262,20 +262,20 @@
 			var section = jQ.trim(jQ(this).parent().text());
 			switch(section)
 			{
-				case 'General data':
-					window.open("<?php echo $mailup_path; ?>/help/general.html", "_blank", "height=375,width=1100,location=0,left=10,top=10,resizable=0,scrollbars=yes,toolbar=0", true);
+				case 'General settings':
+					window.open("https://mailup.atlassian.net/wiki/display/mailupUserGuide/WordPress#WordPress-Generalsettings", "_blank", "", true);
 				break;
-				case 'User lists':
-					window.open("<?php echo $mailup_path; ?>/help/user.html", "_blank", "height=250,width=950,location=0,left=10,top=10,resizable=0,scrollbars=yes,toolbar=0", true);
+				case 'Recipient list':
+					window.open("https://mailup.atlassian.net/wiki/display/mailupUserGuide/WordPress#WordPress-Recipientlist", "_blank", "", true);
 				break;
-				case 'User fields':
-					window.open("<?php echo $mailup_path; ?>/help/fields.html", "_blank", "height=350,width=1100,location=0,left=10,top=10,resizable=0,scrollbars=yes,toolbar=0", true);
+				case 'Recipient fields':
+					window.open("https://mailup.atlassian.net/wiki/display/mailupUserGuide/WordPress#WordPress-PersonalDataFields", "_blank", "", true);
 				break;
-				case 'Errors':
-					window.open("<?php echo $mailup_path; ?>/help/error.html", "_blank", "height=200,width=650,location=0,left=10,top=10,resizable=0,scrollbars=yes,toolbar=0", true);
+				case 'Messages':
+					window.open("https://mailup.atlassian.net/wiki/display/mailupUserGuide/WordPress#WordPress-ErrorMessages", "_blank", "", true);
 				break;
 				case 'Terms and conditions':
-					window.open("<?php echo $mailup_path; ?>/help/terms.html", "_blank", "height=200,width=1000,location=0,left=10,top=10,resizable=0,scrollbars=yes,toolbar=0", true);
+					window.open("https://mailup.atlassian.net/wiki/display/mailupUserGuide/WordPress#WordPress-Termsandconditions", "_blank", "", true);
 				break;
 				default:
 			}

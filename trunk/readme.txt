@@ -4,7 +4,7 @@ Donate link: http://wordpress.org
 
 Tags: mailup, newsletter, email, smtp, bulk, sms, send, list, subscribe, form, marketing, widget, plugin, feedburner, subscription, email marketing, email newsletter form, email widget, emails, newsletter form, newsletter plugin, newsletter signup, newsletter widget, newsletters, signup, widget, contact form, checkbox, sign up, sign-up, subscription form, subscribe form, registration form, sms signup, subscribe widget, subscribers, contacts, iscrizione 
 Requires at least: 3.0
-Tested up to: 3.3.1
+Tested up to: 3.4.1
 Stable tag: 1.1.2
 
 With the MailUp plugin you can easily add a newsletter sign-up form to your Web site or blog, and then send and track email and text messages with MailUp 
@@ -13,7 +13,7 @@ With the MailUp plugin you can easily add a newsletter sign-up form to your Web 
 
 Visitors to your WordPress-powered blog or Web site will be able to subscribe to your newsletter using a configurable sign-up form. Their information will be saved in your MailUp account. You will use your MailUp admin console to manage those subscribers, create and send messages to them, view statistics on sent messages, and more.
 
-The MailUp plugin supports the recommended “confirmed opt-in” subscription method (i.e. subscriber receives an email with a confirmation link that has to be clicked to confirm the subscription). This method ensures that spam traps or wrong email addresses are never added to your list. The unsubscription process will be managed automatically by MailUp (e.g. unsubscribe link in the footer of your messages). 
+The MailUp plugin supports the recommended "confirmed opt-in" subscription method (i.e. subscriber receives an email with a confirmation link that has to be clicked to confirm the subscription). This method ensures that spam traps or wrong email addresses are never added to your list. The unsubscription process will be managed automatically by MailUp (e.g. unsubscribe link in the footer of your messages). 
 
 MailUp supports SMS (text messaging) too, so you can choose to collect a mobile phone number as well. 
 
@@ -63,7 +63,7 @@ For example, you could store in a custom field the date of the last order placed
 2. Copy it to /wp-content/plugins/ folder
 3. Activate the plugin through the Plugins page (wp-admin/plugins.php)
 4. Add the widget to your sidebar on the Widgets page (wp-admin/widgets.php)
-5. Configure "WP MailUp" plugin through [admin page](http://assistenza.mailup.it/KB/a371/wordpress-plugin-configuring-the-mailup-plugin-for-wordpress.aspx?trans=1). Please use "?" buttoms to obtain help when something is not clear. No file editing required.
+5. Configure "WP MailUp" plugin through [admin page](http://assistenza.mailup.it/KB/a371/wordpress-plugin-configuring-the-mailup-plugin-for-wordpress.aspx?trans=1). Please use "?" buttons to obtain help when something is not clear. No file editing required.
 6. Open MailUp console and register IP address of your server (go to "Manage->Web service" and then select "frontend" in the dropdown menu to insert IP address of your server. More than one address could be registered)
 
 == Frequently Asked Questions ==
@@ -118,6 +118,12 @@ Starting from v.7.4, MailUp introduces a security restriction that allows only c
 
 
 == Changelog ==
+
+= 1.1.2 =
+* Fixed links to Help documents.
+
+= 1.1.1 =
+* Redesigned admin interface. Updated subscription form CSS styles.
 
 = 1.1.0 =
 * Extended instructions to explain how to register on MailUp the IP address of the server that hosts Wordpress site (mandatory). Minor graphical changes to better fit with most of Wordpress themes.

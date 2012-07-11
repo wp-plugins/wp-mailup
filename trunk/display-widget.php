@@ -137,10 +137,10 @@
 			var csvFldNames = '<?php echo $csvFldNames; ?>';
 			
 			var csvFldValues = '';
-			if(sub_ext1 && sub_ext2)
-			{
+			/*if(sub_ext1 && sub_ext2)
+			{*/
 				csvFldValues = sub_ext1 + ';' + sub_ext2;
-			}
+			/*}
 			else if(sub_ext1)
 			{
 				csvFldValues = sub_ext1;
@@ -148,11 +148,11 @@
 			else
 			{
 				csvFldValues = sub_ext2;
-			}
+			}*/
 			
 			var listId = '<?php echo $wpmailup['listId']; ?>';
 			var groupId = '<?php echo $wpmailup['groupId']; ?>';
-			var confirmReq = '<?php echo ($wpmailup['requestConfirm'] == 'yes')?'1':'0'; ?>';
+			var confirmReq = '<?php echo ($wpmailup['requestConfirm'] == 'yes')?'true':'false'; ?>';
 			var subUrl = '<?php echo $wpmailup['consoleHost'] . $wpmailup['subscribePath']; ?>';
 			
 			/*

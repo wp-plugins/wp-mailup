@@ -119,6 +119,10 @@ Starting from v.7.4, MailUp introduces a security restriction that allows only c
 
 == Changelog ==
 
+= 1.1.3 =
+* Fixed issue related to confirm email that is sent anyway, even if related option is not set in admin form.
+* Fixed issue related to personal data fields, that were not set when one of them is left empty
+
 = 1.1.2 =
 * Fixed links to Help documents.
 
@@ -244,3 +248,7 @@ A partire dalla versione 7.4 MailUp introduce restrizioni di sicurezza che conse
 
 = 1.1.2 =
 * Fixed links to Help documents.
+
+= 1.1.3 =
+* Fixed issue related to confirm email that is sent anyway, even if related option is not set in admin form.
+* Fixed issue related to personal data fields, that were not set when one of them is left empty

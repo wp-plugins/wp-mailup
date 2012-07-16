@@ -65,12 +65,7 @@ For example, you could store in a custom field the date of the last order placed
 
 == Installation ==
 
-1. Download the MailUp plugin from the Wordpress Plugin Directory
-2. Copy it to /wp-content/plugins/ folder
-3. Activate the plugin through the Plugins page (wp-admin/plugins.php)
-4. Add the widget to your sidebar on the Widgets page (wp-admin/widgets.php)
-5. Configure the plugin through the friendly [admin page](https://mailup.atlassian.net/wiki/display/mailupUserGuide/WordPress "admin settings"). Please use the Help icon to obtain help when something is not clear. No file editing required.
-6. Finally, open the MailUp console and register the IP address of your WordPress-prowered Web site: go to "Manage->Web services" and then select "frontend" in the dropdown menu to insert the IP address of your server. More than one address could be registered.
+For detailed installation instructions, please visit the [MailUp plugin for WordPress documentation](https://mailup.atlassian.net/wiki/display/mailupUserGuide/WordPress).
 
 
 

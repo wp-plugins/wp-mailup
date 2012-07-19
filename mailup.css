@@ -71,17 +71,24 @@
 }
 .menu_body a {
 	display:block;
-	/* color:#006699; */
 	background-color:#EFEFEF;
 	padding-left:10px;
 	font-weight:bold;
 	text-decoration:none;
 }
+	
+	.menu_body a:hover {
+		text-decoration:underline;
+	}
+	
+	.menu_body a.nostyle {
+		display:inline;
+		background-color:transparent;
+		padding-left:0;
+		font-weight:normal;
+		text-decoration:none;
+	}
 
-.menu_body a:hover {
-	/* color: #000000; */
-	text-decoration:underline;
-}
 
 .setting-table{
 	width:100%;

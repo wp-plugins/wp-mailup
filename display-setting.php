@@ -14,7 +14,8 @@
 					<span style="vertical-align:middle;display:inline-block;float:left;">
 					
                     <span class="about-mailup">
-                    	<a href="http://www.mailup.com/loadDocument.asp?docID=103" target="_blank">Documentation &amp; Video Tutorials</a>
+                    	Configure your newsletter subscription signup form, then manage your campaigns in <a href="http://www.mailup.com" target="_blank">MailUp</a>.<br>
+                    	<a href="http://www.mailup.com/loadDocument.asp?docID=103" target="_blank">Video Tutorials</a>
                     	&nbsp;|&nbsp;
                     	<a href="http://www.mailup.com/loadDocument.asp?docID=104" target="_blank">Free Trial</a>
                     	&nbsp;|&nbsp; 
@@ -35,6 +36,9 @@
                     <table class="setting-table setting-general">
                     	<tbody>
                             <tr>
+                                <td colspan="2">To use this plugin, you need a MailUp account (<a href="http://www.mailup.com/loadDocument.asp?docID=104" target="_blank" class="nostyle">free trial</a>) and your <a href="https://mailup.atlassian.net/wiki/display/mailupapi/MailUp+API+Credentials" target="_blank" class="nostyle">MailUp API credentials</a>.</td>
+                            </tr>
+                            <tr>
                                 <td class="setting-label"><label for="console-host"><?php _e('MailUp console host'); ?>: </label></td>
                                 <td class="setting-target"><input name="console-host" id="console-host" class="setting-text general-data" type="text" maxlength="<?php echo $text_field_maxlength; ?>" /></td>
                             </tr>
@@ -51,6 +55,10 @@
                                 <td class="setting-target"><input name="plugin-description" id="plugin-description" class="setting-text  general-data" type="text" maxlength="<?php echo $text_field_maxlength; ?>" /></td>
                             </tr>
                             <tr>
+                                <td class="setting-label"><label><?php _e('Submit button'); ?>: </label></td>
+                                <td class="setting-target"><input name="submit-button" id="submit-button" class="setting-text  general-data" type="text" maxlength="<?php echo $text_field_maxlength; ?>" /></td>
+                            </tr>
+                            <tr>
                                 <td class="setting-label"><label for="css-combination"><?php _e('Select preloaded CSS for widget'); ?>: </label></td>
                                 <td class="setting-target">
                                 <select name="css-combination" id="css-combination" class="select-box">
@@ -61,10 +69,6 @@
                                     <option value="style4">No style</option>
                                 </select>
                                 </td>
-                            </tr>
-                            <tr>
-                                <td class="setting-label"><label><?php _e('Submit button'); ?>: </label></td>
-                                <td class="setting-target"><input name="submit-button" id="submit-button" class="setting-text  general-data" type="text" maxlength="<?php echo $text_field_maxlength; ?>" /></td>
                             </tr>
                             <tr>
                                 <td class="setting-label"><label for="request-confirm"><?php _e('Request confirmation by email'); ?>:</label></td>

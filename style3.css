@@ -12,10 +12,13 @@
 #subscribeForm textarea{
 }
 #subscribeForm input[type=text]{
-	padding:0;
+	padding:0 0 0 2px;
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
 	border-radius:5px;
+	background-color:#777;
+	border: 1px solid #444;
+	color:#FFF;
 }
 #subscribeForm input[type=submit]{
 	border:2px solid #fff;
@@ -38,4 +41,8 @@
 }
 #subscribeForm p,  #subscribeForm h1, #subscribeForm h2, #subscribeForm h3,  #subscribeForm h4,  #subscribeForm h5{
 	color:#fff;
+}
+#subscribeForm p {
+	padding:0;
+	margin: 0 0 10px 0;
 }

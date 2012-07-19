@@ -155,8 +155,12 @@ img.toggle_icon{
 }
 
 .about-mailup a { 
-	color:#9CC !important; 
-	line-height:30px; 
+	color:#21759B !important; 
+	line-height:26px; 
 	font-weight:normal; 
-	font-size:14px; 
+	font-size:13px;
+	text-decoration: none;
 }
+	.about-mailup a:hover { 
+		color: #666 !important;
+	}

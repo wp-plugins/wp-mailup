@@ -14,7 +14,9 @@
 					<span style="vertical-align:middle;display:inline-block;float:left;">
 					
                     <span class="about-mailup">
-                    	<a href="https://mailup.atlassian.net/wiki/display/mailupUserGuide/WordPress" target="_blank">Documentation</a>
+                    	<a href="http://www.mailup.com/loadDocument.asp?docID=103" target="_blank">Documentation &amp; Video Tutorials</a>
+                    	&nbsp;|&nbsp;
+                    	<a href="http://www.mailup.com/loadDocument.asp?docID=104" target="_blank">Free Trial</a>
                     	&nbsp;|&nbsp; 
                     	<a href="http://www.mailup.com" target="_blank">About MailUp</a>
                     </span>
@@ -53,6 +55,7 @@
                                 <td class="setting-target">
                                 <select name="css-combination" id="css-combination" class="select-box">
                                     <option value="style1">Default</option>
+                                    <option value="style5">Compact</option>
                                     <option value="style2">Rounded corners</option>
                                     <option value="style3">Rounded black</option>
                                     <option value="style4">No style</option>
@@ -165,13 +168,27 @@
                                 <td class="setting-target"><input name="generic-error" id="generic-error" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
                             </tr>
                             <tr>
-                                <td class="setting-label"><label>Invalid address:</label></td>
+                                <td class="setting-label"><label>Invalid email address:</label></td>
                                 <td class="setting-target"><input name="invalid-address" id="invalid-address" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
                             </tr>
+                            <tr>
+                                <td class="setting-label"><label>Invalid phone number:</label></td>
+                                <td class="setting-target"><input name="invalid-phone" id="invalid-phone" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
+                            </tr>
+
                             <tr>
                                 <td class="setting-label"><label>Recipient already exists:</label></td>
                                 <td class="setting-target"><input name="already-present" id="already-present" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
                             </tr>
+                            <tr>
+                                <td class="setting-label"><label>Field required:</label></td>
+                                <td class="setting-target"><input name="field-required" id="field-required" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
+                            </tr>
+                            <tr>
+                                <td class="setting-label"><label>Terms not agreed to:</label></td>
+                                <td class="setting-target"><input name="terms-not-agreed" id="terms-not-agreed" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
+                            </tr>
+
                         </tbody>
                     </table>
                     <div style="clear:both;"></div>
@@ -210,7 +227,7 @@
                 <div style="clear:both;"></div>
             </div>
         </form>
-        <img id="loading-img" style="visibility:hidden;vertical-align:middle;padding:4px;background:none;" src="<?php echo get_bloginfo('wpurl').'/wp-content/plugins/wp-mailup/images/indicator.white.gif'; ?>" border="0" />
+        <img id="loading-img" style="display:none;vertical-align:middle;padding:4px;background:none;" src="<?php echo get_bloginfo('wpurl').'/wp-content/plugins/wp-mailup/images/indicator.white.gif'; ?>" border="0" />
         <span id="save-message"><noscript style="color:#F00;"><?php _e('** Please enable javascript to work with this form.'); ?></noscript></span>
     </div>
     <div class="wrap-right postbox" style="display:none">
@@ -392,7 +409,10 @@
 				jQ('#success-message').val(data.successMessage);
 				jQ('#generic-error').val(data.genericError);
 				jQ('#invalid-address').val(data.invalidAddress);
+				jQ('#invalid-phone').val(data.invalidPhone);
 				jQ('#already-present').val(data.alreadyPresent);
+				jQ('#field-required').val(data.fieldRequired);
+				jQ('#terms-not-agreed').val(data.termsNotAgreed);
 				if(data.termsConfirm == 'yes')
 					jQ('#terms-confirm').attr("checked", true);
 				jQ('#terms-n-con').val(data.termsNcon);
@@ -424,14 +444,14 @@
 			{
 				case 'loading':
 					jQ('#loading-img').attr('src', '<?php echo get_bloginfo('wpurl').'/wp-content/plugins/wp-mailup/images/indicator.white.gif'; ?>');
-					jQ('#loading-img').css('visibility', 'visible');
+					jQ('#loading-img').css('display', '');
 					break;
 				case 'info':
 					jQ('#loading-img').attr('src', '<?php echo get_bloginfo('wpurl').'/wp-content/plugins/wp-mailup/images/question.gif'; ?>');
-					jQ('#loading-img').css('visibility', 'visible');
+					jQ('#loading-img').css('display', '');
 					break;
 				case 'stop':
-					jQ('#loading-img').css('visibility', 'hidden');
+					jQ('#loading-img').css('display', 'none');
 				default:
 			}
 		}

@@ -59,7 +59,10 @@ function wpmailup_save_config()
 		$wpmailup['successMessage'] = $_REQUEST['success-message'];
 		$wpmailup['genericError'] = $_REQUEST['generic-error'];
 		$wpmailup['invalidAddress'] = $_REQUEST['invalid-address'];
+		$wpmailup['invalidPhone'] = $_REQUEST['invalid-phone'];
 		$wpmailup['alreadyPresent'] = $_REQUEST['already-present'];
+		$wpmailup['fieldRequired'] = $_REQUEST['field-required'];
+		$wpmailup['termsNotAgreed'] = $_REQUEST['terms-not-agreed'];
 		$wpmailup['termsConfirm'] = $_REQUEST['terms-confirm'];
 		$wpmailup['termsNcon'] = $_REQUEST['terms-n-con'];
 		$wpmailup['acceptanceMsg'] = $_REQUEST['acceptance-msg'];

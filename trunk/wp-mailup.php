@@ -5,10 +5,10 @@
 /*
 	Plugin name: WP-MailUp
 	Plugin URI: http://wordpress.org/extend/plugins/wp-mailup/
-	Description: Wordpress plugin for MailUp Newsletter Service.
-	Version: 1.1.3
-	Author: N. I. Biz Soft Solutions
-	Author URI: http://www.nibizsoft.com/
+	Description: Wordpress plugin for MailUp email marketing system.
+	Version: 1.2
+	Author: MailUp, N. I. Biz Soft Solutions
+	Author URI: http://www.mailup.com/
 	License: GPLv2
 */
 
@@ -137,11 +137,11 @@ function wpmailup_active()
 	$wpmailup['pluginTitle'] = _('Newsletter subscription');
 	$wpmailup['pluginDescription'] = _('Our monthly newsletter with a selection of the best posts');
 	//$wpmailup['externalCss'] = $_REQUEST['external-css'];
-	$wpmailup['cssCombination'] = 'style2';
-	$wpmailup['submitButton'] = 'Send';
+	$wpmailup['cssCombination'] = 'style1';
+	$wpmailup['submitButton'] = 'SIGN UP';
 	$wpmailup['requestConfirm'] = 'yes';
 	$wpmailup['listId'] = 1;
-	$wpmailup['listDisplayedName'] = 'All users';
+	$wpmailup['listDisplayedName'] = 'Newsletter subscribers';
 	$wpmailup['groupId'] = '';
 	$wpmailup['emailShow'] = 'yes';
 	$wpmailup['emailRequired'] = 'yes';
@@ -154,15 +154,18 @@ function wpmailup_active()
 	$wpmailup['extfield2Show'] = 'yes';
 	$wpmailup['extfield2Required'] = 'yes';
 	$wpmailup['extfield2Fieldcode'] = 'Campo2';
-	$wpmailup['extfield2DisplayedName'] = 'Surname';
+	$wpmailup['extfield2DisplayedName'] = 'Last name';
 	$wpmailup['mobileShow'] = 'yes';
 	$wpmailup['mobileRequired'] = 'yes';
 	$wpmailup['mobileFieldcode'] = 'sms';
 	$wpmailup['mobileDisplayedName'] = _('Mobile number');
 	$wpmailup['successMessage'] = _('Operation completed');
 	$wpmailup['genericError'] = _('Generic error');
-	$wpmailup['invalidAddress'] = _('Invalid email address or phone number');
-	$wpmailup['alreadyPresent'] = _('User already subscribed');
+	$wpmailup['invalidAddress'] = _('Invalid email address');
+	$wpmailup['invalidPhone'] = _('Invalid mobile phone number');
+	$wpmailup['alreadyPresent'] = _('Already a subscriber!');
+	$wpmailup['fieldRequired'] = _('is required');
+	$wpmailup['termsNotAgreed'] = _('Please agree to the terms');
 	$wpmailup['termsConfirm'] = '';
 	$wpmailup['termsNcon'] = '';
 	$wpmailup['acceptanceMsg'] = _('I accept terms and conditions.');

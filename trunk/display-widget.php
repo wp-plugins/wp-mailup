@@ -27,6 +27,9 @@
 		case 'style4':
 			require(dirname(__FILE__).'/style4.css');
 			break;
+		case 'style5':
+			require(dirname(__FILE__).'/style5.css');
+			break;
 		default:
 			require(dirname(__FILE__).'/default.css');
 			break;
@@ -40,53 +43,61 @@
 <form action="" method="get" name="subscribeForm" id="subscribeForm" onsubmit="return false;">
 	<input type="hidden" name="wpmailup-subscribe" id="wpmailup-subscribe" value="subscribe" />
     <fieldset id="subscribeDataTable">
-                <h3><?php 
-                    if ( $title ) {
-                        echo $before_title . $title . $after_title;
-                    } else {
+                <?php 
+                    if ( $wpmailup['pluginTitle'] ) {
                         echo $before_title . $wpmailup['pluginTitle'] . $after_title;
                     }
-                ?></h3>
-                <p><?php echo $wpmailup['pluginDescription']; ?></p>
-            <?php if($wpmailup['emailShow'] == 'yes'): ?>
+                ?>
+                <p class="muDescription"><?php echo $wpmailup['pluginDescription']; ?></p>
             
-                	<p><label><?php if($wpmailup['emailRequired'] == 'yes'): ?>
+            <?php if($wpmailup['emailShow'] == 'yes'): ?>
+                <p class="muField"><label><?php if($wpmailup['emailRequired'] == 'yes'): ?>
                     <span style="color:#FF0000;">*</span>
                     <?php endif; ?>
                     <?php echo $wpmailup['emailDisplayedName']; ?>:</label>
                 	<input type="text" name="sub-email" id="sub-email" />
-            <?php endif; ?></p>
+                </p>
+            <?php endif; ?>
             
-            <p><label><?php if($wpmailup['mobileShow'] == 'yes'): ?>
+            <?php if($wpmailup['mobileShow'] == 'yes'): ?>
+            	<p class="muField"><label>
                 	<?php if($wpmailup['mobileRequired'] == 'yes'): ?>
                     <span style="color:#FF0000;">*</span>
                     <?php endif; ?>
                 	<?php echo $wpmailup['mobileDisplayedName']; ?>:</label>
                 	<input type="text" name="sub-phone" id="sub-phone" maxlength="<?php echo $text_field_maxlength; ?>" />
-            <?php endif; ?></p>
+           		</p>
+            <?php endif; ?>
             
-            <p><label><?php if($wpmailup['extfield1Show'] == 'yes'): ?>
+            <?php if($wpmailup['extfield1Show'] == 'yes'): ?>
+            	<p class="muField"><label>
                 	<?php if($wpmailup['extfield1Required'] == 'yes'): ?>
                     <span style="color:#FF0000;">*</span>
                     <?php endif; ?>
                 	<?php echo $wpmailup['extfield1DisplayedName']; ?>:</label>
                 	<input type="text" name="sub-ext1" id="sub-ext1" maxlength="<?php echo $text_field_maxlength; ?>" />
-            <?php endif; ?></p>
+            	</p>
+            <?php endif; ?>
             
-            <p><label><?php if($wpmailup['extfield2Show'] == 'yes'): ?>
+            <?php if($wpmailup['extfield2Show'] == 'yes'): ?>
+            	<p class="muField"><label>
                 	<?php if($wpmailup['extfield2Required'] == 'yes'): ?>
                     <span style="color:#FF0000;">*</span>
                     <?php endif; ?>
                     <?php echo $wpmailup['extfield2DisplayedName']; ?>:</label>
                 	<input type="text" name="sub-ext2" id="sub-ext2" maxlength="<?php echo $text_field_maxlength; ?>" />
-            <?php endif; ?></p>
-            
-            <center><?php if($wpmailup['termsConfirm'] == 'yes'): ?>
-                	<?php echo $wpmailup['termsNcon']; ?></center>
-            <center><label><input name="terms-confirm" id="terms-confirm" type="checkbox" value="yes" /> <?php echo $wpmailup['acceptanceMsg']; ?></label></center>
+            	</p>
             <?php endif; ?>
-            	<center><img id="loading-img" style="visibility:hidden;vertical-align:middle;padding:4px;background:none;" src="<?php echo get_bloginfo('wpurl').'/wp-content/plugins/wp-mailup/images/indicator.white.gif'; ?>" border="0" /><span id="show-response"><noscript><?php _e('Please enable javascript to work with this subscription form.'); ?></noscript></span></center>
-                	<center><input type="submit" name="submit" value="<?php echo $wpmailup['submitButton']; ?>" /></center>
+            
+            <?php if($wpmailup['termsConfirm'] == 'yes'): ?>
+            	<p class="muTerms">
+            		<?php echo $wpmailup['termsNcon']; ?>
+            	<p>
+            	<p class="muTermsCheckbox">
+            		<label><input name="terms-confirm" id="terms-confirm" type="checkbox" value="yes" /> <?php echo $wpmailup['acceptanceMsg']; ?></label>
+            	</p>
+            <?php endif; ?>
+            	<img id="loading-img" style="display:none;vertical-align:middle;background:none;padding: 5px 3px;" src="<?php echo get_bloginfo('wpurl').'/wp-content/plugins/wp-mailup/images/indicator.white.gif'; ?>" border="0" /><span id="show-response"><noscript><?php _e('Please enable javascript to work with this subscription form.'); ?></noscript></span><p class="muSubmit"><input type="submit" name="submit" value="<?php echo $wpmailup['submitButton']; ?>" /></p>
     </fieldset>
 </form>
 <script type="text/javascript">
@@ -100,11 +111,11 @@
 			{
 				case 'loading':
 					jQ('#loading-img').attr('src', '<?php echo get_bloginfo('wpurl').'/wp-content/plugins/wp-mailup/images/indicator.white.gif'; ?>');
-					jQ('#loading-img').css('visibility', 'visible');
+					jQ('#loading-img').css('display', '');
 					break;
 				case 'info':
 					jQ('#loading-img').attr('src', '<?php echo get_bloginfo('wpurl').'/wp-content/plugins/wp-mailup/images/question.gif'; ?>');
-					jQ('#loading-img').css('visibility', 'visible');
+					jQ('#loading-img').css('display', '');
 					break;
 				default:
 			}
@@ -161,7 +172,7 @@
 			<?php if(($wpmailup['emailRequired'] == 'yes') && ($wpmailup['emailShow'] == 'yes')): ?>
 			if(!(sub_email.match(/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/)))
 			{
-				jQ('#show-response').html('<?php _e('Invalid email address.'); ?>');
+				jQ('#show-response').html('<?php _e($wpmailup['invalidAddress']); ?>');
 				viewInfoIcon('info');
 				return false;
 			}
@@ -169,7 +180,7 @@
 			<?php if(($wpmailup['mobileRequired'] == 'yes') && ($wpmailup['mobileShow'] == 'yes')): ?>
 			if(jQ.trim(sub_phone) == "")
 			{
-				jQ('#show-response').html('<?php _e('Invalid phone number.'); ?>');
+				jQ('#show-response').html('<?php _e($wpmailup['invalidPhone']); ?>');
 				viewInfoIcon('info');
 				return false;
 			}
@@ -178,7 +189,7 @@
 			<?php if(($wpmailup['extfield1Show'] == 'yes') && ($wpmailup['extfield1Required'] == 'yes')): ?>
 			if(jQ.trim(sub_ext1) == '')
 			{
-				jQ('#show-response').html('<?php _e($wpmailup['extfield1DisplayedName'].' required!'); ?>');
+				jQ('#show-response').html('<?php _e($wpmailup['extfield1DisplayedName'].' '.$wpmailup['fieldRequired']); ?>');
 				viewInfoIcon('info');
 				return false;
 			}
@@ -187,7 +198,7 @@
 			<?php if(($wpmailup['extfield2Show'] == 'yes') && ($wpmailup['extfield2Required'] == 'yes')): ?>
 			if(jQ.trim(sub_ext2) == '')
 			{
-				jQ('#show-response').html('<?php _e($wpmailup['extfield2DisplayedName'].' required!'); ?>');
+				jQ('#show-response').html('<?php _e($wpmailup['extfield2DisplayedName'].' '.$wpmailup['fieldRequired']); ?>');
 				viewInfoIcon('info');
 				return false;
 			}
@@ -200,7 +211,7 @@
 			<?php if($wpmailup['termsConfirm'] == 'yes'): ?>
 			if(jQ('#terms-confirm').is(':checked') == false)
 			{
-				jQ('#show-response').html('Please accept terms and conditions to proceed.');
+				jQ('#show-response').html('<?php _e($wpmailup['termsNotAgreed']); ?>');
 				viewInfoIcon('info');
 				return false;
 			}
@@ -227,7 +238,7 @@
 				"termsAccept":termsAccept
 			}
 			
-			jQ('#loading-img').css('visibility', 'visible');
+			jQ('#loading-img').css('display', '');
 			viewInfoIcon('loading');
 			jQ('#show-response').html('<?php _e('Sending request...'); ?>');
 			jQ.post('<?php echo get_bloginfo('wpurl').'/wp-content/plugins/wp-mailup/subscribe.php'; ?>', form_values, function(returned_data){
@@ -246,7 +257,7 @@
 						jQ('#show-response').html('<?php echo $wpmailup['alreadyPresent']; ?>');
 						break;
 					case 10:
-						jQ('#show-response').html('<?php _e('Please accept terms and conditions to proceed.'); ?>');
+						jQ('#show-response').html('<?php echo $wpmailup['termsNotAgreed']; ?>');
 						break;
 					default:
 						break;

@@ -5,7 +5,7 @@ Donate link: http://wordpress.org
 Tags: email marketing, e-mail marketing, newsletter sending, newsletter marketing, email signup, e-mail sign-up, subscription form, subscribe form, registration form, sms signup, newsletter, email, smtp, bulk, sms, send, list, subscribe, form, marketing, widget, plugin, feedburner, subscription, email newsletter form, email widget, emails, newsletter form, newsletter plugin, newsletter signup, newsletter widget, newsletters, signup, widget, contact form, checkbox, sign up, sign-up, subscribe widget, subscribers, contacts, iscrizione, mailup
 Requires at least: 3.0
 Tested up to: 3.4.1
-Stable tag: 1.1.3
+Stable tag: 1.2
 
 Easily add a newsletter sign-up form to your Web site or blog, then run email marketing and SMS campaigns with MailUp.
 
@@ -123,6 +123,12 @@ Make sure that the IP address of the WordPress-powered Web site or blog has been
 
 == Release Notes ==
 
+= 1.2 =
+* Cleaned up frontend widget HTML code
+* Added new CSS style for compact layout
+* Removed hardcoded text strings and replaced with dynamic ones configurable from the admin settings
+* Updated existing CSS styles
+
 = 1.1.3 =
 * Fixed issue with confirmation email sent even if option is turned off in the plugin settings
 * Fixed issue related to personal data fields that were not set when one of them is left empty
@@ -238,6 +244,11 @@ A partire dalla versione 7.4 MailUp introduce restrizioni di sicurezza che conse
 
 ## __Note Release__
 
+= 1.2 =
+* Migliorato codice HTML del frontend widget
+* Rimosse stringhe di testo hardcoded nel codice e spostate nell'admin
+* Aggiunto nuovo stile CSS per layout compatti
+* Migliorati stili CSS esistenti
 
 = 1.1.3 =
 * Corretto problema con email di conferma iscrizione inviata anche quando l'opzione non e' attiva nell'admin

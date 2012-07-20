@@ -130,7 +130,7 @@ Make sure that the IP address of the WordPress-powered Web site or blog has been
 2. Subscriber page
 3. Select option to disable security check (not recommended)
 
-== Release Notes ==
+== Changelog ==
 
 = 1.2 =
 * Cleaned up frontend widget HTML code

@@ -1,8 +1,6 @@
 === MailUp newsletter sign-up form ===
 Contributors: mailup
-Donate link: http://wordpress.org
-
-Tags: email marketing, e-mail marketing, newsletter sending, newsletter marketing, email signup, e-mail sign-up, subscription form, subscribe form, registration form, sms signup, newsletter, email, smtp, bulk, sms, send, list, subscribe, form, marketing, widget, plugin, feedburner, subscription, email newsletter form, email widget, emails, newsletter form, newsletter plugin, newsletter signup, newsletter widget, newsletters, signup, widget, contact form, checkbox, sign up, sign-up, subscribe widget, subscribers, contacts, iscrizione, mailup
+Tags: email marketing, e-mail marketing, newsletter sending, newsletter marketing, email signup, e-mail sign-up, subscription form, subscribe form, registration form, sms signup, newsletter, email, smtp, bulk, sms, send, list, subscribe, form, marketing, widget, plugin, feedburner, subscription, email newsletter form, email widget, emails, newsletter form, newsletter plugin, newsletter signup, newsletter widget, newsletters, signup, iscrizione, mailup
 Requires at least: 3.0
 Tested up to: 3.4.1
 Stable tag: 1.2
@@ -12,6 +10,8 @@ Easily add a newsletter sign-up form to your Web site or blog, then run email ma
 == Description ==
 
 Visitors to your WordPress-powered blog or Web site will be able to subscribe to your newsletter using an easily configurable sign-up form. Their information will be saved in your MailUp account, in the List you specify. You will also be able to specify a Group (e.g. List: Monthly Newsletter, Group: Subscribed from WordPress).
+
+[youtube http://www.youtube.com/watch?v=OL3q5Cd_1YU]
 
 The MailUp sign-up form in the WordPress administration area is a widget, which can be added to your Web site like you do with other widgets (e.g. you may decide to drop it in the right-side column).
 
@@ -66,6 +66,15 @@ For example, you could store in a custom field the date of the last order placed
 == Installation ==
 
 For detailed installation instructions, please visit the [MailUp plugin for WordPress documentation](https://mailup.atlassian.net/wiki/display/mailupUserGuide/WordPress).
+
+= Introduction and installation: =
+[youtube http://www.youtube.com/watch?v=OL3q5Cd_1YU]
+
+= Settings and configuration: =
+[youtube http://www.youtube.com/watch?v=p1bGtDGSxJk]
+
+= Styling the newsletter sign-up form: =
+[youtube http://www.youtube.com/watch?v=OL3q5Cd_1YU]
 
 
 

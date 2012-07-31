@@ -74,7 +74,7 @@ For detailed installation instructions, please visit the [MailUp plugin for Word
 [youtube http://www.youtube.com/watch?v=p1bGtDGSxJk]
 
 = Styling the newsletter sign-up form: =
-[youtube http://www.youtube.com/watch?v=OL3q5Cd_1YU]
+[youtube http://www.youtube.com/watch?v=_MMqJg-hto0]
 
 
 

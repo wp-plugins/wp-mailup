@@ -14,12 +14,12 @@
 					<span style="vertical-align:middle;display:inline-block;float:left;">
 					
                     <span class="about-mailup">
-                    	Configure your newsletter subscription signup form, then manage your campaigns in <a href="http://www.mailup.com" target="_blank">MailUp</a>.<br>
-                    	<a href="http://www.mailup.com/loadDocument.asp?docID=103" target="_blank">Video Tutorials</a>
+                    	Configure your newsletter subscription signup form, then manage your campaigns in <a href="http://www.mailup.com?utm_source=wordpress&utm_medium=textlink&utm_campaign=plugin" target="_blank">MailUp</a>.<br>
+                    	<a href="http://www.mailup.com/loadDocument.asp?docID=103&utm_source=wordpress&utm_medium=textlink&utm_campaign=plugin" target="_blank">Video Tutorials</a>
                     	&nbsp;|&nbsp;
-                    	<a href="http://www.mailup.com/loadDocument.asp?docID=104" target="_blank">Free Trial</a>
+                    	<a href="http://www.mailup.com/loadDocument.asp?docID=104&utm_source=wordpress&utm_medium=textlink&utm_campaign=plugin" target="_blank">Free Trial</a>
                     	&nbsp;|&nbsp; 
-                    	<a href="http://www.mailup.com" target="_blank">About MailUp</a>
+                    	<a href="http://www.mailup.com?utm_source=wordpress&utm_medium=textlink&utm_campaign=plugin" target="_blank">About MailUp</a>
                     </span>
                     
                     </span>
@@ -36,7 +36,7 @@
                     <table class="setting-table setting-general">
                     	<tbody>
                             <tr>
-                                <td colspan="2">To use this plugin, you need a MailUp account (<a href="http://www.mailup.com/loadDocument.asp?docID=104" target="_blank" class="nostyle">free trial</a>) and your <a href="https://mailup.atlassian.net/wiki/display/mailupapi/MailUp+API+Credentials" target="_blank" class="nostyle">MailUp API credentials</a>.</td>
+                                <td colspan="2">To use this plugin, you need a MailUp account (<a href="http://www.mailup.com/loadDocument.asp?docID=104&utm_source=wordpress&utm_medium=textlink&utm_campaign=plugin" target="_blank" class="nostyle">free trial</a>) and your <a href="https://mailup.atlassian.net/wiki/display/mailupapi/MailUp+API+Credentials" target="_blank" class="nostyle">MailUp API credentials</a>.</td>
                             </tr>
                             <tr>
                                 <td class="setting-label"><label for="console-host"><?php _e('MailUp console host'); ?>: </label></td>

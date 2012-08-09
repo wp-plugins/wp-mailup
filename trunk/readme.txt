@@ -3,7 +3,7 @@ Contributors: mailup
 Tags: email marketing, e-mail marketing, newsletter sending, newsletter marketing, email signup, e-mail sign-up, subscription form, subscribe form, registration form, sms signup, newsletter, email, smtp, bulk, sms, send, list, subscribe, form, marketing, widget, plugin, feedburner, subscription, email newsletter form, email widget, emails, newsletter form, newsletter plugin, newsletter signup, newsletter widget, newsletters, signup, iscrizione, mailup
 Requires at least: 3.0
 Tested up to: 3.4.1
-Stable tag: 1.2
+Stable tag: 1.21
 
 Easily add a newsletter sign-up form to your Web site or blog, then run email marketing and SMS campaigns with MailUp.
 
@@ -132,6 +132,10 @@ Make sure that the IP address of the WordPress-powered Web site or blog has been
 
 == Changelog ==
 
+= 1.21 =
+* 2 new CSS styles
+* Updated links
+
 = 1.2 =
 * Cleaned up frontend widget HTML code
 * Added new CSS style for compact layout
@@ -252,6 +256,10 @@ A partire dalla versione 7.4 MailUp introduce restrizioni di sicurezza che conse
 
 
 ## __Note Release__
+
+= 1.21 =
+* 2 nuovi stili CSS
+* Aggiornamento link
 
 = 1.2 =
 * Migliorato codice HTML del frontend widget

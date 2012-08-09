@@ -30,6 +30,12 @@
 		case 'style5':
 			require(dirname(__FILE__).'/style5.css');
 			break;
+		case 'style6':
+			require(dirname(__FILE__).'/style6.css');
+			break;
+		case 'style7':
+			require(dirname(__FILE__).'/style7.css');
+			break;
 		default:
 			require(dirname(__FILE__).'/default.css');
 			break;

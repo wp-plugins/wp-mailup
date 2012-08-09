@@ -65,7 +65,9 @@
                                     <option value="style1">Default</option>
                                     <option value="style5">Compact</option>
                                     <option value="style2">Rounded corners</option>
-                                    <option value="style3">Rounded black</option>
+                                    <option value="style3">Rounded corners black</option>
+                                    <option value="style6">MailUp green</option>
+                                    <option value="style7">MailUp orange</option>
                                     <option value="style4">No style</option>
                                 </select>
                                 </td>

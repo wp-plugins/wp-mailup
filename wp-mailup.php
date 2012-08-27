@@ -6,7 +6,7 @@
 	Plugin name: WP-MailUp
 	Plugin URI: http://wordpress.org/extend/plugins/wp-mailup/
 	Description: Wordpress plugin for MailUp email marketing system.
-	Version: 1.21
+	Version: 1.3
 	Author: MailUp and N. I. Biz Soft Solutions
 	Author URI: http://www.mailup.com/
 	License: GPLv2
@@ -155,6 +155,18 @@ function wpmailup_active()
 	$wpmailup['extfield2Required'] = 'yes';
 	$wpmailup['extfield2Fieldcode'] = 'Campo2';
 	$wpmailup['extfield2DisplayedName'] = 'Last name';
+	$wpmailup['extfield3Show'] = '';
+	$wpmailup['extfield3Required'] = '';
+	$wpmailup['extfield3Fieldcode'] = 'Campo3';
+	$wpmailup['extfield3DisplayedName'] = '';
+	$wpmailup['extfield4Show'] = '';
+	$wpmailup['extfield4Required'] = '';
+	$wpmailup['extfield4Fieldcode'] = 'Campo4';
+	$wpmailup['extfield4DisplayedName'] = '';
+	$wpmailup['extfield5Show'] = '';
+	$wpmailup['extfield5Required'] = '';
+	$wpmailup['extfield5Fieldcode'] = 'Campo5';
+	$wpmailup['extfield5DisplayedName'] = '';
 	$wpmailup['mobileShow'] = 'yes';
 	$wpmailup['mobileRequired'] = 'yes';
 	$wpmailup['mobileFieldcode'] = 'sms';

@@ -95,6 +95,36 @@
             	</p>
             <?php endif; ?>
             
+            <?php if($wpmailup['extfield3Show'] == 'yes'): ?>
+            	<p class="muField"><label>
+                	<?php if($wpmailup['extfield3Required'] == 'yes'): ?>
+                    <span style="color:#FF0000;">*</span>
+                    <?php endif; ?>
+                    <?php echo $wpmailup['extfield3DisplayedName']; ?>:</label>
+                	<input type="text" name="sub-ext3" id="sub-ext3" maxlength="<?php echo $text_field_maxlength; ?>" />
+            	</p>
+            <?php endif; ?>
+            
+            <?php if($wpmailup['extfield4Show'] == 'yes'): ?>
+            	<p class="muField"><label>
+                	<?php if($wpmailup['extfield4Required'] == 'yes'): ?>
+                    <span style="color:#FF0000;">*</span>
+                    <?php endif; ?>
+                    <?php echo $wpmailup['extfield4DisplayedName']; ?>:</label>
+                	<input type="text" name="sub-ext4" id="sub-ext4" maxlength="<?php echo $text_field_maxlength; ?>" />
+            	</p>
+            <?php endif; ?>
+
+            <?php if($wpmailup['extfield5Show'] == 'yes'): ?>
+            	<p class="muField"><label>
+                	<?php if($wpmailup['extfield5Required'] == 'yes'): ?>
+                    <span style="color:#FF0000;">*</span>
+                    <?php endif; ?>
+                    <?php echo $wpmailup['extfield5DisplayedName']; ?>:</label>
+                	<input type="text" name="sub-ext5" id="sub-ext5" maxlength="<?php echo $text_field_maxlength; ?>" />
+            	</p>
+            <?php endif; ?>
+            
             <?php if($wpmailup['termsConfirm'] == 'yes'): ?>
             	<p class="muTerms">
             		<?php echo $wpmailup['termsNcon']; ?>
@@ -142,21 +172,80 @@
 			sub_ext2 = jQ('#sub-ext2').val();
 			<?php endif; ?>
 			
+			var sub_ext3 = '';
+			<?php if($wpmailup['extfield3Show'] == 'yes'): ?>
+			sub_ext3 = jQ('#sub-ext3').val();
+			<?php endif; ?>
+
+			var sub_ext4 = '';
+			<?php if($wpmailup['extfield4Show'] == 'yes'): ?>
+			sub_ext4 = jQ('#sub-ext4').val();
+			<?php endif; ?>
+
+			var sub_ext5 = '';
+			<?php if($wpmailup['extfield5Show'] == 'yes'): ?>
+			sub_ext5 = jQ('#sub-ext5').val();
+			<?php endif; ?>
+			
+			var csvFldValues = '';
+			
 			<?php
-				if($wpmailup['extfield1Show'] && $wpmailup['extfield2Show']):
-					$csvFldNames = $wpmailup['extfield1Fieldcode'] . ';' . $wpmailup['extfield2Fieldcode'];
-				elseif($wpmailup['extfield1Show']):
-					$csvFldNames = $wpmailup['extfield1Fieldcode'];
-				elseif($wpmailup['extfield2Show']):
-					$csvFldNames = $wpmailup['extfield2Fieldcode'];
+				if($wpmailup['extfield1Show']):
+					$csvFldNames = $wpmailup['extfield1Fieldcode']; ?>
+					csvFldValues = sub_ext1;
+			<?php 		
+				endif;
+				if($wpmailup['extfield2Show']):
+					if(empty($csvFldNames)):
+					$csvFldNames = $wpmailup['extfield2Fieldcode']; ?>
+					csvFldValues = sub_ext2;
+			<?php 
+					else:
+					$csvFldNames = $csvFldNames . ";" . $wpmailup['extfield2Fieldcode']; ?>
+					csvFldValues = csvFldValues +';' +sub_ext2;
+			<?php		
+					endif;
+				endif;
+				if($wpmailup['extfield3Show']):
+					if(empty($csvFldNames)):
+					$csvFldNames = $wpmailup['extfield3Fieldcode']; ?>
+					csvFldValues = sub_ext3;
+			<?php
+					else:
+					$csvFldNames = $csvFldNames . ";" . $wpmailup['extfield3Fieldcode'];  ?>
+					csvFldValues = csvFldValues +';' +sub_ext3;
+			<?php		
+					endif;
+				endif;
+				if($wpmailup['extfield4Show']):
+					if(empty($csvFldNames)):
+					$csvFldNames = $wpmailup['extfield4Fieldcode']; ?>
+					csvFldValues = sub_ext4;
+			<?php		
+					else:
+					$csvFldNames = $csvFldNames . ";" . $wpmailup['extfield4Fieldcode']; ?>
+					csvFldValues = csvFldValues +';' +sub_ext4;
+			<?php		
+					endif;
+				endif;
+				if($wpmailup['extfield5Show']):
+					if(empty($csvFldNames)):
+					$csvFldNames = $wpmailup['extfield5Fieldcode']; ?>
+					csvFldValues = sub_ext5;
+			<?php		
+					else:
+					$csvFldNames = $csvFldNames . ";" . $wpmailup['extfield5Fieldcode']; ?>
+					csvFldValues = csvFldValues +';' +sub_ext5;
+			<?php		
+					endif;
 				endif;
 			?>
 			var csvFldNames = '<?php echo $csvFldNames; ?>';
 			
-			var csvFldValues = '';
+			//var csvFldValues = '';
 			/*if(sub_ext1 && sub_ext2)
 			{*/
-				csvFldValues = sub_ext1 + ';' + sub_ext2;
+				//csvFldValues = sub_ext1 + ';' + sub_ext2 + ';' + sub_ext3 + ';' + sub_ext4 + ';' + sub_ext5;
 			/*}
 			else if(sub_ext1)
 			{
@@ -166,6 +255,7 @@
 			{
 				csvFldValues = sub_ext2;
 			}*/
+
 			
 			var listId = '<?php echo $wpmailup['listId']; ?>';
 			var groupId = '<?php echo $wpmailup['groupId']; ?>';
@@ -205,6 +295,33 @@
 			if(jQ.trim(sub_ext2) == '')
 			{
 				jQ('#show-response').html('<?php _e($wpmailup['extfield2DisplayedName'].' '.$wpmailup['fieldRequired']); ?>');
+				viewInfoIcon('info');
+				return false;
+			}
+			<?php endif; ?>
+
+			<?php if(($wpmailup['extfield3Show'] == 'yes') && ($wpmailup['extfield3Required'] == 'yes')): ?>
+			if(jQ.trim(sub_ext3) == '')
+			{
+				jQ('#show-response').html('<?php _e($wpmailup['extfield3DisplayedName'].' '.$wpmailup['fieldRequired']); ?>');
+				viewInfoIcon('info');
+				return false;
+			}
+			<?php endif; ?>
+			
+			<?php if(($wpmailup['extfield4Show'] == 'yes') && ($wpmailup['extfield4Required'] == 'yes')): ?>
+			if(jQ.trim(sub_ext4) == '')
+			{
+				jQ('#show-response').html('<?php _e($wpmailup['extfield4DisplayedName'].' '.$wpmailup['fieldRequired']); ?>');
+				viewInfoIcon('info');
+				return false;
+			}
+			<?php endif; ?>
+			
+			<?php if(($wpmailup['extfield5Show'] == 'yes') && ($wpmailup['extfield5Required'] == 'yes')): ?>
+			if(jQ.trim(sub_ext5) == '')
+			{
+				jQ('#show-response').html('<?php _e($wpmailup['extfield5DisplayedName'].' '.$wpmailup['fieldRequired']); ?>');
 				viewInfoIcon('info');
 				return false;
 			}

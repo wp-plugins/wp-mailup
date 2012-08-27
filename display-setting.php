@@ -152,6 +152,27 @@
                                 <td class="setting-target"><input name="extfield2-fieldcode" id="extfield2-fieldcode" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
                                 <td class="setting-target"><input name="extfield2-displayed-name" id="extfield2-displayed-name" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
                             </tr>
+                            <tr>
+                                <td class="setting-target"><label>Custom field 3:</label></td>
+                                <td class="setting-target"><input name="extfield3-show" id="extfield3-show" class="setting-checkbox" type="checkbox" value="yes" /></td>
+                                <td class="setting-target"><input name="extfield3-required" id="extfield3-required" class="setting-checkbox" type="checkbox" value="yes" /></td>
+                                <td class="setting-target"><input name="extfield3-fieldcode" id="extfield3-fieldcode" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
+                                <td class="setting-target"><input name="extfield3-displayed-name" id="extfield3-displayed-name" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
+                            </tr>
+                            <tr>
+                                <td class="setting-target"><label>Custom field 4:</label></td>
+                                <td class="setting-target"><input name="extfield4-show" id="extfield4-show" class="setting-checkbox" type="checkbox" value="yes" /></td>
+                                <td class="setting-target"><input name="extfield4-required" id="extfield4-required" class="setting-checkbox" type="checkbox" value="yes" /></td>
+                                <td class="setting-target"><input name="extfield4-fieldcode" id="extfield4-fieldcode" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
+                                <td class="setting-target"><input name="extfield4-displayed-name" id="extfield4-displayed-name" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
+                            </tr>
+                            <tr>
+                                <td class="setting-target"><label>Custom field 5:</label></td>
+                                <td class="setting-target"><input name="extfield5-show" id="extfield5-show" class="setting-checkbox" type="checkbox" value="yes" /></td>
+                                <td class="setting-target"><input name="extfield5-required" id="extfield5-required" class="setting-checkbox" type="checkbox" value="yes" /></td>
+                                <td class="setting-target"><input name="extfield5-fieldcode" id="extfield5-fieldcode" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
+                                <td class="setting-target"><input name="extfield5-displayed-name" id="extfield5-displayed-name" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
+                            </tr>
                         </tbody>
                     </table>
                     <div style="clear:both;"></div>
@@ -349,7 +370,25 @@
 				jQ("#save-message").css("color", "#F00").html("<?php _e('** <b>Custom field 2</b> must be displayed since it is required'); ?>");
 				return false;
 			}
-			
+
+			if(jQ('#extfield3-required').is(':checked') && !jQ('#extfield3-show').is(':checked')) // If additional field 3 is required, must be 'check' show also
+			{
+				jQ("#save-message").css("color", "#F00").html("<?php _e('** <b>Custom field 3</b> must be displayed since it is required'); ?>");
+				return false;
+			}
+
+			if(jQ('#extfield4-required').is(':checked') && !jQ('#extfield4-show').is(':checked')) // If additional field 4 is required, must be 'check' show also
+			{
+				jQ("#save-message").css("color", "#F00").html("<?php _e('** <b>Custom field 4</b> must be displayed since it is required'); ?>");
+				return false;
+			}
+
+			if(jQ('#extfield5-required').is(':checked') && !jQ('#extfield5-show').is(':checked')) // If additional field 5 is required, must be 'check' show also
+			{
+				jQ("#save-message").css("color", "#F00").html("<?php _e('** <b>Custom field 5</b> must be displayed since it is required'); ?>");
+				return false;
+			}
+
 			
 			/*
 				validation ends
@@ -406,6 +445,24 @@
 					jQ('#extfield2-required').attr("checked", true);
 				jQ('#extfield2-fieldcode').val(data.extfield2Fieldcode);
 				jQ('#extfield2-displayed-name').val(data.extfield2DisplayedName);
+				if(data.extfield3Show == 'yes')
+					jQ('#extfield3-show').attr("checked", true);
+				if(data.extfield3Required == 'yes')
+					jQ('#extfield3-required').attr("checked", true);
+				jQ('#extfield3-fieldcode').val(data.extfield3Fieldcode);
+				jQ('#extfield3-displayed-name').val(data.extfield3DisplayedName);
+				if(data.extfield4Show == 'yes')
+					jQ('#extfield4-show').attr("checked", true);
+				if(data.extfield4Required == 'yes')
+					jQ('#extfield4-required').attr("checked", true);
+				jQ('#extfield4-fieldcode').val(data.extfield4Fieldcode);
+				jQ('#extfield4-displayed-name').val(data.extfield4DisplayedName);
+				if(data.extfield5Show == 'yes')
+					jQ('#extfield5-show').attr("checked", true);
+				if(data.extfield5Required == 'yes')
+					jQ('#extfield5-required').attr("checked", true);
+				jQ('#extfield5-fieldcode').val(data.extfield5Fieldcode);
+				jQ('#extfield5-displayed-name').val(data.extfield5DisplayedName);
 				if(data.mobileShow == 'yes')
 					jQ('#mobile-show').attr("checked", true);
 				if(data.mobileRequired == 'yes')

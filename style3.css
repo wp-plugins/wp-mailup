@@ -1,8 +1,8 @@
 ﻿#subscribeForm {
 }
 #subscribeForm fieldset{
+	width: 200px;
 	margin:10px 0;
-	padding:10px;
 	border:1px solid #DDD;
 	-moz-border-radius:6px;
 	-webkit-border-radius:6px;
@@ -12,13 +12,14 @@
 #subscribeForm textarea{
 }
 #subscribeForm input[type=text]{
-	padding:0 0 0 2px;
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
 	border-radius:5px;
 	background-color:#777;
 	border: 1px solid #444;
 	color:#FFF;
+	width: 170px;
+	height: 18px;
 }
 #subscribeForm input[type=submit]{
 	border:2px solid #fff;
@@ -44,5 +45,13 @@
 }
 #subscribeForm p {
 	padding:0;
-	margin: 0 0 10px 0;
+	margin: 0 10px 10px 10px;
+}
+#subscribeForm h3 {
+	padding:0;
+	margin: 10px 0 0 10px;
+	font-size: 12px;
+}
+#subscribeForm fieldset img {
+	margin-left: 10px;
 }

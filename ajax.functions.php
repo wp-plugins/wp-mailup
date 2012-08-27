@@ -50,6 +50,21 @@ function wpmailup_save_config()
 		$wpmailup['extfield2Required'] = $_REQUEST['extfield2-required'];
 		$wpmailup['extfield2Fieldcode'] = $_REQUEST['extfield2-fieldcode'];
 		$wpmailup['extfield2DisplayedName'] = $_REQUEST['extfield2-displayed-name'];
+
+		$wpmailup['extfield3Show'] = $_REQUEST['extfield3-show'];
+		$wpmailup['extfield3Required'] = $_REQUEST['extfield3-required'];
+		$wpmailup['extfield3Fieldcode'] = $_REQUEST['extfield3-fieldcode'];
+		$wpmailup['extfield3DisplayedName'] = $_REQUEST['extfield3-displayed-name'];
+
+		$wpmailup['extfield4Show'] = $_REQUEST['extfield4-show'];
+		$wpmailup['extfield4Required'] = $_REQUEST['extfield4-required'];
+		$wpmailup['extfield4Fieldcode'] = $_REQUEST['extfield4-fieldcode'];
+		$wpmailup['extfield4DisplayedName'] = $_REQUEST['extfield4-displayed-name'];
+
+		$wpmailup['extfield5Show'] = $_REQUEST['extfield5-show'];
+		$wpmailup['extfield5Required'] = $_REQUEST['extfield5-required'];
+		$wpmailup['extfield5Fieldcode'] = $_REQUEST['extfield5-fieldcode'];
+		$wpmailup['extfield5DisplayedName'] = $_REQUEST['extfield5-displayed-name'];
 		
 		$wpmailup['mobileShow'] = $_REQUEST['mobile-show'];
 		$wpmailup['mobileRequired'] = $_REQUEST['mobile-required'];

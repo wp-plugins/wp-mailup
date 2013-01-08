@@ -75,8 +75,8 @@ function wpmailup_init()
 		Load jquery from Google's CDN
 	*/
 	if (!is_admin()) {
-		wp_deregister_script( 'jquery' );
-		wp_register_script( 'jquery', 'http://code.jquery.com/jquery-1.6.1.js');
+		/*wp_deregister_script( 'jquery' );
+		wp_register_script( 'jquery', 'http://code.jquery.com/jquery-1.6.1.js');*/
 		wp_enqueue_script( 'jquery' );
 	}
 	

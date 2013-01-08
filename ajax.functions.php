@@ -78,8 +78,15 @@ function wpmailup_save_config()
 		$wpmailup['alreadyPresent'] = $_REQUEST['already-present'];
 		$wpmailup['fieldRequired'] = $_REQUEST['field-required'];
 		$wpmailup['termsNotAgreed'] = $_REQUEST['terms-not-agreed'];
-		$wpmailup['termsConfirm'] = $_REQUEST['terms-confirm'];
-		$wpmailup['termsNcon'] = $_REQUEST['terms-n-con'];
+		$wpmailup['termsConfirm'] = $_REQUEST['terms-confirm'];		
+		//$wpmailup['termsNcon'] = $_REQUEST[('terms-n-con')];
+		$tmp = $_REQUEST[('terms-n-con')];
+		//$tmp=str_replace("\'", "'", $tmp);
+		//$tmp=str_replace('\"', '"', $tmp);
+		$tmp=stripslashes($tmp);
+		$wpmailup['termsNcon']= $tmp;	
+		
+		
 		$wpmailup['acceptanceMsg'] = $_REQUEST['acceptance-msg'];
 				
 		update_option('wpmailup', serialize($wpmailup));

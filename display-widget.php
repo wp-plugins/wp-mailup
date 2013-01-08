@@ -127,7 +127,7 @@
             
             <?php if($wpmailup['termsConfirm'] == 'yes'): ?>
             	<p class="muTerms">
-            		<?php echo $wpmailup['termsNcon']; ?>
+            		<?php echo stripslashes($wpmailup['termsNcon']); ?>
             	<p>
             	<p class="muTermsCheckbox">
             		<label><input name="terms-confirm" id="terms-confirm" type="checkbox" value="yes" /> <?php echo $wpmailup['acceptanceMsg']; ?></label>

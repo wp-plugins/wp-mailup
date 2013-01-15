@@ -79,11 +79,8 @@ function wpmailup_save_config()
 		$wpmailup['fieldRequired'] = $_REQUEST['field-required'];
 		$wpmailup['termsNotAgreed'] = $_REQUEST['terms-not-agreed'];
 		$wpmailup['termsConfirm'] = $_REQUEST['terms-confirm'];		
-		//$wpmailup['termsNcon'] = $_REQUEST[('terms-n-con')];
 		$tmp = $_REQUEST[('terms-n-con')];
-		//$tmp=str_replace("\'", "'", $tmp);
-		//$tmp=str_replace('\"', '"', $tmp);
-		$tmp=stripslashes($tmp);
+		$tmp=stripslashes($tmp); // see MailUp ticket 091-1874209D-0204
 		$wpmailup['termsNcon']= $tmp;	
 		
 		

@@ -2,8 +2,8 @@
 Contributors: mailup
 Tags: email marketing, e-mail marketing, newsletter sending, newsletter marketing, email signup, e-mail sign-up, subscription form, subscribe form, registration form, sms signup, newsletter, email, smtp, bulk, sms, send, list, subscribe, form, marketing, widget, plugin, feedburner, subscription, email newsletter form, email widget, emails, newsletter form, newsletter plugin, newsletter signup, newsletter widget, newsletters, signup, iscrizione, mailup
 Requires at least: 3.0
-Tested up to: 3.4.1
-Stable tag: 1.3
+Tested up to: 3.5
+Stable tag: 1.3.1
 
 Easily add a newsletter sign-up form to your Web site or blog, then run email marketing and SMS campaigns with MailUp.
 
@@ -131,6 +131,11 @@ Make sure that the IP address of the WordPress-powered Web site or blog has been
 3. Select option to disable security check (not recommended)
 
 == Changelog ==
+
+= 1.3.1 =
+* Removed reference to a specific jQuery version because some conflicts were detected
+* Fixed problem that adds unexpected '\' character before ' or "
+* Updated links to plugin documentation
 
 = 1.3 =
 * Added new custom fields
@@ -260,6 +265,11 @@ A partire dalla versione 7.4 MailUp introduce restrizioni di sicurezza che conse
 
 
 ## __Note Release__
+
+= 1.3.1 =
+* Rimossi riferimenti ad una versione specifica di jQueryin seguito alla rilevazione di alcuni casi in cui si genera un conflitto
+* Risolto problema dovuto all'aggiunta automatica del carattere '\' prima di uno dei caratteri ' oppure "
+* Aggiornati i link alla documentazione
 
 = 1.3 =
 * Aggiunti nuovi campi anagrafica

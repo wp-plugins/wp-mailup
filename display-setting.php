@@ -36,7 +36,7 @@
                     <table class="setting-table setting-general">
                     	<tbody>
                             <tr>
-                                <td colspan="2">To use this plugin, you need a MailUp account (<a href="http://www.mailup.com/loadDocument.asp?docID=104&utm_source=wordpress&utm_medium=textlink&utm_campaign=plugin" target="_blank" class="nostyle">free trial</a>) and your <a href="https://mailup.atlassian.net/wiki/display/mailupapi/MailUp+API+Credentials" target="_blank" class="nostyle">MailUp API credentials</a>.</td>
+                                <td colspan="2">To use this plugin, you need a MailUp account (<a href="http://www.mailup.com/loadDocument.asp?docID=104&utm_source=wordpress&utm_medium=textlink&utm_campaign=plugin" target="_blank" class="nostyle">free trial</a>) and your <a href="http://help.mailup.com/display/mailupapi/MailUp+API+Credentials" target="_blank" class="nostyle">MailUp API credentials</a>.</td>
                             </tr>
                             <tr>
                                 <td class="setting-label"><label for="console-host"><?php _e('MailUp console host'); ?>: </label></td>
@@ -307,19 +307,19 @@
 			switch(section)
 			{
 				case 'General settings':
-					window.open("https://mailup.atlassian.net/wiki/display/mailupUserGuide/WordPress#WordPress-Generalsettings", "_blank", "", true);
+					window.open("http://help.mailup.com/display/mailupUserGuide/WordPress#WordPress-Generalsettings", "_blank", "", true);
 				break;
 				case 'Recipient list':
-					window.open("https://mailup.atlassian.net/wiki/display/mailupUserGuide/WordPress#WordPress-Recipientlist", "_blank", "", true);
+					window.open("http://help.mailup.com/display/mailupUserGuide/WordPress#WordPress-Recipientlist", "_blank", "", true);
 				break;
 				case 'Recipient fields':
-					window.open("https://mailup.atlassian.net/wiki/display/mailupUserGuide/WordPress#WordPress-PersonalDataFields", "_blank", "", true);
+					window.open("http://help.mailup.com/display/mailupUserGuide/WordPress#WordPress-PersonalDataFields", "_blank", "", true);
 				break;
 				case 'Messages':
-					window.open("https://mailup.atlassian.net/wiki/display/mailupUserGuide/WordPress#WordPress-ErrorMessages", "_blank", "", true);
+					window.open("http://help.mailup.com/display/mailupUserGuide/WordPress#WordPress-ErrorMessages", "_blank", "", true);
 				break;
 				case 'Terms and conditions':
-					window.open("https://mailup.atlassian.net/wiki/display/mailupUserGuide/WordPress#WordPress-Termsandconditions", "_blank", "", true);
+					window.open("http://help.mailup.com/display/mailupUserGuide/WordPress#WordPress-Termsandconditions", "_blank", "", true);
 				break;
 				default:
 			}

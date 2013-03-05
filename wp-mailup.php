@@ -6,7 +6,7 @@
 	Plugin name: WP-MailUp
 	Plugin URI: http://wordpress.org/extend/plugins/wp-mailup/
 	Description: Wordpress plugin for MailUp email marketing system.
-	Version: 1.3.1
+	Version: 1.3.2
 	Author: MailUp and N. I. Biz Soft Solutions
 	Author URI: http://www.mailup.com/
 	License: GPLv2

@@ -1,7 +1,7 @@
 <?php
 	error_reporting(0);
 	$wpmailup = unserialize(get_option('wpmailup'));
-	/* exit('<pre>' . print_r($wpmailup, true) . '</pre>'); */
+	/*exit('<pre>' . print_r($wpmailup, true) . '</pre>');*/
 	
 	$text_field_size = 22;
 	$text_field_maxlength = 80;
@@ -382,6 +382,12 @@
 					case 10:
 						jQ('#show-response').html('<?php echo $wpmailup['termsNotAgreed']; ?>');
 						break;
+					case -1011:
+						/* here generic message is displayed instead of a detailed message, which can be misleading for subscribers */
+						jQ('#show-response').html('<?php echo $wpmailup['genericError']; ?>'); 
+						/*jQ('#show-response').html('<?php echo 'IP address validation is required. Please check this <a href="http://help.mailup.com/display/mailupUserGuide/WordPress#WordPress-authorizing" target="_blank">page</a>'; ?>');*/
+						
+						break;						
 					default:
 						break;
 				}

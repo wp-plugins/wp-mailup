@@ -3,11 +3,24 @@
  * @package WP-MailUp
  * MailUp AJAX and Init functions
  */
-
+ 
+$logged_in = false;
+if (count($_COOKIE)) {
+    foreach ($_COOKIE as $key => $val) {
+        if (substr($key, 0, 19) === "wordpress_logged_in") {
+			 $logged_in = true;
+        }
+    }
+}
 
 if(@$_REQUEST['formData'] == 'save')
 {
-	add_action('init', 'wpmailup_save_config');
+	if ($logged_in) {
+		add_action('init', 'wpmailup_save_config');
+	}
+	else {
+		echo 'ACCESS DENIED';
+	}
 }
 function wpmailup_save_config()
 {

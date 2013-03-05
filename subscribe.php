@@ -73,7 +73,7 @@ if(@$_REQUEST['token'] == 'subscribe')
 	$response = curl_exec( $ch );
 	
 	$response = trim($response);
-	if(($response != '0') && ($response != '1') && ($response != '2') && ($response != '3'))
+	if(($response != '0') && ($response != '1') && ($response != '2') && ($response != '3')&& ($response != '-1011'))
 	{
 		exit('1');
 	}

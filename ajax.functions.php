@@ -4,14 +4,33 @@
  * MailUp AJAX and Init functions
  */
  
+// Remove the two lines below when debugging
+// ini_set('display_errors',1); 
+// error_reporting(E_ALL);
+ 
 $logged_in = false;
-if (count($_COOKIE)) {
-    foreach ($_COOKIE as $key => $val) {
-        if (substr($key, 0, 19) === "wordpress_logged_in") {
-			 $logged_in = true;
-        }
-    }
+include_once "myPluggable.php";
+
+
+
+//if ( current_user_can( 'manage_options' ) ) /* Not used because this message is returned: Fatal error: Call to undefined function wp_get_current_user() in /usr/local/www/vhosts/wpress.xrider.it/httpdocs/wp-includes/capabilities.php on line 1281 */
+
+if( is_user_logged_in() ) 
+{
+	$logged_in = true;
+		
+	/* This commented block was active in 1.3.2 but it has been replaced by "is_user_logged_in" (see above) 
+	   due to security vulnerability that has been reported on "http://wpsecure.net/2013/03/mailup-plugin-ajax/"  
+	if (count($_COOKIE)) {
+		foreach ($_COOKIE as $key => $val) {
+			if (substr($key, 0, 19) === "wordpress_logged_in") {
+				 $logged_in = true;
+			}
+		}
+	}
+	*/
 }
+
 
 if(@$_REQUEST['formData'] == 'save')
 {
@@ -19,7 +38,7 @@ if(@$_REQUEST['formData'] == 'save')
 		add_action('init', 'wpmailup_save_config');
 	}
 	else {
-		echo 'ACCESS DENIED';
+		echo 'ACCESS DENIED (1)';
 	}
 }
 function wpmailup_save_config()
@@ -84,14 +103,14 @@ function wpmailup_save_config()
 		$wpmailup['mobileFieldcode'] = $_REQUEST['mobile-fieldcode'];
 		$wpmailup['mobileDisplayedName'] = $_REQUEST['mobile-displayed-name'];
 		
-		$wpmailup['successMessage'] = $_REQUEST['success-message'];
-		$wpmailup['genericError'] = $_REQUEST['generic-error'];
-		$wpmailup['invalidAddress'] = $_REQUEST['invalid-address'];
-		$wpmailup['invalidPhone'] = $_REQUEST['invalid-phone'];
-		$wpmailup['alreadyPresent'] = $_REQUEST['already-present'];
-		$wpmailup['fieldRequired'] = $_REQUEST['field-required'];
-		$wpmailup['termsNotAgreed'] = $_REQUEST['terms-not-agreed'];
-		$wpmailup['termsConfirm'] = $_REQUEST['terms-confirm'];		
+		$wpmailup['successMessage'] = stripslashes($_REQUEST['success-message']);
+		$wpmailup['genericError'] = stripslashes($_REQUEST['generic-error']);
+		$wpmailup['invalidAddress'] = stripslashes($_REQUEST['invalid-address']);
+		$wpmailup['invalidPhone'] = stripslashes($_REQUEST['invalid-phone']);
+		$wpmailup['alreadyPresent'] = stripslashes($_REQUEST['already-present']);
+		$wpmailup['fieldRequired'] = stripslashes($_REQUEST['field-required']);
+		$wpmailup['termsNotAgreed'] = stripslashes($_REQUEST['terms-not-agreed']);
+		$wpmailup['termsConfirm'] = stripslashes($_REQUEST['terms-confirm']);		
 		$tmp = $_REQUEST[('terms-n-con')];
 		$tmp=stripslashes($tmp); // see MailUp ticket 091-1874209D-0204
 		$wpmailup['termsNcon']= $tmp;	
@@ -105,9 +124,17 @@ function wpmailup_save_config()
 }
 
 if(@$_REQUEST['formData'] == 'load')
-{
-	add_action('init', 'wpmailup_load_config');
+{		
+	if($logged_in){
+		add_action('init', 'wpmailup_load_config');
+	}
+	else {
+		echo 'ACCESS DENIED (2)';
+	}
+	
 }
+
+
 
 function wpmailup_load_config()
 {
@@ -116,5 +143,6 @@ function wpmailup_load_config()
 	echo json_encode($wpmailup);
 	exit();
 }
+
 
 ?>

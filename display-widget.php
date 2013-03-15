@@ -1,7 +1,7 @@
 <?php
 	error_reporting(0);
 	$wpmailup = unserialize(get_option('wpmailup'));
-	/*exit('<pre>' . print_r($wpmailup, true) . '</pre>');*/
+	/* exit('<pre>' . print_r($wpmailup, true) . '</pre>'); */
 	
 	$text_field_size = 22;
 	$text_field_maxlength = 80;

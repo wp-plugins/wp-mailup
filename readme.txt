@@ -124,6 +124,10 @@ Yes, simply remove the widget from the Web site's frontend. For example, if you 
 
 Make sure that the IP address of the WordPress-powered Web site or blog has been registered in your MailUp account. This is a security restriction that exists in MailUp to prevent unauthorized calls to the MailUp API. Please refer to the plugin [documentation](http://help.mailup.com/wiki/display/mailupUserGuide/WordPress "Help") for detailed instructions on adding and editing the authorized IP addresses.
 
+= "Submit" button seems not to work =
+
+Make sure that text strings in "Messages" section of admin page do not contain a single quote character. If you need to add a single quote in your messages you shall put a backslash before them (e.g. write "You\'ll receive a confirmation email" if you want to display "You\'ll receive a confirmation email").
+
 == Screenshots ==
 
 1. Admin page
@@ -134,7 +138,6 @@ Make sure that the IP address of the WordPress-powered Web site or blog has been
 
 = 1.3.3 =
 * Security patch n.2 (highly recommended) because changes introduced by v.1.3.2 were incomplete to solve the issue.
-* Fixed problem that adds unexpected '\' character before ' or " in error messages
 
 = 1.3.2 =
 * Security patch that solves a vulnerability on 'formData=save' requests. Please refer to Secunia Advisory SA51917 on http://www.secunia.com for more details.
@@ -270,12 +273,15 @@ Si', basta cancellare il riferimento dalla console.
 
 A partire dalla versione 7.4 MailUp introduce restrizioni di sicurezza che consentono solo chiamate dai server il cui indirizzo IP e' registrato sulla console MailUp ("Gestione->Web service" e poi selezionare "frontend" nel menu a tendina per iniziare la registrazione dell'indirizzo IP. E' possibile registrare piu' di un'indirizzo IP. Anche se sconsigliato, e' possibile disabilitare questa restrizione deselezionando l'opzione "Controllo IP abilitato"
 
+= Il pulsante di invio sembra non funzionare =
+
+Assicurarsi che nel testo dei messaggi configurati nella sezione "Messages" non siano presenti apici singoli. Nel caso fosse necessario utilizzare un apice nel messaggio è necessario farlo precedere dal simbolo \ nella pagina di configurazione (es. impostare "Errore nell\'indirizzo email" per visualizzare "Errore nell'indirizzo email").
+
 
 ## __Note Release__
 
 = 1.3.3 =
 * Security patch n.2 (fortemente raccomandata) dovuta al fatto che la soluzione ad un problema di sicurezza che era stata fornita con la v.1.3.2 era incompleta.
-* Risolto problema nella sezione "Messages" dovuto all'aggiunta automatica del carattere '\' prima di uno dei caratteri ' oppure "
 
 = 1.3.2 =
 * Security patch che risolve una vulnerabilita' sulle chiamate del tipo 'formData=save'. Fare riferimento a Secunia Advisory SA51917 su http://www.secunia.com per i dettagli.

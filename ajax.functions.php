@@ -5,44 +5,15 @@
  */
  
 // Remove the two lines below when debugging
-ini_set('display_errors',1); 
-error_reporting(E_ALL);
+//ini_set('display_errors',1); 
+//error_reporting(E_ALL);
  
-$logged_in = false;
-//include_once "myPluggable.php";
-
-
-//global $current_user;
-//get_currentuserinfo();
-
-//if ( current_user_can( 'manage_options' ) ) /* Not used because this message is returned: Fatal error: Call to undefined function wp_get_current_user() in /usr/local/www/vhosts/wpress.xrider.it/httpdocs/wp-includes/capabilities.php on line 1281 */
-
-//if( is_user_logged_in() ) 
-{
-	$logged_in = true;
-		
-	/* This commented block was active in 1.3.2 but it has been replaced by "is_user_logged_in" (see above) 
-	   due to security vulnerability that has been reported on "http://wpsecure.net/2013/03/mailup-plugin-ajax/"  
-	if (count($_COOKIE)) {
-		foreach ($_COOKIE as $key => $val) {
-			if (substr($key, 0, 19) === "wordpress_logged_in") {
-				 $logged_in = true;
-			}
-		}
-	}
-	*/
-}
-
 
 if(@$_REQUEST['formData'] == 'save')
 {
-	//if ($logged_in) {
 		add_action('init', 'wpmailup_save_config');
-	/*}
-	//else {
-		echo 'ACCESS DENIED (1)';
-	}*/
 }
+
 function wpmailup_save_config()
 {
 	error_reporting(0);
@@ -141,14 +112,7 @@ function wpmailup_save_config()
 
 if(@$_REQUEST['formData'] == 'load')
 {		
-	//if( is_user_logged_in() )
-	{
-		add_action('init', 'wpmailup_load_config');
-	}
-	/*else {
-		echo 'ACCESS DENIED';
-	}*/
-	
+		add_action('init', 'wpmailup_load_config');	
 }
 
 

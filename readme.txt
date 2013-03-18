@@ -132,12 +132,16 @@ Make sure that the IP address of the WordPress-powered Web site or blog has been
 
 == Changelog ==
 
+= 1.3.3 =
+* Security patch n.2 (highly recommended) because changes introduced by v.1.3.2 were incomplete to solve the issue.
+* Fixed problem that adds unexpected '\' character before ' or " in error messages
+
 = 1.3.2 =
-* Security patch (highly recommended) that solves a vulnerability on 'formData=save' requests. Please refer to Secunia Advisory SA51917 on http://www.secunia.com for more details.
+* Security patch that solves a vulnerability on 'formData=save' requests. Please refer to Secunia Advisory SA51917 on http://www.secunia.com for more details.
 
 = 1.3.1 =
 * Removed reference to a specific jQuery version because some conflicts were detected
-* Fixed problem that adds unexpected '\' character before ' or "
+* Fixed problem that adds unexpected '\' character before ' or " in "terms and conditions" text area
 * Updated links to plugin documentation
 
 = 1.3 =
@@ -269,12 +273,16 @@ A partire dalla versione 7.4 MailUp introduce restrizioni di sicurezza che conse
 
 ## __Note Release__
 
+= 1.3.3 =
+* Security patch n.2 (fortemente raccomandata) dovuta al fatto che la soluzione ad un problema di sicurezza che era stata fornita con la v.1.3.2 era incompleta.
+* Risolto problema nella sezione "Messages" dovuto all'aggiunta automatica del carattere '\' prima di uno dei caratteri ' oppure "
+
 = 1.3.2 =
-* Security patch (raccomandata) che risolve una vulnerabilita' sulle chiamate del tipo 'formData=save'. Fare riferimento a Secunia Advisory SA51917 su http://www.secunia.com per i dettagli.
+* Security patch che risolve una vulnerabilita' sulle chiamate del tipo 'formData=save'. Fare riferimento a Secunia Advisory SA51917 su http://www.secunia.com per i dettagli.
 
 = 1.3.1 =
 * Rimossi riferimenti ad una versione specifica di jQuery in seguito alla rilevazione di alcuni casi in cui si genera un conflitto
-* Risolto problema dovuto all'aggiunta automatica del carattere '\' prima di uno dei caratteri ' oppure "
+* Risolto problema in "Terms and conditions" dovuto all'aggiunta automatica del carattere '\' prima di uno dei caratteri ' oppure "
 * Aggiornati i link alla documentazione
 
 = 1.3 =

@@ -65,7 +65,7 @@ For example, you could store in a custom field the date of the last order placed
 
 == Installation ==
 
-For detailed installation instructions, please visit the [MailUp plugin for WordPress documentation](http://help.mailup.com/wiki/display/mailupUserGuide/WordPress).
+For detailed installation instructions, please visit the [MailUp plugin for WordPress documentation](http://help.mailup.com/display/mailupUserGuide/WordPress).
 
 = Introduction and installation: =
 [youtube http://www.youtube.com/watch?v=OL3q5Cd_1YU]
@@ -90,11 +90,11 @@ There will be no limitation with regard to how many subscribers can be collected
 
 = How can I configure the MailUp plugin? =
 
-Go to your WordPress admin panel, click on on "Settings", and then select "WP MailUp". Connect the plugin to your MailUp account and configure the rest of the settings to best match your needs, using the [documentation](http://help.mailup.com/wiki/display/mailupUserGuide/WordPress "Help") if something is not clear.
+Go to your WordPress admin panel, click on on "Settings", and then select "WP MailUp". Connect the plugin to your MailUp account and configure the rest of the settings to best match your needs, using the [documentation](http://help.mailup.com/display/mailupUserGuide/WordPress "Help") if something is not clear.
 
 = How can I check if the plugin is working? =
 
-Add the widget (subscription form) to the frontend of your WordPress-powered Web site or blog as indicated in the [documentation](http://help.mailup.com/wiki/display/mailupUserGuide/WordPress "Help"). Fill out and submit the form as a visitor to the Web site would do. Now log into your MailUp account: the new subscriber should appear in the List specified in the plugin settings. Note that the subscriber will be 'Pending' if you have configured the system to send a subscription confirmation request message (double opt-in, recommended), until the subscription has been confirmed.
+Add the widget (subscription form) to the frontend of your WordPress-powered Web site or blog as indicated in the [documentation](http://help.mailup.com/display/mailupUserGuide/WordPress "Help"). Fill out and submit the form as a visitor to the Web site would do. Now log into your MailUp account: the new subscriber should appear in the List specified in the plugin settings. Note that the subscriber will be 'Pending' if you have configured the system to send a subscription confirmation request message (double opt-in, recommended), until the subscription has been confirmed.
 
 = How often do I have to change configuration? =
 
@@ -102,7 +102,7 @@ In many cases you will only need to configure the MailUp plugin for WordPress on
 
 = How can I change the appereance of the subscription form =
 
-You can select one of four available styles, including a blank style that should simply inherit any styling used by the rest of your WordPress Web site. Users familiar with Cascading Style Sheets may also decide to tweak the default CSS styles to further personalize the look of the subscription form. The [documentation](http://help.mailup.com/wiki/display/mailupUserGuide/WordPress "Help") contains detailed instructions on editing the available CSS documents. Please note that editing is allowed only for users who have read/write access to those files.
+You can select one of four available styles, including a blank style that should simply inherit any styling used by the rest of your WordPress Web site. Users familiar with Cascading Style Sheets may also decide to tweak the default CSS styles to further personalize the look of the subscription form. The [documentation](http://help.mailup.com/display/mailupUserGuide/WordPress "Help") contains detailed instructions on editing the available CSS documents. Please note that editing is allowed only for users who have read/write access to those files.
 
 = Can I allow a one-click newsletter sign-up using a social account (e.g. Facebook)? =
 
@@ -122,7 +122,7 @@ Yes, simply remove the widget from the Web site's frontend. For example, if you 
 
 = The configuration seems to be correct, but the plugin returns a "Generic Error" message =
 
-Make sure that the IP address of the WordPress-powered Web site or blog has been registered in your MailUp account. This is a security restriction that exists in MailUp to prevent unauthorized calls to the MailUp API. Please refer to the plugin [documentation](http://help.mailup.com/wiki/display/mailupUserGuide/WordPress "Help") for detailed instructions on adding and editing the authorized IP addresses.
+Make sure that the IP address of the WordPress-powered Web site or blog has been registered in your MailUp account. This is a security restriction that exists in MailUp to prevent unauthorized calls to the MailUp API. Please refer to the plugin [documentation](http://help.mailup.com/display/mailupUserGuide/WordPress "Help") for detailed instructions on adding and editing the authorized IP addresses.
 
 = "Submit" button seems not to work =
 

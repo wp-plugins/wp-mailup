@@ -279,14 +279,14 @@ A partire dalla versione 7.4 MailUp introduce restrizioni di sicurezza che conse
 
 = Il pulsante di invio sembra non funzionare =
 
-Assicurarsi che nel testo dei messaggi configurati nella sezione "Messages" non siano presenti apici singoli. Nel caso fosse necessario utilizzare un apice nel messaggio è necessario farlo precedere dal simbolo \ nella pagina di configurazione (es. impostare "Errore nell\'indirizzo email" per visualizzare "Errore nell'indirizzo email").
+Assicurarsi che nel testo dei messaggi configurati nella sezione "Messages" non siano presenti apici singoli. Nel caso fosse necessario utilizzare un apice nel messaggio e' necessario farlo precedere dal simbolo \ nella pagina di configurazione (es. impostare "Errore nell\'indirizzo email" per visualizzare "Errore nell'indirizzo email").
 
 
 ## __Note Release__
 
 = 1.3.4 =
-* Ora anche il simbolo '+' è supportato per i prefissi telefonici internazionali (es. sia 0039 sia +39 sono supportati per i numeri di telefono italiani)
-* Risolti i problemi MC-385 (messaggio di errore errato quando il numero di telefono non e' corretto) e IN-100 (l'iscrizione sul canale sms fallisce se il campo email non è configurato nel widget).
+* Ora anche il simbolo '+' e' supportato per i prefissi telefonici internazionali (es. sia 0039 sia +39 sono supportati per i numeri di telefono italiani)
+* Risolti i problemi MC-385 (messaggio di errore errato quando il numero di telefono non e' corretto) e IN-100 (l'iscrizione sul canale sms fallisce se il campo email non e' configurato nel widget).
 
 = 1.3.3 =
 * Security patch n.2 (fortemente raccomandata) dovuta al fatto che la soluzione ad un problema di sicurezza che era stata fornita con la v.1.3.2 era incompleta.

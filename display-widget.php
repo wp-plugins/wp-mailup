@@ -274,11 +274,19 @@
 			}
 			<?php endif; ?>
 			<?php if(($wpmailup['mobileRequired'] == 'yes') && ($wpmailup['mobileShow'] == 'yes')): ?>
-			if(jQ.trim(sub_phone) == "")
+			//if(jQ.trim(sub_phone) == "")
+			if((jQ.trim(sub_phone) == "")||(!(sub_phone.match((/^(\+?\-? *[0-9]+)([,0-9 ]*)([0-9 ]){6,20}$/)))))
 			{
 				jQ('#show-response').html('<?php _e($wpmailup['invalidPhone']); ?>');
 				viewInfoIcon('info');
 				return false;
+			}
+			else
+			{
+				// REMOVE '+' AND SPACES, WHICH ARE NOT SUPPORTED BY XmlSubscribe.aspx
+				sub_phone = sub_phone.replace("+","00");
+				sub_phone = sub_phone.replace(/\s/g, '');
+				sub_phone = sub_phone.replace("-","");				
 			}
 			<?php endif; ?>
 			

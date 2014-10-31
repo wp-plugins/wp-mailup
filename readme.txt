@@ -2,7 +2,7 @@
 Contributors: mailup
 Tags: email marketing, e-mail marketing, newsletter sending, newsletter marketing, email signup, e-mail sign-up, subscription form, subscribe form, registration form, sms signup, newsletter, email, smtp, bulk, sms, send, list, subscribe, form, marketing, widget, plugin, feedburner, subscription, email newsletter form, email widget, emails, newsletter form, newsletter plugin, newsletter signup, newsletter widget, newsletters, signup, iscrizione, mailup
 Requires at least: 3.0
-Tested up to: 3.8.1
+Tested up to: 4.0
 Stable tag: 1.3.3
 
 Easily add a newsletter sign-up form to your Web site or blog, then run email marketing and SMS campaigns with MailUp.
@@ -135,6 +135,10 @@ Make sure that text strings in "Messages" section of admin page do not contain a
 3. Select option to disable security check (not recommended)
 
 == Changelog ==
+
+= 1.3.4 =
+* Now '+' is supported for international phone prefixes (e.g. both 001 and +1 are supported for USA prefix)
+* Fixed bugs MC-385 (wrong error message is displayed when phone number is not correct) and IN-100 (Subscription on SMS channel fails if Email input field is not configured).
 
 = 1.3.3 =
 * Security patch n.2 (highly recommended) because changes introduced by v.1.3.2 were incomplete to solve the issue.
@@ -279,6 +283,10 @@ Assicurarsi che nel testo dei messaggi configurati nella sezione "Messages" non 
 
 
 ## __Note Release__
+
+= 1.3.4 =
+* Ora anche il simbolo '+' è supportato per i prefissi telefonici internazionali (es. sia 0039 sia +39 sono supportati per i numeri di telefono italiani)
+* Risolti i problemi MC-385 (messaggio di errore errato quando il numero di telefono non e' corretto) e IN-100 (l'iscrizione sul canale sms fallisce se il campo email non è configurato nel widget).
 
 = 1.3.3 =
 * Security patch n.2 (fortemente raccomandata) dovuta al fatto che la soluzione ad un problema di sicurezza che era stata fornita con la v.1.3.2 era incompleta.

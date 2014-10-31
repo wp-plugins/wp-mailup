@@ -29,9 +29,12 @@ if(@$_REQUEST['token'] == 'subscribe')
 	}
 	
 	$post_data = '';
+	
+	$post_data .= "source=wordpress";
+	
 	if($_REQUEST['Email'])
 	{
-		$post_data .= "Email=".$_REQUEST['Email'];
+		$post_data .= "&Email=".$_REQUEST['Email'];
 	}
 	if($_REQUEST['sms'])
 	{

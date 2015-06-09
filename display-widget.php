@@ -137,7 +137,7 @@
     </fieldset>
 </form>
 <script type="text/javascript">
-	<!--
+	
 	var jQ = jQuery.noConflict();
 	jQ(document).ready(function(){
 		
@@ -268,7 +268,7 @@
 			<?php if(($wpmailup['emailRequired'] == 'yes') && ($wpmailup['emailShow'] == 'yes')): ?>
 			if(!(sub_email.match(/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/)))
 			{
-				jQ('#show-response').html('<?php _e($wpmailup['invalidAddress']); ?>');
+				jQ('#show-response').html('<?php _e(addslashes($wpmailup['invalidAddress'])); ?>');
 				viewInfoIcon('info');
 				return false;
 			}
@@ -277,7 +277,7 @@
 			//if(jQ.trim(sub_phone) == "")
 			if((jQ.trim(sub_phone) == "")||(!(sub_phone.match((/^(\+?\-? *[0-9]+)([,0-9 ]*)([0-9 ]){6,20}$/)))))
 			{
-				jQ('#show-response').html('<?php _e($wpmailup['invalidPhone']); ?>');
+				jQ('#show-response').html('<?php _e(addslashes($wpmailup['invalidPhone'])); ?>');
 				viewInfoIcon('info');
 				return false;
 			}
@@ -293,7 +293,7 @@
 			<?php if(($wpmailup['extfield1Show'] == 'yes') && ($wpmailup['extfield1Required'] == 'yes')): ?>
 			if(jQ.trim(sub_ext1) == '')
 			{
-				jQ('#show-response').html('<?php _e($wpmailup['extfield1DisplayedName'].' '.$wpmailup['fieldRequired']); ?>');
+				jQ('#show-response').html('<?php _e(addslashes($wpmailup['extfield1DisplayedName']).' '.$wpmailup['fieldRequired']); ?>');
 				viewInfoIcon('info');
 				return false;
 			}
@@ -302,7 +302,7 @@
 			<?php if(($wpmailup['extfield2Show'] == 'yes') && ($wpmailup['extfield2Required'] == 'yes')): ?>
 			if(jQ.trim(sub_ext2) == '')
 			{
-				jQ('#show-response').html('<?php _e($wpmailup['extfield2DisplayedName'].' '.$wpmailup['fieldRequired']); ?>');
+				jQ('#show-response').html('<?php _e(addslashes($wpmailup['extfield2DisplayedName']).' '.$wpmailup['fieldRequired']); ?>');
 				viewInfoIcon('info');
 				return false;
 			}
@@ -311,7 +311,7 @@
 			<?php if(($wpmailup['extfield3Show'] == 'yes') && ($wpmailup['extfield3Required'] == 'yes')): ?>
 			if(jQ.trim(sub_ext3) == '')
 			{
-				jQ('#show-response').html('<?php _e($wpmailup['extfield3DisplayedName'].' '.$wpmailup['fieldRequired']); ?>');
+				jQ('#show-response').html('<?php _e(addslashes($wpmailup['extfield3DisplayedName']).' '.$wpmailup['fieldRequired']); ?>');
 				viewInfoIcon('info');
 				return false;
 			}
@@ -320,7 +320,7 @@
 			<?php if(($wpmailup['extfield4Show'] == 'yes') && ($wpmailup['extfield4Required'] == 'yes')): ?>
 			if(jQ.trim(sub_ext4) == '')
 			{
-				jQ('#show-response').html('<?php _e($wpmailup['extfield4DisplayedName'].' '.$wpmailup['fieldRequired']); ?>');
+				jQ('#show-response').html('<?php _e(addslashes($wpmailup['extfield4DisplayedName']).' '.$wpmailup['fieldRequired']); ?>');
 				viewInfoIcon('info');
 				return false;
 			}
@@ -329,7 +329,7 @@
 			<?php if(($wpmailup['extfield5Show'] == 'yes') && ($wpmailup['extfield5Required'] == 'yes')): ?>
 			if(jQ.trim(sub_ext5) == '')
 			{
-				jQ('#show-response').html('<?php _e($wpmailup['extfield5DisplayedName'].' '.$wpmailup['fieldRequired']); ?>');
+				jQ('#show-response').html('<?php _e(addslashes($wpmailup['extfield5DisplayedName']).' '.$wpmailup['fieldRequired']); ?>');
 				viewInfoIcon('info');
 				return false;
 			}
@@ -342,7 +342,7 @@
 			<?php if($wpmailup['termsConfirm'] == 'yes'): ?>
 			if(jQ('#terms-confirm').is(':checked') == false)
 			{
-				jQ('#show-response').html('<?php _e($wpmailup['termsNotAgreed']); ?>');
+				jQ('#show-response').html('<?php _e(addslashes($wpmailup['termsNotAgreed'])); ?>');
 				viewInfoIcon('info');
 				return false;
 			}
@@ -376,23 +376,23 @@
 				switch(Number(returned_data))
 				{
 					case 0:
-						jQ('#show-response').html('<?php echo $wpmailup['successMessage']; ?>');
+						jQ('#show-response').html('<?php echo addslashes($wpmailup['successMessage']); ?>');
 						break;
 					case 1:
-						jQ('#show-response').html('<?php echo $wpmailup['genericError']; ?>');
+						jQ('#show-response').html('<?php echo addslashes($wpmailup['genericError']); ?>');
 						break;
 					case 2:
-						jQ('#show-response').html('<?php echo $wpmailup['invalidAddress']; ?>');
+						jQ('#show-response').html('<?php echo addslashes($wpmailup['invalidAddress']); ?>');
 						break;
 					case 3:
-						jQ('#show-response').html('<?php echo $wpmailup['alreadyPresent']; ?>');
+						jQ('#show-response').html('<?php echo addslashes($wpmailup['alreadyPresent']); ?>');
 						break;
 					case 10:
-						jQ('#show-response').html('<?php echo $wpmailup['termsNotAgreed']; ?>');
+						jQ('#show-response').html('<?php echo addslashes($wpmailup['termsNotAgreed']); ?>');
 						break;
 					case -1011:
 						/* here generic message is displayed instead of a detailed message, which can be misleading for subscribers */
-						jQ('#show-response').html('<?php echo $wpmailup['genericError']; ?>'); 
+						jQ('#show-response').html('<?php echo addslashes($wpmailup['genericError']); ?>'); 
 						/*jQ('#show-response').html('<?php echo 'IP address validation is required. Please check this <a href="http://help.mailup.com/display/mailupUserGuide/WordPress#WordPress-authorizing" target="_blank">page</a>'; ?>');*/
 						
 						break;						
@@ -404,5 +404,5 @@
 			return false;
 		});
 	});
-	//-->
+	
 </script>

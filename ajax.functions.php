@@ -33,51 +33,51 @@ function wpmailup_save_config()
 				}
 				$wpmailup['consoleHost'] = $_REQUEST['console-host'];
 				$wpmailup['subscribePath'] = $_REQUEST['subscribe-path'];
-				$wpmailup['pluginTitle'] = $_REQUEST['plugin-title'];
-				$wpmailup['pluginDescription'] = $_REQUEST['plugin-description'];
+				$wpmailup['pluginTitle'] = stripslashes($_REQUEST['plugin-title']);
+				$wpmailup['pluginDescription'] = stripslashes($_REQUEST['plugin-description']);
 				/* $wpmailup['externalCss'] = $_REQUEST['external-css']; */
 				$wpmailup['cssCombination'] = $_REQUEST['css-combination'];
-				$wpmailup['submitButton'] = $_REQUEST['submit-button'];
+				$wpmailup['submitButton'] = stripslashes($_REQUEST['submit-button']);
 				$wpmailup['requestConfirm'] = $_REQUEST['request-confirm'];
 				$wpmailup['listId'] = $_REQUEST['list-id'];
-				$wpmailup['listDisplayedName'] = $_REQUEST['list-displayed-name'];
+				$wpmailup['listDisplayedName'] = stripslashes($_REQUEST['list-displayed-name']);
 				$wpmailup['groupId'] = $_REQUEST['group-id'];
 				
 				$wpmailup['emailShow'] = $_REQUEST['email-show'];
 				$wpmailup['emailRequired'] = $_REQUEST['email-required'];
 				/* as email fieldcode always will be Email */
 				/* $wpmailup['emailFieldcode'] = $_REQUEST['email-fieldcode']; */
-				$wpmailup['emailDisplayedName'] = $_REQUEST['email-displayed-name'];
+				$wpmailup['emailDisplayedName'] = stripslashes($_REQUEST['email-displayed-name']);
 				
 				$wpmailup['extfield1Show'] = $_REQUEST['extfield1-show'];
 				$wpmailup['extfield1Required'] = $_REQUEST['extfield1-required'];
 				$wpmailup['extfield1Fieldcode'] = $_REQUEST['extfield1-fieldcode'];
-				$wpmailup['extfield1DisplayedName'] = $_REQUEST['extfield1-displayed-name'];
+				$wpmailup['extfield1DisplayedName'] = stripslashes($_REQUEST['extfield1-displayed-name']);
 				
 				$wpmailup['extfield2Show'] = $_REQUEST['extfield2-show'];
 				$wpmailup['extfield2Required'] = $_REQUEST['extfield2-required'];
 				$wpmailup['extfield2Fieldcode'] = $_REQUEST['extfield2-fieldcode'];
-				$wpmailup['extfield2DisplayedName'] = $_REQUEST['extfield2-displayed-name'];
+				$wpmailup['extfield2DisplayedName'] = stripslashes($_REQUEST['extfield2-displayed-name']);
 
 				$wpmailup['extfield3Show'] = $_REQUEST['extfield3-show'];
 				$wpmailup['extfield3Required'] = $_REQUEST['extfield3-required'];
 				$wpmailup['extfield3Fieldcode'] = $_REQUEST['extfield3-fieldcode'];
-				$wpmailup['extfield3DisplayedName'] = $_REQUEST['extfield3-displayed-name'];
+				$wpmailup['extfield3DisplayedName'] = stripslashes($_REQUEST['extfield3-displayed-name']);
 
 				$wpmailup['extfield4Show'] = $_REQUEST['extfield4-show'];
 				$wpmailup['extfield4Required'] = $_REQUEST['extfield4-required'];
 				$wpmailup['extfield4Fieldcode'] = $_REQUEST['extfield4-fieldcode'];
-				$wpmailup['extfield4DisplayedName'] = $_REQUEST['extfield4-displayed-name'];
+				$wpmailup['extfield4DisplayedName'] = stripslashes($_REQUEST['extfield4-displayed-name']);
 
 				$wpmailup['extfield5Show'] = $_REQUEST['extfield5-show'];
 				$wpmailup['extfield5Required'] = $_REQUEST['extfield5-required'];
 				$wpmailup['extfield5Fieldcode'] = $_REQUEST['extfield5-fieldcode'];
-				$wpmailup['extfield5DisplayedName'] = $_REQUEST['extfield5-displayed-name'];
+				$wpmailup['extfield5DisplayedName'] = stripslashes($_REQUEST['extfield5-displayed-name']);
 				
 				$wpmailup['mobileShow'] = $_REQUEST['mobile-show'];
 				$wpmailup['mobileRequired'] = $_REQUEST['mobile-required'];
 				$wpmailup['mobileFieldcode'] = $_REQUEST['mobile-fieldcode'];
-				$wpmailup['mobileDisplayedName'] = $_REQUEST['mobile-displayed-name'];
+				$wpmailup['mobileDisplayedName'] = stripslashes($_REQUEST['mobile-displayed-name']);
 				
 				$wpmailup['successMessage'] = stripslashes($_REQUEST['success-message']);
 				$wpmailup['genericError'] = stripslashes($_REQUEST['generic-error']);
@@ -130,6 +130,5 @@ function wpmailup_load_config()
 	}
 	exit();
 }
-
 
 ?>

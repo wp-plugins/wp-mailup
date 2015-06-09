@@ -38,6 +38,7 @@ function wpmailup_save_config()
 				/* $wpmailup['externalCss'] = $_REQUEST['external-css']; */
 				$wpmailup['cssCombination'] = $_REQUEST['css-combination'];
 				$wpmailup['submitButton'] = stripslashes($_REQUEST['submit-button']);
+				$wpmailup['textInside'] = $_REQUEST['text-inside'];
 				$wpmailup['requestConfirm'] = $_REQUEST['request-confirm'];
 				$wpmailup['listId'] = $_REQUEST['list-id'];
 				$wpmailup['listDisplayedName'] = stripslashes($_REQUEST['list-displayed-name']);

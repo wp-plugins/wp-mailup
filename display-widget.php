@@ -57,71 +57,115 @@
                 <p class="muDescription"><?php echo $wpmailup['pluginDescription']; ?></p>
             
             <?php if($wpmailup['emailShow'] == 'yes'): ?>
-                <p class="muField"><label><?php if($wpmailup['emailRequired'] == 'yes'): ?>
-                    <span style="color:#FF0000;">*</span>
-                    <?php endif; ?>
-                    <?php echo $wpmailup['emailDisplayedName']; ?>:</label>
-                	<input type="text" name="sub-email" id="sub-email" />
+                <p class="muField">
+                	<?php if($wpmailup['textInside'] != 'yes'): ?>
+	                	<label>
+	                		<?php if($wpmailup['emailRequired'] == 'yes'): ?>
+	                	    	<span style="color:#FF0000;">*</span>
+	                	    <?php endif; ?>
+	                	    <?php echo $wpmailup['emailDisplayedName']; ?>:
+	                    </label>
+	                	<input type="text" name="sub-email" id="sub-email" />
+	                <?php else: ?>
+	                	<input type="text" name="sub-email" id="sub-email" placeholder="<?php echo $wpmailup['emailDisplayedName']; ?>" />
+	                <?php endif; ?>
                 </p>
             <?php endif; ?>
             
             <?php if($wpmailup['mobileShow'] == 'yes'): ?>
-            	<p class="muField"><label>
-                	<?php if($wpmailup['mobileRequired'] == 'yes'): ?>
-                    <span style="color:#FF0000;">*</span>
-                    <?php endif; ?>
-                	<?php echo $wpmailup['mobileDisplayedName']; ?>:</label>
-                	<input type="text" name="sub-phone" id="sub-phone" maxlength="<?php echo $text_field_maxlength; ?>" />
+            	<p class="muField">
+            		<?php if($wpmailup['textInside'] != 'yes'): ?>
+            			<label>
+            				<?php if($wpmailup['mobileRequired'] == 'yes'): ?>
+	                	    	<span style="color:#FF0000;">*</span>
+	                	    <?php endif; ?>
+	                		<?php echo $wpmailup['mobileDisplayedName']; ?>:
+	                	</label>
+	                	<input type="text" name="sub-phone" id="sub-phone" maxlength="<?php echo $text_field_maxlength; ?>" />
+	                <?php else: ?>
+	                	<input type="text" name="sub-phone" id="sub-phone" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php echo $wpmailup['mobileDisplayedName']; ?>" />
+	                <?php endif; ?>
            		</p>
             <?php endif; ?>
             
             <?php if($wpmailup['extfield1Show'] == 'yes'): ?>
-            	<p class="muField"><label>
-                	<?php if($wpmailup['extfield1Required'] == 'yes'): ?>
-                    <span style="color:#FF0000;">*</span>
-                    <?php endif; ?>
-                	<?php echo $wpmailup['extfield1DisplayedName']; ?>:</label>
-                	<input type="text" name="sub-ext1" id="sub-ext1" maxlength="<?php echo $text_field_maxlength; ?>" />
+            	<p class="muField">
+            		<?php if($wpmailup['textInside'] != 'yes'): ?>
+	            		<label>
+	            			<?php if($wpmailup['extfield1Required'] == 'yes'): ?>
+	                    		<span style="color:#FF0000;">*</span>
+	                    	<?php endif; ?>
+	                		<?php echo $wpmailup['extfield1DisplayedName']; ?>:
+	                	</label>
+	                	<input type="text" name="sub-ext1" id="sub-ext1" maxlength="<?php echo $text_field_maxlength; ?>" />
+	                <?php else: ?>
+	                	<input type="text" name="sub-ext1" id="sub-ext1" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php echo $wpmailup['extfield1DisplayedName']; ?>" />
+	                <?php endif; ?>
             	</p>
             <?php endif; ?>
             
             <?php if($wpmailup['extfield2Show'] == 'yes'): ?>
-            	<p class="muField"><label>
-                	<?php if($wpmailup['extfield2Required'] == 'yes'): ?>
-                    <span style="color:#FF0000;">*</span>
-                    <?php endif; ?>
-                    <?php echo $wpmailup['extfield2DisplayedName']; ?>:</label>
-                	<input type="text" name="sub-ext2" id="sub-ext2" maxlength="<?php echo $text_field_maxlength; ?>" />
+            	<p class="muField">
+            		<?php if($wpmailup['textInside'] != 'yes'): ?> 	
+            			<label>
+                			<?php if($wpmailup['extfield2Required'] == 'yes'): ?>
+                   				<span style="color:#FF0000;">*</span>
+                    		<?php endif; ?>
+                    		<?php echo $wpmailup['extfield2DisplayedName']; ?>:
+                    	</label>
+                		<input type="text" name="sub-ext2" id="sub-ext2" maxlength="<?php echo $text_field_maxlength; ?>" />
+                	<?php else: ?>
+	                	<input type="text" name="sub-ext2" id="sub-ext2" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php echo $wpmailup['extfield2DisplayedName']; ?>" />
+	                <?php endif; ?>
             	</p>
             <?php endif; ?>
             
             <?php if($wpmailup['extfield3Show'] == 'yes'): ?>
-            	<p class="muField"><label>
-                	<?php if($wpmailup['extfield3Required'] == 'yes'): ?>
-                    <span style="color:#FF0000;">*</span>
-                    <?php endif; ?>
-                    <?php echo $wpmailup['extfield3DisplayedName']; ?>:</label>
-                	<input type="text" name="sub-ext3" id="sub-ext3" maxlength="<?php echo $text_field_maxlength; ?>" />
+            	<p class="muField">
+            		<?php if($wpmailup['textInside'] != 'yes'): ?> 	
+            			<label>
+                			<?php if($wpmailup['extfield3Required'] == 'yes'): ?>
+                   				<span style="color:#FF0000;">*</span>
+                    		<?php endif; ?>
+                    		<?php echo $wpmailup['extfield3DisplayedName']; ?>:
+                    	</label>
+                		<input type="text" name="sub-ext3" id="sub-ext3" maxlength="<?php echo $text_field_maxlength; ?>" />
+                	<?php else: ?>
+	                	<input type="text" name="sub-ext3" id="sub-ext3" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php echo $wpmailup['extfield3DisplayedName']; ?>" />
+	                <?php endif; ?>
+
             	</p>
             <?php endif; ?>
             
             <?php if($wpmailup['extfield4Show'] == 'yes'): ?>
-            	<p class="muField"><label>
-                	<?php if($wpmailup['extfield4Required'] == 'yes'): ?>
-                    <span style="color:#FF0000;">*</span>
-                    <?php endif; ?>
-                    <?php echo $wpmailup['extfield4DisplayedName']; ?>:</label>
-                	<input type="text" name="sub-ext4" id="sub-ext4" maxlength="<?php echo $text_field_maxlength; ?>" />
+            	<p class="muField">
+            		<?php if($wpmailup['textInside'] != 'yes'): ?> 	
+            			<label>
+                			<?php if($wpmailup['extfield4Required'] == 'yes'): ?>
+                   				<span style="color:#FF0000;">*</span>
+                    		<?php endif; ?>
+                    		<?php echo $wpmailup['extfield4DisplayedName']; ?>:
+                    	</label>
+                		<input type="text" name="sub-ext4" id="sub-ext4" maxlength="<?php echo $text_field_maxlength; ?>" />
+                	<?php else: ?>
+	                	<input type="text" name="sub-ext4" id="sub-ext4" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php echo $wpmailup['extfield4DisplayedName']; ?>" />
+	                <?php endif; ?>
             	</p>
             <?php endif; ?>
 
             <?php if($wpmailup['extfield5Show'] == 'yes'): ?>
-            	<p class="muField"><label>
-                	<?php if($wpmailup['extfield5Required'] == 'yes'): ?>
-                    <span style="color:#FF0000;">*</span>
-                    <?php endif; ?>
-                    <?php echo $wpmailup['extfield5DisplayedName']; ?>:</label>
-                	<input type="text" name="sub-ext5" id="sub-ext5" maxlength="<?php echo $text_field_maxlength; ?>" />
+            	<p class="muField">
+            		<?php if($wpmailup['textInside'] != 'yes'): ?> 	
+            			<label>
+                			<?php if($wpmailup['extfield5Required'] == 'yes'): ?>
+                   				<span style="color:#FF0000;">*</span>
+                    		<?php endif; ?>
+                    		<?php echo $wpmailup['extfield5DisplayedName']; ?>:
+                    	</label>
+                		<input type="text" name="sub-ext5" id="sub-ext5" maxlength="<?php echo $text_field_maxlength; ?>" />
+                	<?php else: ?>
+	                	<input type="text" name="sub-ext5" id="sub-ext5" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php echo $wpmailup['extfield5DisplayedName']; ?>" />
+	                <?php endif; ?>
             	</p>
             <?php endif; ?>
             

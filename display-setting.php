@@ -78,6 +78,11 @@
                                 </td>
                             </tr>
                             <tr>
+                                <td class="setting-label"><label for="text-inside"><?php _e('Insert texts inside fields'); ?>:</label></td>
+                                <td class="setting-target"><input name="text-inside" id="text-inside" value="yes" class="setting-checkbox" type="checkbox" /></td>
+                            </tr>
+
+                            <tr>
                                 <td class="setting-label"><label for="request-confirm"><?php _e('Request confirmation by email'); ?>:</label></td>
                                 <td class="setting-target"><input name="request-confirm" id="request-confirm" value="yes" class="setting-checkbox" type="checkbox" /></td>
                             </tr>
@@ -427,6 +432,8 @@
 				/* jQ('#external-css').val(data.externalCss); */
 				jQ('#css-combination').val(data.cssCombination);
 				jQ('#submit-button').val(data.submitButton);
+				if(data.textInside == 'yes')
+					jQ('#text-inside').attr("checked", true);
 				if(data.requestConfirm == 'yes')
 					jQ('#request-confirm').attr("checked", true);
 				jQ('#list-id').val(data.listId);

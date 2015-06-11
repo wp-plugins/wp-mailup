@@ -548,19 +548,17 @@
 			else{
 				var listId = '<?php echo $wpmailup['listId']; ?>';
 				var groupId = '<?php echo $wpmailup['groupId']; ?>';
-				var confirmReq = '<?php echo ($wpmailup['requestConfirm'] == 'yes')?'true':'false'; ?>';
 				var subUrl = '<?php echo $wpmailup['consoleHost'] . $wpmailup['subscribePath']; ?>';
-				var token = jQ('#wpmailup-subscribe').val();
 				var form_values = {
 					"Email":"esempio@mailup.it",
 					"List":listId,
 					"sms":"",
 					"Group":groupId,
-					"Confirm":confirmReq,
+					"Confirm":"false",
 					"csvFldNames":"",
 					"csvFldValues":"",
 					"retCode":"1",
-					"token":token,
+					"token":"subscribe",
 					"subsUrl":subUrl,
 					"termsAccept":"yes"
 				}

@@ -148,6 +148,15 @@
                                 <td class="setting-target"><input readonly="readonly" name="mobile-fieldcode" id="mobile-fieldcode" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" value="sms" /></td>
                                 <td class="setting-target"><input name="mobile-displayed-name" id="mobile-displayed-name" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
                             </tr>
+                            
+                            <tr>
+                                <td class="setting-target"><label>Custom date:</label></td>
+                                <td class="setting-target"><input name="date-show" id="date-show" class="setting-checkbox" type="checkbox" value="yes" /></td>
+                                <td class="setting-target"><input name="date-required" id="date-required" class="setting-checkbox" type="checkbox" value="yes" /></td>
+                                <td class="setting-target"><input name="date-fieldcode" id="date-fieldcode" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
+                                <td class="setting-target"><input name="date-displayed-name" id="date-displayed-name" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
+                            </tr>
+
                             <tr>
                                 <td class="setting-target"><label>Custom field 1:</label></td>
                                 <td class="setting-target"><input name="extfield1-show" id="extfield1-show" class="setting-checkbox" type="checkbox" value="yes" /></td>
@@ -369,6 +378,12 @@
 				return false;
 			}
 			
+			if(jQ('#date-required').is(':checked') && !jQ('#date-show').is(':checked')) // If date field is required, must be 'check' show also
+			{
+				jQ("#save-message").css("color", "#F00").html("<?php _e('** <b>Custom Data</b> must be displayed since it is required'); ?>");
+				return false;
+			}
+			
 			if(jQ('#extfield1-required').is(':checked') && !jQ('#extfield1-show').is(':checked')) // If additional field 1 is required, must be 'check' show also
 			{
 				jQ("#save-message").css("color", "#F00").html("<?php _e('** <b>Custom field 1</b> must be displayed since it is required'); ?>");
@@ -443,6 +458,12 @@
 					jQ('#email-show').attr("checked", true);
 				if(data.emailRequired == 'yes')
 					jQ('#email-required').attr("checked", true);
+				if(data.dateShow == 'yes')
+					jQ('#date-show').attr("checked", true);
+				if(data.dateRequired == 'yes')
+					jQ('#date-required').attr("checked", true);
+				jQ('#date-fieldcode').val(data.dateFieldcode);
+				jQ('#date-displayed-name').val(data.dateDisplayedName);
 				//jQ('#email-fieldcode').val(data.emailFieldcode);
 				jQ('#email-displayed-name').val(data.emailDisplayedName);
 				if(data.extfield1Show == 'yes')

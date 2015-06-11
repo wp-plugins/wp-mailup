@@ -147,6 +147,10 @@ function wpmailup_active()
 	$wpmailup['emailRequired'] = 'yes';
 	$wpmailup['emailFieldcode'] = 'Email';
 	$wpmailup['emailDisplayedName'] = _('Email');
+	$wpmailup['dateShow'] = '';
+	$wpmailup['dateRequired'] = '';
+	$wpmailup['dateFieldcode'] = 'Campo6';
+	$wpmailup['dateDisplayedName'] = '';
 	$wpmailup['extfield1Show'] = 'yes';
 	$wpmailup['extfield1Required'] = 'yes';
 	$wpmailup['extfield1Fieldcode'] = 'Campo1';

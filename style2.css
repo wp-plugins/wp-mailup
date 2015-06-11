@@ -1,6 +1,7 @@
 ﻿#subscribeForm {
 }
 #subscribeForm fieldset{
+	color:#000000;
 	width: 200px;
 	margin:10px 0;
 	border:1px solid #DDD;
@@ -13,8 +14,7 @@
 	background-image: -moz-linear-gradient(top, #F9F9F9, #ECECEC); /* FF3.6+ */
 	background-image: -ms-linear-gradient(top, #F9F9F9, #ECECEC); /* IE10 */
 	background-image: -o-linear-gradient(top, #F9F9F9, #ECECEC); /* Opera 11.10+ */
-	background-image: linear-gradient(top, #F9F9F9, #ECECEC); /* W3C */
-}
+	background-image: linear-gradient(top, #F9F9F9, #ECECEC); /* W3C */}
 #subscribeForm textarea{
 }
 #subscribeForm input[type=text]{
@@ -22,11 +22,11 @@
 	-webkit-border-radius:5px;
 	border-radius:5px;
 	width: 170px;
-	height: 18px;
+	color:#000000;
 }
 #subscribeForm input[type=submit]{
 	border:1px solid #555;
-	color:#fff;
+	color:#000000;
 	background-color:#777;
 	cursor:pointer;
 	text-transform:uppercase;
@@ -36,7 +36,7 @@
 	border-radius:5px;
 }
 #subscribeForm input[type=submit]:hover{
-	color:#fff;
+	color:#000000;
 	background-color:#333;
 }
 #subscribeForm p {
@@ -50,4 +50,19 @@
 }
 #subscribeForm fieldset img {
 	margin-left: 10px;
+}
+/*setting placehyolder color for each browser*/
+#subscribeForm input[type=text]::-webkit-input-placeholder { /* WebKit browsers */
+    color:#000000;
+}
+#subscribeForm input[type=text]:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:#000000;/*#909;*/
+   opacity:  1;
+}
+#subscribeForm input[type=text]::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:#000000;
+   opacity:  1;
+}
+#subscribeForm input[type=text]:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:#000000;
 }

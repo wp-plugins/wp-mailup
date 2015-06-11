@@ -19,7 +19,6 @@
 	border: 1px solid #444;
 	color:#FFF;
 	width: 170px;
-	height: 18px;
 }
 #subscribeForm input[type=submit]{
 	border:2px solid #fff;
@@ -54,4 +53,19 @@
 }
 #subscribeForm fieldset img {
 	margin-left: 10px;
+}
+/*setting placeholder color for each browser*/
+#subscribeForm input[type=text]::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #DDD;
+}
+#subscribeForm input[type=text]:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #DDD;
+   opacity:  1;
+}
+#subscribeForm input[type=text]::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #DDD;
+   opacity:  1;
+}
+#subscribeForm input[type=text]:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    #DDD;
 }

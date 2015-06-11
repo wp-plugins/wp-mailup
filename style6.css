@@ -19,7 +19,6 @@
 	border: 1px solid #00454D;
 	color:#FFF;
 	width: 170px;
-	height: 18px;
 }
 #subscribeForm input[type=submit]{
 	cursor:pointer;
@@ -59,4 +58,19 @@
 }
 #subscribeForm a {
 	color: #F58221;
+}
+/*setting placeholder color for each browser*/
+#subscribeForm input[type=text]::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #00D;
+}
+#subscribeForm input[type=text]:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #00D;
+   opacity:  1;
+}
+#subscribeForm input[type=text]::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #00D;
+   opacity:  1;
+}
+#subscribeForm input[type=text]:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    #00D;
 }

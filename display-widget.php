@@ -7,7 +7,7 @@
 	$text_field_maxlength = 80;
 ?>
 <style type="text/css">
-<!--	
+
 	fieldset#subscribeDataTable label {
 		display:block;
 		margin-bottom:3px;
@@ -41,10 +41,12 @@
 			break;
 	}
 ?>
--->
+
 </style>
 <?php /* if($wpmailup['externalCss']): ?>
 <link rel="stylesheet" href="<?php echo $wpmailup['externalCss']; ?>" />
+
+
 <?php endif; */ ?>
 <form action="" method="get" name="subscribeForm" id="subscribeForm" onsubmit="return false;">
 	<input type="hidden" name="wpmailup-subscribe" id="wpmailup-subscribe" value="subscribe" />
@@ -67,7 +69,7 @@
 	                    </label>
 	                	<input type="text" name="sub-email" id="sub-email" />
 	                <?php else: ?>
-	                	<input type="text" name="sub-email" id="sub-email" placeholder="<?php echo $wpmailup['emailDisplayedName']; ?>" />
+	                	<input type="text" name="sub-email" id="sub-email" placeholder="<?php  if($wpmailup['emailRequired'] == 'yes'): echo '*'; endif; echo $wpmailup['emailDisplayedName']; ?>" />
 	                <?php endif; ?>
                 </p>
             <?php endif; ?>
@@ -83,10 +85,33 @@
 	                	</label>
 	                	<input type="text" name="sub-phone" id="sub-phone" maxlength="<?php echo $text_field_maxlength; ?>" />
 	                <?php else: ?>
-	                	<input type="text" name="sub-phone" id="sub-phone" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php echo $wpmailup['mobileDisplayedName']; ?>" />
+	                	<input type="text" name="sub-phone" id="sub-phone" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php if($wpmailup['mobileRequired'] == 'yes'): echo '*'; endif; echo $wpmailup['mobileDisplayedName']; ?>" />
 	                <?php endif; ?>
            		</p>
             <?php endif; ?>
+            
+            
+			<?php if($wpmailup['dateShow'] == 'yes'): ?>
+            	<p class="muField">
+            	<!--<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  				<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>-->
+	            <style>@import url(http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css);</style>
+
+            		<?php if($wpmailup['textInside'] != 'yes'): ?>
+            			<label>
+            				<?php if($wpmailup['dateRequired'] == 'yes'): ?>
+	                	    	<span style="color:#FF0000;">*</span>
+	                	    <?php endif; ?>
+	                		<?php echo $wpmailup['dateDisplayedName']; ?>:
+	                	</label>
+						<input  type="text" name="sub-date" id="sub-date" maxlength="<?php echo $text_field_maxlength;?>">
+	                <?php else: ?>
+	                	<input  type="text" name="sub-date" id="sub-date" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php if($wpmailup['dateRequired'] == 'yes'): echo '*'; endif; echo $wpmailup['dateDisplayedName']; ?>" >
+	                <?php endif; ?>
+           		</p>
+            <?php endif; ?>
+
+            
             
             <?php if($wpmailup['extfield1Show'] == 'yes'): ?>
             	<p class="muField">
@@ -99,7 +124,7 @@
 	                	</label>
 	                	<input type="text" name="sub-ext1" id="sub-ext1" maxlength="<?php echo $text_field_maxlength; ?>" />
 	                <?php else: ?>
-	                	<input type="text" name="sub-ext1" id="sub-ext1" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php echo $wpmailup['extfield1DisplayedName']; ?>" />
+	                	<input type="text" name="sub-ext1" id="sub-ext1" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php if($wpmailup['extfield1Required'] == 'yes'): echo '*'; endif; echo $wpmailup['extfield1DisplayedName']; ?>" />
 	                <?php endif; ?>
             	</p>
             <?php endif; ?>
@@ -115,7 +140,7 @@
                     	</label>
                 		<input type="text" name="sub-ext2" id="sub-ext2" maxlength="<?php echo $text_field_maxlength; ?>" />
                 	<?php else: ?>
-	                	<input type="text" name="sub-ext2" id="sub-ext2" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php echo $wpmailup['extfield2DisplayedName']; ?>" />
+	                	<input type="text" name="sub-ext2" id="sub-ext2" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php if($wpmailup['extfield2Required'] == 'yes'): echo '*'; endif; echo $wpmailup['extfield2DisplayedName']; ?>" />
 	                <?php endif; ?>
             	</p>
             <?php endif; ?>
@@ -131,7 +156,7 @@
                     	</label>
                 		<input type="text" name="sub-ext3" id="sub-ext3" maxlength="<?php echo $text_field_maxlength; ?>" />
                 	<?php else: ?>
-	                	<input type="text" name="sub-ext3" id="sub-ext3" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php echo $wpmailup['extfield3DisplayedName']; ?>" />
+	                	<input type="text" name="sub-ext3" id="sub-ext3" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php if($wpmailup['extfield3Required'] == 'yes'): echo '*'; endif; echo $wpmailup['extfield3DisplayedName']; ?>" />
 	                <?php endif; ?>
 
             	</p>
@@ -148,7 +173,7 @@
                     	</label>
                 		<input type="text" name="sub-ext4" id="sub-ext4" maxlength="<?php echo $text_field_maxlength; ?>" />
                 	<?php else: ?>
-	                	<input type="text" name="sub-ext4" id="sub-ext4" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php echo $wpmailup['extfield4DisplayedName']; ?>" />
+	                	<input type="text" name="sub-ext4" id="sub-ext4" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php  if($wpmailup['extfield4Required'] == 'yes'): echo '*'; endif; echo $wpmailup['extfield4DisplayedName']; ?>" />
 	                <?php endif; ?>
             	</p>
             <?php endif; ?>
@@ -164,7 +189,7 @@
                     	</label>
                 		<input type="text" name="sub-ext5" id="sub-ext5" maxlength="<?php echo $text_field_maxlength; ?>" />
                 	<?php else: ?>
-	                	<input type="text" name="sub-ext5" id="sub-ext5" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php echo $wpmailup['extfield5DisplayedName']; ?>" />
+	                	<input type="text" name="sub-ext5" id="sub-ext5" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php if($wpmailup['extfield5Required'] == 'yes'): echo '*'; endif; echo $wpmailup['extfield5DisplayedName'];  ?>" />
 	                <?php endif; ?>
             	</p>
             <?php endif; ?>
@@ -206,6 +231,12 @@
 			var sub_email = jQ('#sub-email').val();
 			var sub_phone = jQ('#sub-phone').val();
 			
+			var sub_date = '';
+			<?php if($wpmailup['dateShow'] == 'yes'): ?>
+			jQ("#sub-date").datepicker();
+			sub_date = jQ('#sub-date').val();
+			<?php endif; ?>
+
 			var sub_ext1 = '';
 			<?php if($wpmailup['extfield1Show'] == 'yes'): ?>
 			sub_ext1 = jQ('#sub-ext1').val();
@@ -232,12 +263,22 @@
 			<?php endif; ?>
 			
 			var csvFldValues = '';
-			
 			<?php
+				if($wpmailup['dateShow']):
+					$csvFldNames = $wpmailup['dateFieldcode']; ?>
+					csvFldValues = sub_date;
+			<?php
+				endif;
 				if($wpmailup['extfield1Show']):
+					if(empty($csvFldNames)):
 					$csvFldNames = $wpmailup['extfield1Fieldcode']; ?>
 					csvFldValues = sub_ext1;
-			<?php 		
+			<?php 
+					else:
+					$csvFldNames = $csvFldNames . ";" . $wpmailup['extfield1Fieldcode']; ?>
+					csvFldValues = csvFldValues +';' +sub_ext1;
+			<?php		
+					endif;
 				endif;
 				if($wpmailup['extfield2Show']):
 					if(empty($csvFldNames)):
@@ -310,7 +351,9 @@
 				validate form
 			*/
 			<?php if(($wpmailup['emailRequired'] == 'yes') && ($wpmailup['emailShow'] == 'yes')): ?>
-			if(!(sub_email.match(/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/)))
+			
+
+  			if(!(sub_email.match(/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,63})$/)))
 			{
 				jQ('#show-response').html('<?php _e(addslashes($wpmailup['invalidAddress'])); ?>');
 				viewInfoIcon('info');
@@ -333,6 +376,16 @@
 				sub_phone = sub_phone.replace("-","");				
 			}
 			<?php endif; ?>
+			
+			<?php if(($wpmailup['dateShow'] == 'yes') && ($wpmailup['dateRequired'] == 'yes')): ?>
+			if(jQ.trim(sub_ext1) == '')
+			{
+				jQ('#show-response').html('<?php _e(addslashes($wpmailup['dateDisplayedName']).' '.$wpmailup['fieldRequired']); ?>');
+				viewInfoIcon('info');
+				return false;
+			}
+			<?php endif; ?>
+
 			
 			<?php if(($wpmailup['extfield1Show'] == 'yes') && ($wpmailup['extfield1Required'] == 'yes')): ?>
 			if(jQ.trim(sub_ext1) == '')

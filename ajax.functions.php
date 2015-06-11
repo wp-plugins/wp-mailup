@@ -50,6 +50,12 @@ function wpmailup_save_config()
 				/* $wpmailup['emailFieldcode'] = $_REQUEST['email-fieldcode']; */
 				$wpmailup['emailDisplayedName'] = stripslashes($_REQUEST['email-displayed-name']);
 				
+				$wpmailup['dateShow'] = $_REQUEST['date-show'];
+				$wpmailup['dateRequired'] = $_REQUEST['date-required'];
+				$wpmailup['dateFieldcode'] = $_REQUEST['date-fieldcode'];
+				$wpmailup['dateDisplayedName'] = stripslashes($_REQUEST['date-displayed-name']);
+
+				
 				$wpmailup['extfield1Show'] = $_REQUEST['extfield1-show'];
 				$wpmailup['extfield1Required'] = $_REQUEST['extfield1-required'];
 				$wpmailup['extfield1Fieldcode'] = $_REQUEST['extfield1-fieldcode'];

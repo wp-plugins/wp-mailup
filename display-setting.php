@@ -269,6 +269,8 @@
                 	<input id="setting-save-btn" type="submit" value="Save" class="button-primary" />
                 	&nbsp;
                 	<input id="setting-reset-btn" type="button" value="Reset" class="button-secondary" />
+                	&nbsp;
+                	<input id="setting-test-btn" type="button" value="Test" class="button-secondary" />
                 </div>
                 <div style="clear:both;"></div>
             </div>
@@ -524,13 +526,53 @@
 		fillFormData();
 		
 		/*
-			Reset the previous opptions
+			Reset the previous options
 		*/
 		jQ('#setting-reset-btn').click(function(){
 			if(confirm('<?php _e('Do you want to reset the settings?'); ?>'))
 			{
 				fillFormData();
 				jQ("#save-message").css("color", "#00F").html("<?php _e('* Settings reset.'); ?>");
+			}
+		});
+		
+		/*
+			Test current options
+		*/
+		jQ('#setting-test-btn').click(function(){
+			var console_host = jQ('#console-host').val();
+			if(!(console_host.match(/^([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6}$/)) || console_host==''){
+				jQ("#save-message").css("color", "#F00").html("<?php _e('** <b>MailUp console host: </b> field is wrong'); ?>");
+				jQ('#console-host').css("borderColor", "#F00");
+			}
+			else{
+				var listId = '<?php echo $wpmailup['listId']; ?>';
+				var groupId = '<?php echo $wpmailup['groupId']; ?>';
+				var confirmReq = '<?php echo ($wpmailup['requestConfirm'] == 'yes')?'true':'false'; ?>';
+				var subUrl = '<?php echo $wpmailup['consoleHost'] . $wpmailup['subscribePath']; ?>';
+				var token = jQ('#wpmailup-subscribe').val();
+				var form_values = {
+					"Email":"esempio@mailup.it",
+					"List":listId,
+					"sms":"",
+					"Group":groupId,
+					"Confirm":confirmReq,
+					"csvFldNames":"",
+					"csvFldValues":"",
+					"retCode":"1",
+					"token":token,
+					"subsUrl":subUrl,
+					"termsAccept":"yes"
+				}
+				
+				jQ.post('<?php echo get_bloginfo('wpurl').'/wp-content/plugins/wp-mailup/subscribe.php'; ?>', form_values, function(returned_data){
+					if(Number(returned_data)==-1011){
+						jQ("#save-message").css("color", "#F00").html('<?php echo 'IP address validation is required. Please check this <a href="http://help.mailup.com/display/mailupUserGuide/WordPress#WordPress-authorizing" target="_blank">page</a>'; ?>');
+					}
+					else{
+						jQ("#save-message").css("color", "#00F").html("<?php _e('** <b>Everything is OK</b>'); ?>");
+					}
+				});
 			}
 		});
 		

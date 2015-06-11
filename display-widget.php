@@ -2,7 +2,8 @@
 	error_reporting(0);
 	$wpmailup = unserialize(get_option('wpmailup'));
 	/* exit('<pre>' . print_r($wpmailup, true) . '</pre>'); */
-	
+	wp_enqueue_script('jquery-ui-datepicker');
+	wp_enqueue_style('jquery-style', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/smoothness/jquery-ui.css');
 	$text_field_size = 22;
 	$text_field_maxlength = 80;
 ?>
@@ -93,10 +94,6 @@
             
 			<?php if($wpmailup['dateShow'] == 'yes'): ?>
             	<p class="muField">
-            	<!--<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-  				<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>-->
-	            <style>@import url(http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css);</style>
-
             		<?php if($wpmailup['textInside'] != 'yes'): ?>
             			<label>
             				<?php if($wpmailup['dateRequired'] == 'yes'): ?>
@@ -208,7 +205,12 @@
 <script type="text/javascript">
 	
 	var jQ = jQuery.noConflict();
+	
 	jQ(document).ready(function(){
+		
+		<?php if($wpmailup['dateShow'] == 'yes'): ?>
+				jQ("#sub-date").datepicker({dateFormat : 'dd-mm-yy'});
+		<?php endif; ?>
 		
 		function viewInfoIcon(status)
 		{
@@ -233,7 +235,6 @@
 			
 			var sub_date = '';
 			<?php if($wpmailup['dateShow'] == 'yes'): ?>
-			jQ("#sub-date").datepicker();
 			sub_date = jQ('#sub-date').val();
 			<?php endif; ?>
 

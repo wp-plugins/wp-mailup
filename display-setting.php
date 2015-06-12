@@ -148,15 +148,6 @@
                                 <td class="setting-target"><input readonly="readonly" name="mobile-fieldcode" id="mobile-fieldcode" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" value="sms" /></td>
                                 <td class="setting-target"><input name="mobile-displayed-name" id="mobile-displayed-name" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
                             </tr>
-                            
-                            <tr>
-                                <td class="setting-target"><label>Custom date:</label></td>
-                                <td class="setting-target"><input name="date-show" id="date-show" class="setting-checkbox" type="checkbox" value="yes" /></td>
-                                <td class="setting-target"><input name="date-required" id="date-required" class="setting-checkbox" type="checkbox" value="yes" /></td>
-                                <td class="setting-target"><input name="date-fieldcode" id="date-fieldcode" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
-                                <td class="setting-target"><input name="date-displayed-name" id="date-displayed-name" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
-                            </tr>
-
                             <tr>
                                 <td class="setting-target"><label>Custom field 1:</label></td>
                                 <td class="setting-target"><input name="extfield1-show" id="extfield1-show" class="setting-checkbox" type="checkbox" value="yes" /></td>
@@ -192,6 +183,14 @@
                                 <td class="setting-target"><input name="extfield5-fieldcode" id="extfield5-fieldcode" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
                                 <td class="setting-target"><input name="extfield5-displayed-name" id="extfield5-displayed-name" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
                             </tr>
+                            <tr>
+                                <td class="setting-target"><label>Date Field:</label></td>
+                                <td class="setting-target"><input name="date-show" id="date-show" class="setting-checkbox" type="checkbox" value="yes" /></td>
+                                <td class="setting-target"><input name="date-required" id="date-required" class="setting-checkbox" type="checkbox" value="yes" /></td>
+                                <td class="setting-target"><input name="date-fieldcode" id="date-fieldcode" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
+                                <td class="setting-target"><input name="date-displayed-name" id="date-displayed-name" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
+                            </tr>
+
                         </tbody>
                     </table>
                     <div style="clear:both;"></div>
@@ -317,6 +316,7 @@
 		*/
 		jQ("input,textarea,select").change(function(){
 			jQ("#save-message").css("color", "#F00").html("<?php _e('** Settings have changed. Click <b>Save</b> to save the new settings.'); ?>");
+			jQ('#setting-test-btn').fadeOut();
 		});
 		
 		/*
@@ -428,6 +428,7 @@
 			form_values = jQuery(this).serialize();
 			jQ.post('<?php echo $_SERVER['PHP_SELF']; ?>?formData=save', form_values, function(returned_data){
 				jQ("#save-message").css("color", "#00F").html("<?php _e('* Settings saved successfully.'); ?>");
+				jQ('#setting-test-btn').fadeIn();
 				fillFormData();
 			});
 			jQ('.setting-text').css("borderColor", "#DFDFDF");
@@ -535,7 +536,7 @@
 				jQ('#subscribe-path').val('/frontend/xmlSubscribe.aspx');
 				jQ('#plugin-title').val('Newsletter subscription');
 				jQ('#plugin-description').val('Our monthly newsletter with a selection of the best posts');
-				jQ('#css-combination').val('Default');
+				jQ('#css-combination').val('style1');
 				jQ('#submit-button').val('SIGN UP');
 				jQ('#text-inside').attr("checked", false);
 				jQ('#request-confirm').attr("checked", false);
@@ -551,7 +552,7 @@
 				jQ('#mobile-show').attr("checked", true);
 				jQ('#mobile-required').attr("checked", true);
 				jQ('#mobile-displayed-name').val('Mobile number');
-				//jQ('#mobile-fieldcode').val('');
+
 				
 				jQ('#date-show').attr("checked", false);
 				jQ('#date-required').attr("checked", false);
@@ -604,7 +605,7 @@
 		jQ('#setting-test-btn').click(function(){
 			var console_host = jQ('#console-host').val();
 			var subscribe_path = jQ('#subscribe-path').val();
-			if(!(console_host.match(/^([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6}$/)) || console_host==''){
+			if((!(console_host.match(/^([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6}$/)) && !(console_host.match(/^(http|https):\/\/([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6}$/))) || (console_host=='')){
 				jQ("#save-message").css("color", "#F00").html("<?php _e('** <b>MailUp console host: </b> field is wrong'); ?>");
 				jQ('#console-host').css("borderColor", "#F00");
 			}
@@ -636,7 +637,7 @@
 						}
 						else{
 							jQ('#console-host').css("borderColor", "");
-							jQ("#save-message").css("color", "#00F").html("<?php _e('** <b>Everything is OK</b>'); ?>");
+							jQ("#save-message").css("color", "#00F").html("<?php _e('** <b>Everything is OK</b> '); ?>");
 						}
 					});
 				}

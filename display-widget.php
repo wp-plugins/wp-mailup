@@ -209,7 +209,7 @@
 	jQ(document).ready(function(){
 		
 		<?php if($wpmailup['dateShow'] == 'yes'): ?>
-				jQ("#sub-date").datepicker({dateFormat : 'dd-mm-yy'});
+				jQ("#sub-date").datepicker();
 		<?php endif; ?>
 		
 		function viewInfoIcon(status)
@@ -379,7 +379,7 @@
 			<?php endif; ?>
 			
 			<?php if(($wpmailup['dateShow'] == 'yes') && ($wpmailup['dateRequired'] == 'yes')): ?>
-			if(jQ.trim(sub_ext1) == '')
+			if(jQ.trim(sub_date) == '')
 			{
 				jQ('#show-response').html('<?php _e(addslashes($wpmailup['dateDisplayedName']).' '.$wpmailup['fieldRequired']); ?>');
 				viewInfoIcon('info');

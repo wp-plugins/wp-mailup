@@ -356,7 +356,7 @@
 
   			if(!(sub_email.match(/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,63})$/)))
 			{
-				jQ('#show-response').html('<?php _e(addslashes($wpmailup['invalidAddress'])); ?>');
+				jQ('#show-response').html('<?php echo addslashes($wpmailup['invalidAddress']); ?>');
 				viewInfoIcon('info');
 				return false;
 			}
@@ -365,7 +365,7 @@
 			//if(jQ.trim(sub_phone) == "")
 			if((jQ.trim(sub_phone) == "")||(!(sub_phone.match((/^(\+?\-? *[0-9]+)([,0-9 ]*)([0-9 ]){6,20}$/)))))
 			{
-				jQ('#show-response').html('<?php _e(addslashes($wpmailup['invalidPhone'])); ?>');
+				jQ('#show-response').html('<?php echo addslashes($wpmailup['invalidPhone']); ?>');
 				viewInfoIcon('info');
 				return false;
 			}
@@ -381,7 +381,7 @@
 			<?php if(($wpmailup['dateShow'] == 'yes') && ($wpmailup['dateRequired'] == 'yes')): ?>
 			if(jQ.trim(sub_date) == '')
 			{
-				jQ('#show-response').html('<?php _e(addslashes($wpmailup['dateDisplayedName']).' '.$wpmailup['fieldRequired']); ?>');
+				jQ('#show-response').html('<?php echo addslashes($wpmailup['dateDisplayedName']).' '.addslashes($wpmailup['fieldRequired']); ?>');
 				viewInfoIcon('info');
 				return false;
 			}
@@ -391,7 +391,7 @@
 			<?php if(($wpmailup['extfield1Show'] == 'yes') && ($wpmailup['extfield1Required'] == 'yes')): ?>
 			if(jQ.trim(sub_ext1) == '')
 			{
-				jQ('#show-response').html('<?php _e(addslashes($wpmailup['extfield1DisplayedName']).' '.$wpmailup['fieldRequired']); ?>');
+				jQ('#show-response').html('<?php echo addslashes($wpmailup['extfield1DisplayedName']).' '.addslashes($wpmailup['fieldRequired']); ?>');
 				viewInfoIcon('info');
 				return false;
 			}
@@ -400,7 +400,7 @@
 			<?php if(($wpmailup['extfield2Show'] == 'yes') && ($wpmailup['extfield2Required'] == 'yes')): ?>
 			if(jQ.trim(sub_ext2) == '')
 			{
-				jQ('#show-response').html('<?php _e(addslashes($wpmailup['extfield2DisplayedName']).' '.$wpmailup['fieldRequired']); ?>');
+				jQ('#show-response').html('<?php echo addslashes($wpmailup['extfield2DisplayedName']).' '.addslashes($wpmailup['fieldRequired']); ?>');
 				viewInfoIcon('info');
 				return false;
 			}
@@ -409,7 +409,7 @@
 			<?php if(($wpmailup['extfield3Show'] == 'yes') && ($wpmailup['extfield3Required'] == 'yes')): ?>
 			if(jQ.trim(sub_ext3) == '')
 			{
-				jQ('#show-response').html('<?php _e(addslashes($wpmailup['extfield3DisplayedName']).' '.$wpmailup['fieldRequired']); ?>');
+				jQ('#show-response').html('<?php echo addslashes($wpmailup['extfield3DisplayedName']).' '.addslashes($wpmailup['fieldRequired']); ?>');
 				viewInfoIcon('info');
 				return false;
 			}
@@ -418,7 +418,7 @@
 			<?php if(($wpmailup['extfield4Show'] == 'yes') && ($wpmailup['extfield4Required'] == 'yes')): ?>
 			if(jQ.trim(sub_ext4) == '')
 			{
-				jQ('#show-response').html('<?php _e(addslashes($wpmailup['extfield4DisplayedName']).' '.$wpmailup['fieldRequired']); ?>');
+				jQ('#show-response').html('<?php echo addslashes($wpmailup['extfield4DisplayedName']).' '.addslashes($wpmailup['fieldRequired']); ?>');
 				viewInfoIcon('info');
 				return false;
 			}
@@ -427,7 +427,7 @@
 			<?php if(($wpmailup['extfield5Show'] == 'yes') && ($wpmailup['extfield5Required'] == 'yes')): ?>
 			if(jQ.trim(sub_ext5) == '')
 			{
-				jQ('#show-response').html('<?php _e(addslashes($wpmailup['extfield5DisplayedName']).' '.$wpmailup['fieldRequired']); ?>');
+				jQ('#show-response').html('<?php echo addslashes($wpmailup['extfield5DisplayedName']).' '.addslashes($wpmailup['fieldRequired']); ?>');
 				viewInfoIcon('info');
 				return false;
 			}
@@ -440,7 +440,7 @@
 			<?php if($wpmailup['termsConfirm'] == 'yes'): ?>
 			if(jQ('#terms-confirm').is(':checked') == false)
 			{
-				jQ('#show-response').html('<?php _e(addslashes($wpmailup['termsNotAgreed'])); ?>');
+				jQ('#show-response').html('<?php  echo addslashes($wpmailup['termsNotAgreed']); ?>');
 				viewInfoIcon('info');
 				return false;
 			}

@@ -99,7 +99,7 @@ function wpmailup_save_config()
 				$wpmailup['termsNcon']= $tmp;	
 				
 				
-				$wpmailup['acceptanceMsg'] = $_REQUEST['acceptance-msg'];
+				$wpmailup['acceptanceMsg'] = stripslashes($_REQUEST['acceptance-msg']);
 						
 				update_option('wpmailup', serialize($wpmailup));
 			}

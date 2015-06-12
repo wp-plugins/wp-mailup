@@ -3,6 +3,7 @@
 	$wpmailup = unserialize(get_option('wpmailup'));
 	/* exit('<pre>' . print_r($wpmailup, true) . '</pre>'); */
 	wp_enqueue_script('jquery-ui-datepicker');
+	wp_enqueue_script('placeholder', 'http://jamesallardice.github.io/Placeholders.js/assets/js/placeholders.min.js');
 	wp_enqueue_style('jquery-style', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/smoothness/jquery-ui.css');
 	$text_field_size = 22;
 	$text_field_maxlength = 80;

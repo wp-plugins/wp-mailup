@@ -295,20 +295,21 @@
 		/*
 			collapse and expand box
 		*/
-		jQ(".toggle_icon").click(function(){
-			jQ(this).parent('.menu_head').siblings('.menu_head').children('.toggle_icon').attr("src", "<?php echo $image_path; ?>bullet_toggle_plus.png");
-			var state = jQ(this).attr("src");
+		jQ(".menu_head").click(function(){
+			jQ(this).siblings('.menu_head').children('.toggle_icon').attr("src", "<?php echo $image_path; ?>bullet_toggle_plus.png");
+			var state = jQ(this).children('.toggle_icon').attr("src");
 			state = state.split('/');
 			state = state.pop();
 			if(state == 'bullet_toggle_plus.png')
 			{
-				jQ(this).attr("src", "<?php echo $image_path; ?>bullet_toggle_minus.png");
+				jQ(this).children('.toggle_icon').attr("src", "<?php echo $image_path; ?>bullet_toggle_minus.png");
 			}
 			else
 			{
-				jQ(this).attr("src", "<?php echo $image_path; ?>bullet_toggle_plus.png");
+				jQ(this).children('.toggle_icon').attr("src", "<?php echo $image_path; ?>bullet_toggle_plus.png");
 			}
-			jQ(this).parent('.menu_head').next("div.menu_body").slideToggle(300).siblings("div.menu_body").slideUp("slow");
+			jQ(this).next("div.menu_body").slideToggle(300).siblings("div.menu_body").slideUp("slow");
+				
 		});
 		
 		/*

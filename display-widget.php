@@ -90,26 +90,7 @@
 	                <?php endif; ?>
            		</p>
             <?php endif; ?>
-            
-            
-			<?php if($wpmailup['dateShow'] == 'yes'): ?>
-            	<p class="muField">
-            		<?php if($wpmailup['textInside'] != 'yes'): ?>
-            			<label>
-            				<?php if($wpmailup['dateRequired'] == 'yes'): ?>
-	                	    	<span style="color:#FF0000;">*</span>
-	                	    <?php endif; ?>
-	                		<?php echo $wpmailup['dateDisplayedName']; ?>:
-	                	</label>
-						<input  type="text" name="sub-date" id="sub-date" maxlength="<?php echo $text_field_maxlength;?>">
-	                <?php else: ?>
-	                	<input  type="text" name="sub-date" id="sub-date" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php if($wpmailup['dateRequired'] == 'yes'): echo '*'; endif; echo $wpmailup['dateDisplayedName']; ?>" >
-	                <?php endif; ?>
-           		</p>
-            <?php endif; ?>
-
-            
-            
+        
             <?php if($wpmailup['extfield1Show'] == 'yes'): ?>
             	<p class="muField">
             		<?php if($wpmailup['textInside'] != 'yes'): ?>
@@ -190,6 +171,23 @@
 	                <?php endif; ?>
             	</p>
             <?php endif; ?>
+            
+			<?php if($wpmailup['dateShow'] == 'yes'): ?>
+            	<p class="muField">
+            		<?php if($wpmailup['textInside'] != 'yes'): ?>
+            			<label>
+            				<?php if($wpmailup['dateRequired'] == 'yes'): ?>
+	                	    	<span style="color:#FF0000;">*</span>
+	                	    <?php endif; ?>
+	                		<?php echo $wpmailup['dateDisplayedName']; ?>:
+	                	</label>
+						<input  type="text" name="sub-date" id="sub-date" maxlength="<?php echo $text_field_maxlength;?>">
+	                <?php else: ?>
+	                	<input  type="text" name="sub-date" id="sub-date" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php if($wpmailup['dateRequired'] == 'yes'): echo '*'; endif; echo $wpmailup['dateDisplayedName']; ?>" >
+	                <?php endif; ?>
+           		</p>
+            <?php endif; ?>
+
             
             <?php if($wpmailup['termsConfirm'] == 'yes'): ?>
             	<p class="muTerms">

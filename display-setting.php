@@ -350,7 +350,7 @@
 			Settings form submit
 		*/
 		jQ("form#mailUpSettingForm").submit(function(){
-			
+		
 			viewInfoIcon('loading');
 			
 			/*
@@ -531,7 +531,69 @@
 		jQ('#setting-reset-btn').click(function(){
 			if(confirm('<?php _e('Do you want to reset the settings?'); ?>'))
 			{
-				fillFormData();
+				jQ('#console-host').val('');
+				jQ('#subscribe-path').val('/frontend/xmlSubscribe.aspx');
+				jQ('#plugin-title').val('Newsletter subscription');
+				jQ('#plugin-description').val('Our monthly newsletter with a selection of the best posts');
+				jQ('#css-combination').val('Default');
+				jQ('#submit-button').val('SIGN UP');
+				jQ('#text-inside').attr("checked", false);
+				jQ('#request-confirm').attr("checked", false);
+				
+				jQ('#list-id').val('1');
+				jQ('#list-displayed-name').val('Newsletter subscribers');
+				jQ('#group-id').val('');
+				
+				jQ('#email-show').attr("checked", true);
+				jQ('#email-required').attr("checked", true);
+				jQ('#email-displayed-name').val('Email');
+				
+				jQ('#mobile-show').attr("checked", true);
+				jQ('#mobile-required').attr("checked", true);
+				jQ('#mobile-displayed-name').val('Mobile number');
+				//jQ('#mobile-fieldcode').val('');
+				
+				jQ('#date-show').attr("checked", false);
+				jQ('#date-required').attr("checked", false);
+				jQ('#date-fieldcode').val('Campo6');
+				jQ('#date-displayed-name').val('Date');
+				
+				jQ('#extfield1-show').attr("checked", false);
+				jQ('#extfield1-required').attr("checked", false);
+				jQ('#extfield1-fieldcode').val('Campo1');
+				jQ('#extfield1-displayed-name').val('Name');
+				
+				jQ('#extfield2-show').attr("checked", false);
+				jQ('#extfield2-required').attr("checked", false);
+				jQ('#extfield2-fieldcode').val('Campo2');
+				jQ('#extfield2-displayed-name').val('Last Name');
+				
+				jQ('#extfield3-show').attr("checked", false);
+				jQ('#extfield3-required').attr("checked", false);
+				jQ('#extfield3-fieldcode').val('Campo3');
+				jQ('#extfield3-displayed-name').val('');
+
+				jQ('#extfield4-show').attr("checked", false);
+				jQ('#extfield4-required').attr("checked", false);
+				jQ('#extfield4-fieldcode').val('Campo4');
+				jQ('#extfield4-displayed-name').val('');
+				
+				jQ('#extfield5-show').attr("checked", false);
+				jQ('#extfield5-required').attr("checked", false);
+				jQ('#extfield5-fieldcode').val('Campo5');
+				jQ('#extfield5-displayed-name').val('');
+				
+				jQ('#success-message').val('Operation completed');
+				jQ('#generic-error').val('Generic error');
+				jQ('#invalid-address').val('Invalid email address');
+				jQ('#invalid-phone').val('Invalid mobile phone number');
+				jQ('#already-present').val('Already a subscriber!');
+				jQ('#field-required').val('is required');
+				jQ('#terms-not-agreed').val('Please agree to the terms');
+				
+				jQ('#terms-confirm').attr("checked", false);
+				jQ('#terms-n-con').val('');
+				jQ('#acceptance-msg').val('I accept terms and conditions.');
 				jQ("#save-message").css("color", "#00F").html("<?php _e('* Settings reset.'); ?>");
 			}
 		});
@@ -541,37 +603,43 @@
 		*/
 		jQ('#setting-test-btn').click(function(){
 			var console_host = jQ('#console-host').val();
+			var subscribe_path = jQ('#subscribe-path').val();
 			if(!(console_host.match(/^([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6}$/)) || console_host==''){
 				jQ("#save-message").css("color", "#F00").html("<?php _e('** <b>MailUp console host: </b> field is wrong'); ?>");
 				jQ('#console-host').css("borderColor", "#F00");
 			}
-			else{
-				var listId = '<?php echo $wpmailup['listId']; ?>';
-				var groupId = '<?php echo $wpmailup['groupId']; ?>';
-				var subUrl = '<?php echo $wpmailup['consoleHost'] . $wpmailup['subscribePath']; ?>';
-				var form_values = {
-					"Email":"esempio@mailup.it",
-					"List":listId,
-					"sms":"",
-					"Group":groupId,
-					"Confirm":"false",
-					"csvFldNames":"",
-					"csvFldValues":"",
-					"retCode":"1",
-					"token":"subscribe",
-					"subsUrl":subUrl,
-					"termsAccept":"yes"
+			else if(subscribe_path==''){
+					jQ("#save-message").css("color", "#F00").html("<?php _e('** <b>MailUp subscribe path: </b> field is empty'); ?>");
+					jQ('#subscribe-path').css("borderColor", "#F00");
 				}
-				
-				jQ.post('<?php echo get_bloginfo('wpurl').'/wp-content/plugins/wp-mailup/subscribe.php'; ?>', form_values, function(returned_data){
-					if(Number(returned_data)==-1011){
-						jQ("#save-message").css("color", "#F00").html('<?php echo 'IP address validation is required. Please check this <a href="http://help.mailup.com/display/mailupUserGuide/WordPress#WordPress-authorizing" target="_blank">page</a>'; ?>');
+				else{
+					var listId = '<?php echo $wpmailup['listId']; ?>';
+					var groupId = '<?php echo $wpmailup['groupId']; ?>';
+					var subUrl = '<?php echo $wpmailup['consoleHost'] . $wpmailup['subscribePath']; ?>';
+					var form_values = {
+						"Email":"esempio@mailup.it",
+						"List":listId,
+						"sms":"",
+						"Group":groupId,
+						"Confirm":"false",
+						"csvFldNames":"",
+						"csvFldValues":"",
+						"retCode":"1",
+						"token":"subscribe",
+						"subsUrl":subUrl,
+						"termsAccept":"yes"
 					}
-					else{
-						jQ("#save-message").css("color", "#00F").html("<?php _e('** <b>Everything is OK</b>'); ?>");
-					}
-				});
-			}
+					
+					jQ.post('<?php echo get_bloginfo('wpurl').'/wp-content/plugins/wp-mailup/subscribe.php'; ?>', form_values, function(returned_data){
+						if(Number(returned_data)==-1011){
+							jQ("#save-message").css("color", "#F00").html('<?php echo 'IP address validation is required. Please check this <a href="http://help.mailup.com/display/mailupUserGuide/WordPress#WordPress-authorizing" target="_blank">page</a>'; ?>');
+						}
+						else{
+							jQ('#console-host').css("borderColor", "");
+							jQ("#save-message").css("color", "#00F").html("<?php _e('** <b>Everything is OK</b>'); ?>");
+						}
+					});
+				}
 		});
 		
 		function viewInfoIcon(status)

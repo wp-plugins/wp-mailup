@@ -638,7 +638,7 @@
 						}
 						else{
 							jQ('#console-host').css("borderColor", "");
-							jQ("#save-message").css("color", "#00F").html("<?php _e('** <b>Succesfully tested!</b> '); ?>");
+							jQ("#save-message").css("color", "#00F").html("<?php _e('** <b>Successfully tested</b> '); ?>");
 						}
 					});
 				}

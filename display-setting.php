@@ -78,7 +78,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="setting-label"><label for="text-inside"><?php _e('Insert texts inside fields'); ?>:</label></td>
+                                <td class="setting-label"><label for="text-inside"><?php _e('Use placeholders instead of labels'); ?>:</label></td>
                                 <td class="setting-target"><input name="text-inside" id="text-inside" value="yes" class="setting-checkbox" type="checkbox" /></td>
                             </tr>
 
@@ -607,7 +607,7 @@
 			var console_host = jQ('#console-host').val();
 			var subscribe_path = jQ('#subscribe-path').val();
 			if((!(console_host.match(/^([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6}$/)) && !(console_host.match(/^(http|https):\/\/([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6}$/))) || (console_host=='')){
-				jQ("#save-message").css("color", "#F00").html("<?php _e('** <b>MailUp console host: </b> field is wrong'); ?>");
+				jQ("#save-message").css("color", "#F00").html("<?php _e('** <b>MailUp console host: </b> field is empty or wrong'); ?>");
 				jQ('#console-host').css("borderColor", "#F00");
 			}
 			else if(subscribe_path==''){
@@ -638,7 +638,7 @@
 						}
 						else{
 							jQ('#console-host').css("borderColor", "");
-							jQ("#save-message").css("color", "#00F").html("<?php _e('** <b>Everything is OK</b> '); ?>");
+							jQ("#save-message").css("color", "#00F").html("<?php _e('** <b>Succesfully tested!</b> '); ?>");
 						}
 					});
 				}

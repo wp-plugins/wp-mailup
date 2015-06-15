@@ -74,6 +74,6 @@
 #subscribeForm input[type=text]:-ms-input-placeholder { /* Internet Explorer 10+ */
    color:    #00D;
 }
-#subscribeForm input[placeholder]{	/*For any unsupported browser*/
+/*#subscribeForm input[placeholder]{	/*For any unsupported browser
 	color:	#00D;
-}
+}*/

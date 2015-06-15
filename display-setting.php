@@ -184,7 +184,7 @@
                                 <td class="setting-target"><input name="extfield5-displayed-name" id="extfield5-displayed-name" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>
                             </tr>
                             <tr>
-                                <td class="setting-target"><label>Date Field:</label></td>
+                                <td class="setting-target"><label>Date Picker:</label></td>
                                 <td class="setting-target"><input name="date-show" id="date-show" class="setting-checkbox" type="checkbox" value="yes" /></td>
                                 <td class="setting-target"><input name="date-required" id="date-required" class="setting-checkbox" type="checkbox" value="yes" /></td>
                                 <td class="setting-target"><input name="date-fieldcode" id="date-fieldcode" class="setting-text" type="text" maxlength="<?php echo $text_field_maxlength; ?>" size="<?php echo $text_field_size; ?>" /></td>

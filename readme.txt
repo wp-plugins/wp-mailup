@@ -2,7 +2,7 @@
 Contributors: mailup
 Tags: email marketing, e-mail marketing, newsletter sending, newsletter marketing, email signup, e-mail sign-up, subscription form, subscribe form, registration form, sms signup, newsletter, email, smtp, bulk, sms, send, list, subscribe, form, marketing, widget, plugin, feedburner, subscription, email newsletter form, email widget, emails, newsletter form, newsletter plugin, newsletter signup, newsletter widget, newsletters, signup, iscrizione, mailup
 Requires at least: 3.0
-Tested up to: 4.2.1
+Tested up to: 4.2.2
 Stable tag: 1.3.4
 
 Easily add a newsletter sign-up form to your Web site or blog, then run email marketing and SMS campaigns with MailUp.
@@ -135,6 +135,13 @@ Make sure that text strings in "Messages" section of admin page do not contain a
 3. Select option to disable security check (not recommended)
 
 == Changelog ==
+
+= 1.4.0 =
+* Added "Test" button to let plugin administrator verify if plugin configuration is correct. This allows a fast discovery of  IP restrictions.
+* Displayed names for input fields can be specified using a placeholder in the subscriber's page. A dedicated option in the plugin admin page enables this setting.
+* A new "Date picker" data field can be used instead of (or in addition to) an existing text field. Use this field if you want to ensure that a date field is always provided to MailUp in the same way (e.g. for filtering purposes) . Displayed calendar uses US format.
+* Fixed bug to properly support HTML entities (ampersand, aphostrope...) inside the text that is used for labels.
+* Fixed bug on "Reset" button, now it can be used to properly restore initial settings.
 
 = 1.3.4 =
 * Now '+' is supported for international phone prefixes (e.g. both 001 and +1 are supported for USA prefix)
@@ -283,6 +290,14 @@ Assicurarsi che nel testo dei messaggi configurati nella sezione "Messages" non 
 
 
 ## __Note Release__
+
+= 1.4.0 =
+* Aggiunto pulsante di "Test" per consentire una verifica immediata della configurazione impostata per il plugin. In questo modo eventuali restrizioni sugli indirizzi IP sono individuate immediatamente.
+* Nel form di iscrizione il nome dei campi può essere visualizzato mediante placeholder con del testo inserito all'interno delle caselle da compilare. Per utilizzare i placeholder è necessario selezionare l'apposita opzione nella pagina di configurazione del plugin.
+* Aggiunto un nuovo campo "Date picker" da usare in aggiunta o al posto di un campo esistente. Questo campo può essere usato nei casi in cui ci si vuole assicurare che un parametro di tipo data sia passato a MailUp esattamente in un certo formato (così da poter applicare efficacemente dei filtri sulla data). Il calendario visualizzato nel form è solo in inglese e usa il formato USA per le date.
+* Risolti problemi di visualizzazione dei caratteri classificati come "HTML entities" (&, ' , ...).
+* Risolto problema con il pulsante "Reset", ora ripristina correttamente i dati iniziali.
+
 
 = 1.3.4 =
 * Ora anche il simbolo '+' e' supportato per i prefissi telefonici internazionali (es. sia 0039 sia +39 sono supportati per i numeri di telefono italiani)

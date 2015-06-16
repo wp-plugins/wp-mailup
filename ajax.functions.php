@@ -143,6 +143,31 @@ function update_wpml(){
 		global $wpmailup;		
 		//WMPL
 		/**
+		 * unregister strings before translation
+		 */
+		if (function_exists('icl_unregister_string')){
+			icl_unregister_string('WP-Mailup', 'pTitle');
+			icl_unregister_string('WP-Mailup', 'pDescription');
+			icl_unregister_string('WP-Mailup', 'sButton');
+			icl_unregister_string('WP-Mailup', 'emailName');
+			icl_unregister_string('WP-Mailup', 'dateName');
+			icl_unregister_string('WP-Mailup', 'field1Name');
+			icl_unregister_string('WP-Mailup', 'field2Name');
+			icl_unregister_string('WP-Mailup', 'field3Name');
+			icl_unregister_string('WP-Mailup', 'field4Name');
+			icl_unregister_string('WP-Mailup', 'field5Name');
+			icl_unregister_string('WP-Mailup', 'mobileName');
+			icl_unregister_string('WP-Mailup', 'success-message');
+			icl_unregister_string('WP-Mailup', 'generic-error');
+			icl_unregister_string('WP-Mailup', 'invalid-address');
+			icl_unregister_string('WP-Mailup', 'invalid-phone');
+			icl_unregister_string('WP-Mailup', 'already-present');
+			icl_unregister_string('WP-Mailup', 'field-required');
+			icl_unregister_string('WP-Mailup', 'terms-not-agreed');
+			icl_unregister_string('WP-Mailup', 'terms-n-con');
+			icl_unregister_string('WP-Mailup', 'acceptance-msg');	
+		}
+		/**
 		 * register strings for translation
 		 */
 		if (function_exists ( 'icl_register_string' )){

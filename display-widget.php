@@ -370,7 +370,7 @@
 
   			if(!(sub_email.match(/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,63})$/)))
 			{
-				jQ('#show-response').html('<?php echo addslashes($wpmailup['invalidAddress']); ?>');
+				jQ('#show-response').html('<?php echo wpml_translate(addslashes($wpmailup['invalidAddress']), 'invalid-address'); ?>');
 				viewInfoIcon('info');
 				return false;
 			}
@@ -379,7 +379,7 @@
 			//if(jQ.trim(sub_phone) == "")
 			if((jQ.trim(sub_phone) == "")||(!(sub_phone.match((/^(\+?\-? *[0-9]+)([,0-9 ]*)([0-9 ]){6,20}$/)))))
 			{
-				jQ('#show-response').html('<?php echo addslashes($wpmailup['invalidPhone']); ?>');
+				jQ('#show-response').html('<?php echo wpml_translate(addslashes($wpmailup['invalidPhone']), 'invalid-phone'); ?>');
 				viewInfoIcon('info');
 				return false;
 			}
@@ -395,7 +395,7 @@
 			<?php if(($wpmailup['dateShow'] == 'yes') && ($wpmailup['dateRequired'] == 'yes')): ?>
 			if(jQ.trim(sub_date) == '')
 			{
-				jQ('#show-response').html('<?php echo addslashes($wpmailup['dateDisplayedName']).' '.addslashes($wpmailup['fieldRequired']); ?>');
+				jQ('#show-response').html('<?php echo wpml_translate(addslashes($wpmailup['dateDisplayedName']), 'dateName').' '.wpml_translate(addslashes($wpmailup['fieldRequired']), 'field-required'); ?>');
 				viewInfoIcon('info');
 				return false;
 			}
@@ -405,7 +405,7 @@
 			<?php if(($wpmailup['extfield1Show'] == 'yes') && ($wpmailup['extfield1Required'] == 'yes')): ?>
 			if(jQ.trim(sub_ext1) == '')
 			{
-				jQ('#show-response').html('<?php echo addslashes($wpmailup['extfield1DisplayedName']).' '.addslashes($wpmailup['fieldRequired']); ?>');
+				jQ('#show-response').html('<?php echo wpml_translate(addslashes($wpmailup['extfield1DisplayedName']), 'field1Name').' '.wpml_translate(addslashes($wpmailup['fieldRequired']), 'field-required'); ?>');
 				viewInfoIcon('info');
 				return false;
 			}
@@ -414,7 +414,7 @@
 			<?php if(($wpmailup['extfield2Show'] == 'yes') && ($wpmailup['extfield2Required'] == 'yes')): ?>
 			if(jQ.trim(sub_ext2) == '')
 			{
-				jQ('#show-response').html('<?php echo addslashes($wpmailup['extfield2DisplayedName']).' '.addslashes($wpmailup['fieldRequired']); ?>');
+				jQ('#show-response').html('<?php echo wpml_translate(addslashes($wpmailup['extfield2DisplayedName']), 'field2Name').' '.wpml_translate(addslashes($wpmailup['fieldRequired']), 'field-required'); ?>');
 				viewInfoIcon('info');
 				return false;
 			}
@@ -423,7 +423,7 @@
 			<?php if(($wpmailup['extfield3Show'] == 'yes') && ($wpmailup['extfield3Required'] == 'yes')): ?>
 			if(jQ.trim(sub_ext3) == '')
 			{
-				jQ('#show-response').html('<?php echo addslashes($wpmailup['extfield3DisplayedName']).' '.addslashes($wpmailup['fieldRequired']); ?>');
+				jQ('#show-response').html('<?php echo wpml_translate(addslashes($wpmailup['extfield3DisplayedName']), 'field3Name').' '.wpml_translate(addslashes($wpmailup['fieldRequired']), 'field-required'); ?>');
 				viewInfoIcon('info');
 				return false;
 			}
@@ -432,7 +432,7 @@
 			<?php if(($wpmailup['extfield4Show'] == 'yes') && ($wpmailup['extfield4Required'] == 'yes')): ?>
 			if(jQ.trim(sub_ext4) == '')
 			{
-				jQ('#show-response').html('<?php echo addslashes($wpmailup['extfield4DisplayedName']).' '.addslashes($wpmailup['fieldRequired']); ?>');
+				jQ('#show-response').html('<?php echo wpml_translate(addslashes($wpmailup['extfield4DisplayedName']), 'field4Name').' '.wpml_translate(addslashes($wpmailup['fieldRequired']), 'field-required'); ?>');
 				viewInfoIcon('info');
 				return false;
 			}
@@ -441,7 +441,7 @@
 			<?php if(($wpmailup['extfield5Show'] == 'yes') && ($wpmailup['extfield5Required'] == 'yes')): ?>
 			if(jQ.trim(sub_ext5) == '')
 			{
-				jQ('#show-response').html('<?php echo addslashes($wpmailup['extfield5DisplayedName']).' '.addslashes($wpmailup['fieldRequired']); ?>');
+				jQ('#show-response').html('<?php echo wpml_translate(addslashes($wpmailup['extfield5DisplayedName']), 'field5Name').' '.wpml_translate(addslashes($wpmailup['fieldRequired']), 'field-required'); ?>');
 				viewInfoIcon('info');
 				return false;
 			}
@@ -454,7 +454,7 @@
 			<?php if($wpmailup['termsConfirm'] == 'yes'): ?>
 			if(jQ('#terms-confirm').is(':checked') == false)
 			{
-				jQ('#show-response').html('<?php  echo addslashes($wpmailup['termsNotAgreed']); ?>');
+				jQ('#show-response').html('<?php  echo wpml_translate(addslashes($wpmailup['termsNotAgreed']), 'terms-not-agreed'); ?>');
 				viewInfoIcon('info');
 				return false;
 			}
@@ -488,23 +488,23 @@
 				switch(Number(returned_data))
 				{
 					case 0:
-						jQ('#show-response').html('<?php echo addslashes($wpmailup['successMessage']); ?>');
+						jQ('#show-response').html('<?php echo wpml_translate(addslashes($wpmailup['successMessage']), 'success-message'); ?>');
 						break;
 					case 1:
-						jQ('#show-response').html('<?php echo addslashes($wpmailup['genericError']); ?>');
+						jQ('#show-response').html('<?php echo wpml_translate(addslashes($wpmailup['genericError']), 'generic-error'); ?>');
 						break;
 					case 2:
-						jQ('#show-response').html('<?php echo addslashes($wpmailup['invalidAddress']); ?>');
+						jQ('#show-response').html('<?php echo wpml_translate(addslashes($wpmailup['invalidAddress']), 'invalid-address'); ?>');
 						break;
 					case 3:
-						jQ('#show-response').html('<?php echo addslashes($wpmailup['alreadyPresent']); ?>');
+						jQ('#show-response').html('<?php echo wpml_translate(addslashes($wpmailup['alreadyPresent']), 'already-present'); ?>');
 						break;
 					case 10:
-						jQ('#show-response').html('<?php echo addslashes($wpmailup['termsNotAgreed']); ?>');
+						jQ('#show-response').html('<?php echo wpml_translate(addslashes($wpmailup['termsNotAgreed']), 'terms-not-agreed'); ?>');
 						break;
 					case -1011:
 						/* here generic message is displayed instead of a detailed message, which can be misleading for subscribers */
-						jQ('#show-response').html('<?php echo addslashes($wpmailup['genericError']); ?>'); 
+						jQ('#show-response').html('<?php echo wpml_translate(addslashes($wpmailup['genericError']), 'generic-error'); ?>'); 
 						/*jQ('#show-response').html('<?php echo 'IP address validation is required. Please check this <a href="http://help.mailup.com/display/mailupUserGuide/WordPress#WordPress-authorizing" target="_blank">page</a>'; ?>');*/
 						
 						break;						

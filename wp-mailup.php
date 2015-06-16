@@ -140,6 +140,8 @@ function wpmailup_active()
 	$wpmailup['cssCombination'] = 'style1';
 	$wpmailup['submitButton'] = 'SIGN UP';
 	$wpmailup['requestConfirm'] = 'yes';
+	$wpmailup['textInside'] = '';
+	$wpmailup['requestConfirm'] = '';
 	$wpmailup['listId'] = 1;
 	$wpmailup['listDisplayedName'] = 'Newsletter subscribers';
 	$wpmailup['groupId'] = '';

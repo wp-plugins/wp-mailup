@@ -40,6 +40,7 @@ function wpmailup_save_config()
 				$wpmailup['submitButton'] = stripslashes($_REQUEST['submit-button']);
 				$wpmailup['textInside'] = $_REQUEST['text-inside'];
 				$wpmailup['requestConfirm'] = $_REQUEST['request-confirm'];
+				$wpmailup['wpml'] = $_REQUEST['wpml'];
 				$wpmailup['listId'] = $_REQUEST['list-id'];
 				$wpmailup['listDisplayedName'] = stripslashes($_REQUEST['list-displayed-name']);
 				$wpmailup['groupId'] = $_REQUEST['group-id'];
@@ -145,7 +146,7 @@ function update_wpml(){
 		/**
 		 * unregister strings before translation
 		 */
-		if (function_exists('icl_unregister_string')){
+		if (function_exists('icl_unregister_string') && $wpmailup['wpml']!='yes'){
 			icl_unregister_string('WP-Mailup', 'pTitle');
 			icl_unregister_string('WP-Mailup', 'pDescription');
 			icl_unregister_string('WP-Mailup', 'sButton');

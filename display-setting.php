@@ -86,6 +86,11 @@
                                 <td class="setting-label"><label for="request-confirm"><?php _e('Request confirmation by email'); ?>:</label></td>
                                 <td class="setting-target"><input name="request-confirm" id="request-confirm" value="yes" class="setting-checkbox" type="checkbox" /></td>
                             </tr>
+                            <tr>
+                                <td class="setting-label"><label for="wpml"><?php _e('I am using WPML to translate this website'); ?>:</label></td>
+                                <td class="setting-target"><input name="wpml" id="wpml" value="yes" class="setting-checkbox" type="checkbox" /></td>
+                            </tr>
+
                         </tbody>
                     </table>
                     <div style="clear:both;"></div>
@@ -450,6 +455,8 @@
 				jQ('#plugin-description').val(data.pluginDescription);
 				/* jQ('#external-css').val(data.externalCss); */
 				jQ('#css-combination').val(data.cssCombination);
+				if(data.wpml == 'yes')
+					jQ('#wpml').attr("checked", true);
 				jQ('#submit-button').val(data.submitButton);
 				if(data.textInside == 'yes')
 					jQ('#text-inside').attr("checked", true);
@@ -518,6 +525,7 @@
 				jQ('#terms-n-con').val(data.termsNcon);
 				jQ('#acceptance-msg').val(data.acceptanceMsg);
 				
+				
 				viewInfoIcon('stop');
 			}, "json");
 		}
@@ -541,6 +549,7 @@
 				jQ('#submit-button').val('SIGN UP');
 				jQ('#text-inside').attr("checked", false);
 				jQ('#request-confirm').attr("checked", false);
+				jQ('#wpml').attr("checked", false);
 				
 				jQ('#list-id').val('1');
 				jQ('#list-displayed-name').val('Newsletter subscribers');

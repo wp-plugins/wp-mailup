@@ -70,7 +70,7 @@
     <fieldset id="subscribeDataTable">
                 <?php 
                     if ( $wpmailup['pluginTitle'] ) {
-                        echo $before_title . $wpmailup['pluginTitle'] . $after_title;
+                        echo $before_title . wpml_translate($wpmailup['pluginTitle'], 'pTitle') . $after_title;
                     }
                 ?>
                 <p class="muDescription"><?php echo wpml_translate($wpmailup['pluginDescription'], 'pDescription'); ?></p>

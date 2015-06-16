@@ -7,6 +7,21 @@
 	wp_enqueue_style('jquery-style', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/smoothness/jquery-ui.css');
 	$text_field_size = 22;
 	$text_field_maxlength = 80;
+	
+	function wpml_translate($string, $position){
+		# Output
+        //WMPL
+        /**
+         * retreive translations
+         */
+        if (function_exists ( 'icl_translate' )){
+            return icl_translate('WP-Mailup', $position, $string);
+        }
+        //\WMPL
+        else{
+        	return $string;
+        }
+	}
 ?>
 <style type="text/css">
 
@@ -58,7 +73,7 @@
                         echo $before_title . $wpmailup['pluginTitle'] . $after_title;
                     }
                 ?>
-                <p class="muDescription"><?php echo $wpmailup['pluginDescription']; ?></p>
+                <p class="muDescription"><?php echo wpml_translate($wpmailup['pluginDescription'], 'pDescription'); ?></p>
             
             <?php if($wpmailup['emailShow'] == 'yes'): ?>
                 <p class="muField">
@@ -67,11 +82,11 @@
 	                		<?php if($wpmailup['emailRequired'] == 'yes'): ?>
 	                	    	<span style="color:#FF0000;">*</span>
 	                	    <?php endif; ?>
-	                	    <?php echo $wpmailup['emailDisplayedName']; ?>:
+	                	    <?php echo wpml_translate($wpmailup['emailDisplayedName'], 'emailName'); ?>:
 	                    </label>
 	                	<input type="text" name="sub-email" id="sub-email" />
 	                <?php else: ?>
-	                	<input type="text" name="sub-email" id="sub-email" placeholder="<?php  if($wpmailup['emailRequired'] == 'yes'): echo '*'; endif; echo $wpmailup['emailDisplayedName']; ?>" />
+	                	<input type="text" name="sub-email" id="sub-email" placeholder="<?php  if($wpmailup['emailRequired'] == 'yes'): echo '*'; endif; echo wpml_translate($wpmailup['emailDisplayedName'], 'emailName'); ?>" />
 	                <?php endif; ?>
                 </p>
             <?php endif; ?>
@@ -83,11 +98,11 @@
             				<?php if($wpmailup['mobileRequired'] == 'yes'): ?>
 	                	    	<span style="color:#FF0000;">*</span>
 	                	    <?php endif; ?>
-	                		<?php echo $wpmailup['mobileDisplayedName']; ?>:
+	                		<?php echo wpml_translate($wpmailup['mobileDisplayedName'], 'mobileName'); ?>:
 	                	</label>
 	                	<input type="text" name="sub-phone" id="sub-phone" maxlength="<?php echo $text_field_maxlength; ?>" />
 	                <?php else: ?>
-	                	<input type="text" name="sub-phone" id="sub-phone" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php if($wpmailup['mobileRequired'] == 'yes'): echo '*'; endif; echo $wpmailup['mobileDisplayedName']; ?>" />
+	                	<input type="text" name="sub-phone" id="sub-phone" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php if($wpmailup['mobileRequired'] == 'yes'): echo '*'; endif; echo wpml_translate($wpmailup['mobileDisplayedName'], 'mobileName'); ?>" />
 	                <?php endif; ?>
            		</p>
             <?php endif; ?>
@@ -99,11 +114,11 @@
 	            			<?php if($wpmailup['extfield1Required'] == 'yes'): ?>
 	                    		<span style="color:#FF0000;">*</span>
 	                    	<?php endif; ?>
-	                		<?php echo $wpmailup['extfield1DisplayedName']; ?>:
+	                		<?php echo wpml_translate($wpmailup['extfield1DisplayedName'], 'field1Name'); ?>:
 	                	</label>
 	                	<input type="text" name="sub-ext1" id="sub-ext1" maxlength="<?php echo $text_field_maxlength; ?>" />
 	                <?php else: ?>
-	                	<input type="text" name="sub-ext1" id="sub-ext1" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php if($wpmailup['extfield1Required'] == 'yes'): echo '*'; endif; echo $wpmailup['extfield1DisplayedName']; ?>" />
+	                	<input type="text" name="sub-ext1" id="sub-ext1" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php if($wpmailup['extfield1Required'] == 'yes'): echo '*'; endif; echo wpml_translate($wpmailup['extfield1DisplayedName'], 'field1Name'); ?>" />
 	                <?php endif; ?>
             	</p>
             <?php endif; ?>
@@ -115,11 +130,11 @@
                 			<?php if($wpmailup['extfield2Required'] == 'yes'): ?>
                    				<span style="color:#FF0000;">*</span>
                     		<?php endif; ?>
-                    		<?php echo $wpmailup['extfield2DisplayedName']; ?>:
+                    		<?php echo wpml_translate($wpmailup['extfield2DisplayedName'], 'field2Name'); ?>:
                     	</label>
                 		<input type="text" name="sub-ext2" id="sub-ext2" maxlength="<?php echo $text_field_maxlength; ?>" />
                 	<?php else: ?>
-	                	<input type="text" name="sub-ext2" id="sub-ext2" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php if($wpmailup['extfield2Required'] == 'yes'): echo '*'; endif; echo $wpmailup['extfield2DisplayedName']; ?>" />
+	                	<input type="text" name="sub-ext2" id="sub-ext2" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php if($wpmailup['extfield2Required'] == 'yes'): echo '*'; endif; echo wpml_translate($wpmailup['extfield2DisplayedName'], 'field2Name'); ?>" />
 	                <?php endif; ?>
             	</p>
             <?php endif; ?>
@@ -131,11 +146,11 @@
                 			<?php if($wpmailup['extfield3Required'] == 'yes'): ?>
                    				<span style="color:#FF0000;">*</span>
                     		<?php endif; ?>
-                    		<?php echo $wpmailup['extfield3DisplayedName']; ?>:
+                    		<?php echo wpml_translate($wpmailup['extfield3DisplayedName'], 'field3Name'); ?>:
                     	</label>
                 		<input type="text" name="sub-ext3" id="sub-ext3" maxlength="<?php echo $text_field_maxlength; ?>" />
                 	<?php else: ?>
-	                	<input type="text" name="sub-ext3" id="sub-ext3" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php if($wpmailup['extfield3Required'] == 'yes'): echo '*'; endif; echo $wpmailup['extfield3DisplayedName']; ?>" />
+	                	<input type="text" name="sub-ext3" id="sub-ext3" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php if($wpmailup['extfield3Required'] == 'yes'): echo '*'; endif; echo wpml_translate($wpmailup['extfield3DisplayedName'], 'field3Name'); ?>" />
 	                <?php endif; ?>
 
             	</p>
@@ -148,11 +163,11 @@
                 			<?php if($wpmailup['extfield4Required'] == 'yes'): ?>
                    				<span style="color:#FF0000;">*</span>
                     		<?php endif; ?>
-                    		<?php echo $wpmailup['extfield4DisplayedName']; ?>:
+                    		<?php echo wpml_translate($wpmailup['extfield4DisplayedName'], 'field4Name'); ?>:
                     	</label>
                 		<input type="text" name="sub-ext4" id="sub-ext4" maxlength="<?php echo $text_field_maxlength; ?>" />
                 	<?php else: ?>
-	                	<input type="text" name="sub-ext4" id="sub-ext4" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php  if($wpmailup['extfield4Required'] == 'yes'): echo '*'; endif; echo $wpmailup['extfield4DisplayedName']; ?>" />
+	                	<input type="text" name="sub-ext4" id="sub-ext4" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php  if($wpmailup['extfield4Required'] == 'yes'): echo '*'; endif; echo wpml_translate($wpmailup['extfield4DisplayedName'], 'field4Name'); ?>" />
 	                <?php endif; ?>
             	</p>
             <?php endif; ?>
@@ -164,11 +179,11 @@
                 			<?php if($wpmailup['extfield5Required'] == 'yes'): ?>
                    				<span style="color:#FF0000;">*</span>
                     		<?php endif; ?>
-                    		<?php echo $wpmailup['extfield5DisplayedName']; ?>:
+                    		<?php echo wpml_translate($wpmailup['extfield5DisplayedName'], 'field5Name'); ?>:
                     	</label>
                 		<input type="text" name="sub-ext5" id="sub-ext5" maxlength="<?php echo $text_field_maxlength; ?>" />
                 	<?php else: ?>
-	                	<input type="text" name="sub-ext5" id="sub-ext5" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php if($wpmailup['extfield5Required'] == 'yes'): echo '*'; endif; echo $wpmailup['extfield5DisplayedName'];  ?>" />
+	                	<input type="text" name="sub-ext5" id="sub-ext5" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php if($wpmailup['extfield5Required'] == 'yes'): echo '*'; endif; echo wpml_translate($wpmailup['extfield5DisplayedName'], 'field5Name');  ?>" />
 	                <?php endif; ?>
             	</p>
             <?php endif; ?>
@@ -180,11 +195,11 @@
             				<?php if($wpmailup['dateRequired'] == 'yes'): ?>
 	                	    	<span style="color:#FF0000;">*</span>
 	                	    <?php endif; ?>
-	                		<?php echo $wpmailup['dateDisplayedName']; ?>:
+	                		<?php echo wpml_translate($wpmailup['dateDisplayedName'], 'dateName'); ?>:
 	                	</label>
 						<input  type="text" name="sub-date" id="sub-date" maxlength="<?php echo $text_field_maxlength;?>">
 	                <?php else: ?>
-	                	<input  type="text" name="sub-date" id="sub-date" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php if($wpmailup['dateRequired'] == 'yes'): echo '*'; endif; echo $wpmailup['dateDisplayedName']; ?>" >
+	                	<input  type="text" name="sub-date" id="sub-date" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php if($wpmailup['dateRequired'] == 'yes'): echo '*'; endif; echo wpml_translate($wpmailup['dateDisplayedName'], 'dateName'); ?>" >
 	                <?php endif; ?>
            		</p>
             <?php endif; ?>
@@ -192,13 +207,13 @@
             
             <?php if($wpmailup['termsConfirm'] == 'yes'): ?>
             	<p class="muTerms">
-            		<?php echo stripslashes($wpmailup['termsNcon']); ?>
+            		<?php echo wpml_translate(stripslashes($wpmailup['termsNcon']), 'terms-n-con'); ?>
             	<p>
             	<p class="muTermsCheckbox">
-            		<label><input name="terms-confirm" id="terms-confirm" type="checkbox" value="yes" /> <?php echo $wpmailup['acceptanceMsg']; ?></label>
+            		<label><input name="terms-confirm" id="terms-confirm" type="checkbox" value="yes" /> <?php echo wpml_translate($wpmailup['acceptanceMsg'], 'acceptance-msg'); ?></label>
             	</p>
             <?php endif; ?>
-            	<img id="loading-img" style="display:none;vertical-align:middle;background:none;padding: 5px 3px;" src="<?php echo get_bloginfo('wpurl').'/wp-content/plugins/wp-mailup/images/indicator.white.gif'; ?>" border="0" /><span id="show-response"><noscript><?php _e('Please enable javascript to work with this subscription form.'); ?></noscript></span><p class="muSubmit"><input type="submit" name="submit" value="<?php echo $wpmailup['submitButton']; ?>" /></p>
+            	<img id="loading-img" style="display:none;vertical-align:middle;background:none;padding: 5px 3px;" src="<?php echo get_bloginfo('wpurl').'/wp-content/plugins/wp-mailup/images/indicator.white.gif'; ?>" border="0" /><span id="show-response"><noscript><?php _e('Please enable javascript to work with this subscription form.'); ?></noscript></span><p class="muSubmit"><input type="submit" name="submit" value="<?php echo wpml_translate($wpmailup['submitButton'], 'sButton'); ?>" /></p>
     </fieldset>
 </form>
 <script type="text/javascript">

@@ -93,7 +93,7 @@ function wpmailup_save_config()
 				$wpmailup['alreadyPresent'] = stripslashes($_REQUEST['already-present']);
 				$wpmailup['fieldRequired'] = stripslashes($_REQUEST['field-required']);
 				$wpmailup['termsNotAgreed'] = stripslashes($_REQUEST['terms-not-agreed']);
-				$wpmailup['termsConfirm'] = stripslashes($_REQUEST['terms-confirm']);		
+				$wpmailup['termsConfirm'] = $_REQUEST['terms-confirm'];		
 				$tmp = $_REQUEST[('terms-n-con')];
 				$tmp=stripslashes($tmp); // see MailUp ticket 091-1874209D-0204
 				$wpmailup['termsNcon']= $tmp;	
@@ -102,6 +102,7 @@ function wpmailup_save_config()
 				$wpmailup['acceptanceMsg'] = stripslashes($_REQUEST['acceptance-msg']);
 						
 				update_option('wpmailup', serialize($wpmailup));
+				update_wpml();
 			}
 			exit();
 		}
@@ -138,4 +139,34 @@ function wpmailup_load_config()
 	exit();
 }
 
+function update_wpml(){
+		global $wpmailup;		
+		//WMPL
+		/**
+		 * register strings for translation
+		 */
+		if (function_exists ( 'icl_register_string' )){
+			icl_register_string('WP-Mailup', 'pTitle', $wpmailup['pluginTitle']);
+			icl_register_string('WP-Mailup', 'pDescription', $wpmailup['pluginDescription']);
+			icl_register_string('WP-Mailup', 'sButton', $wpmailup['submitButton']);
+			icl_register_string('WP-Mailup', 'emailName', $wpmailup['emailDisplayedName']);
+			icl_register_string('WP-Mailup', 'dateName', $wpmailup['dateDisplayedName']);
+			icl_register_string('WP-Mailup', 'field1Name', $wpmailup['extfield1DisplayedName']);
+			icl_register_string('WP-Mailup', 'field2Name', $wpmailup['extfield2DisplayedName']);
+			icl_register_string('WP-Mailup', 'field3Name', $wpmailup['extfield3DisplayedName']);
+			icl_register_string('WP-Mailup', 'field4Name', $wpmailup['extfield4DisplayedName']);
+			icl_register_string('WP-Mailup', 'field5Name', $wpmailup['extfield5DisplayedName']);
+			icl_register_string('WP-Mailup', 'mobileName', $wpmailup['mobileDisplayedName']);
+			icl_register_string('WP-Mailup', 'success-message', $wpmailup['successMessage']);
+			icl_register_string('WP-Mailup', 'generic-error', $wpmailup['genericError']);
+			icl_register_string('WP-Mailup', 'invalid-address', $wpmailup['invalidAddress']);
+			icl_register_string('WP-Mailup', 'invalid-phone', $wpmailup['invalidPhone']);
+			icl_register_string('WP-Mailup', 'already-present', $wpmailup['alreadyPresent']);
+			icl_register_string('WP-Mailup', 'field-required', $wpmailup['fieldRequired']);
+			icl_register_string('WP-Mailup', 'terms-not-agreed', $wpmailup['termsNotAgreed']);
+			icl_register_string('WP-Mailup', 'terms-n-con', $wpmailup['termsNcon']);
+			icl_register_string('WP-Mailup', 'acceptance-msg', $wpmailup['acceptanceMsg']);
+		}
+		//\WMPL
+	}
 ?>

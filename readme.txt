@@ -137,11 +137,11 @@ Make sure that text strings in "Messages" section of admin page do not contain a
 == Changelog ==
 
 = 1.4.0 =
-* Added multilanguage support using WPML or Polylang. If you use WPML you have to select the "I am using WPML to translate this website" option to avoid the reset of plugin's translation strings when saving.
+* Added multi language support using WPML or Polylang. If you use WPML you have to select the "I am using WPML to translate this website" option to avoid the reset of plugin's translation strings when saving.
 * Added "Test" button to let plugin administrator verify if plugin configuration is correct. This allows a fast discovery of  IP restrictions.
 * Displayed names for input fields can be specified using a placeholder in the subscriber's page. A dedicated option in the plugin admin page enables this setting.
 * A new "Date picker" data field can be used instead of (or in addition to) an existing text field. Use this field if you want to ensure that a date field is always provided to MailUp in the same way (e.g. for filtering purposes) . Displayed calendar uses US format.
-* Fixed bug to properly support HTML entities (ampersand, aphostrope...) inside the text that is used for labels.
+* Fixed bug to properly support HTML entities (ampersand, aphostrophe...) inside the text that is used for labels.
 * Fixed bug on "Reset" button, now it can be used to properly restore initial settings.
 
 = 1.3.4 =

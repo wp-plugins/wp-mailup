@@ -137,6 +137,7 @@ Make sure that text strings in "Messages" section of admin page do not contain a
 == Changelog ==
 
 = 1.4.0 =
+* Added multilanguage support using WPML or Polylang. If you use WPML you have to select the "I am using WPML to translate this website" option to avoid the reset of plugin's translation strings when saving.
 * Added "Test" button to let plugin administrator verify if plugin configuration is correct. This allows a fast discovery of  IP restrictions.
 * Displayed names for input fields can be specified using a placeholder in the subscriber's page. A dedicated option in the plugin admin page enables this setting.
 * A new "Date picker" data field can be used instead of (or in addition to) an existing text field. Use this field if you want to ensure that a date field is always provided to MailUp in the same way (e.g. for filtering purposes) . Displayed calendar uses US format.
@@ -292,6 +293,7 @@ Assicurarsi che nel testo dei messaggi configurati nella sezione "Messages" non 
 ## __Note Release__
 
 = 1.4.0 =
+* Aggiunto supporto multilingua usando WPML o Polylang. Se usi WPML devi selezionare l'opzione "I am using WPML to translate this website" per evitare la cancellazione delle traduzioni del plugin in fase di salvataggio.
 * Aggiunto pulsante di "Test" per consentire una verifica immediata della configurazione impostata per il plugin. In questo modo eventuali restrizioni sugli indirizzi IP sono individuate immediatamente.
 * Nel form di iscrizione il nome dei campi può essere visualizzato mediante placeholder con del testo inserito all'interno delle caselle da compilare. Per utilizzare i placeholder è necessario selezionare l'apposita opzione nella pagina di configurazione del plugin.
 * Aggiunto un nuovo campo "Date picker" da usare in aggiunta o al posto di un campo esistente. Questo campo può essere usato nei casi in cui ci si vuole assicurare che un parametro di tipo data sia passato a MailUp esattamente in un certo formato (così da poter applicare efficacemente dei filtri sulla data). Il calendario visualizzato nel form è solo in inglese e usa il formato USA per le date.

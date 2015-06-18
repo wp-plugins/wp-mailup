@@ -79,10 +79,10 @@
                 <p class="muField">
                 	<?php if($wpmailup['textInside'] != 'yes'): ?>
 	                	<label>
-	                		<?php if($wpmailup['emailRequired'] == 'yes'): ?>
-	                	    	<span style="color:#FF0000;">*</span>
-	                	    <?php endif; ?>
 	                	    <?php echo wpml_translate($wpmailup['emailDisplayedName'], 'emailName'); ?>:
+	                	    <?php if($wpmailup['emailRequired'] == 'yes'): ?>
+	                	    	<span style="color:#FF0000; float:right">*</span>
+	                	    <?php endif; ?>
 	                    </label>
 	                	<input type="text" name="sub-email" id="sub-email" />
 	                <?php else: ?>
@@ -95,10 +95,10 @@
             	<p class="muField">
             		<?php if($wpmailup['textInside'] != 'yes'): ?>
             			<label>
-            				<?php if($wpmailup['mobileRequired'] == 'yes'): ?>
-	                	    	<span style="color:#FF0000;">*</span>
-	                	    <?php endif; ?>
 	                		<?php echo wpml_translate($wpmailup['mobileDisplayedName'], 'mobileName'); ?>:
+	                		<?php if($wpmailup['mobileRequired'] == 'yes'): ?>
+	                	    	<span style="color:#FF0000; float:right">*</span>
+	                	    <?php endif; ?>
 	                	</label>
 	                	<input type="text" name="sub-phone" id="sub-phone" maxlength="<?php echo $text_field_maxlength; ?>" />
 	                <?php else: ?>
@@ -111,10 +111,10 @@
             	<p class="muField">
             		<?php if($wpmailup['textInside'] != 'yes'): ?>
 	            		<label>
-	            			<?php if($wpmailup['extfield1Required'] == 'yes'): ?>
-	                    		<span style="color:#FF0000;">*</span>
-	                    	<?php endif; ?>
 	                		<?php echo wpml_translate($wpmailup['extfield1DisplayedName'], 'field1Name'); ?>:
+	                		<?php if($wpmailup['extfield1Required'] == 'yes'): ?>
+	                    		<span style="color:#FF0000; float:right">*</span>
+	                    	<?php endif; ?>
 	                	</label>
 	                	<input type="text" name="sub-ext1" id="sub-ext1" maxlength="<?php echo $text_field_maxlength; ?>" />
 	                <?php else: ?>
@@ -126,11 +126,11 @@
             <?php if($wpmailup['extfield2Show'] == 'yes'): ?>
             	<p class="muField">
             		<?php if($wpmailup['textInside'] != 'yes'): ?> 	
-            			<label>
-                			<?php if($wpmailup['extfield2Required'] == 'yes'): ?>
-                   				<span style="color:#FF0000;">*</span>
-                    		<?php endif; ?>
+            			<label>             			
                     		<?php echo wpml_translate($wpmailup['extfield2DisplayedName'], 'field2Name'); ?>:
+                    		<?php if($wpmailup['extfield2Required'] == 'yes'): ?>
+                   				<span style="color:#FF0000; float:right">*</span>
+                    		<?php endif; ?>
                     	</label>
                 		<input type="text" name="sub-ext2" id="sub-ext2" maxlength="<?php echo $text_field_maxlength; ?>" />
                 	<?php else: ?>
@@ -142,11 +142,11 @@
             <?php if($wpmailup['extfield3Show'] == 'yes'): ?>
             	<p class="muField">
             		<?php if($wpmailup['textInside'] != 'yes'): ?> 	
-            			<label>
-                			<?php if($wpmailup['extfield3Required'] == 'yes'): ?>
-                   				<span style="color:#FF0000;">*</span>
-                    		<?php endif; ?>
+            			<label>	
                     		<?php echo wpml_translate($wpmailup['extfield3DisplayedName'], 'field3Name'); ?>:
+                    		<?php if($wpmailup['extfield3Required'] == 'yes'): ?>
+                   				<span style="color:#FF0000; float:right">*</span>
+                    		<?php endif; ?>
                     	</label>
                 		<input type="text" name="sub-ext3" id="sub-ext3" maxlength="<?php echo $text_field_maxlength; ?>" />
                 	<?php else: ?>
@@ -160,10 +160,10 @@
             	<p class="muField">
             		<?php if($wpmailup['textInside'] != 'yes'): ?> 	
             			<label>
-                			<?php if($wpmailup['extfield4Required'] == 'yes'): ?>
-                   				<span style="color:#FF0000;">*</span>
-                    		<?php endif; ?>
                     		<?php echo wpml_translate($wpmailup['extfield4DisplayedName'], 'field4Name'); ?>:
+                    		<?php if($wpmailup['extfield4Required'] == 'yes'): ?>
+                   				<span style="color:#FF0000; float:right">*</span>
+                    		<?php endif; ?>
                     	</label>
                 		<input type="text" name="sub-ext4" id="sub-ext4" maxlength="<?php echo $text_field_maxlength; ?>" />
                 	<?php else: ?>
@@ -176,10 +176,10 @@
             	<p class="muField">
             		<?php if($wpmailup['textInside'] != 'yes'): ?> 	
             			<label>
-                			<?php if($wpmailup['extfield5Required'] == 'yes'): ?>
-                   				<span style="color:#FF0000;">*</span>
-                    		<?php endif; ?>
                     		<?php echo wpml_translate($wpmailup['extfield5DisplayedName'], 'field5Name'); ?>:
+                    		<?php if($wpmailup['extfield5Required'] == 'yes'): ?>
+                   				<span style="color:#FF0000; float:right">*</span>   
+                            <?php endif; ?>
                     	</label>
                 		<input type="text" name="sub-ext5" id="sub-ext5" maxlength="<?php echo $text_field_maxlength; ?>" />
                 	<?php else: ?>
@@ -192,10 +192,10 @@
             	<p class="muField">
             		<?php if($wpmailup['textInside'] != 'yes'): ?>
             			<label>
-            				<?php if($wpmailup['dateRequired'] == 'yes'): ?>
-	                	    	<span style="color:#FF0000;">*</span>
-	                	    <?php endif; ?>
 	                		<?php echo wpml_translate($wpmailup['dateDisplayedName'], 'dateName'); ?>:
+	                		<?php if($wpmailup['dateRequired'] == 'yes'): ?>
+	                	    	<span style="color:#FF0000; float:right">*</span>
+	                	    <?php endif; ?>
 	                	</label>
 						<input  type="text" name="sub-date" id="sub-date" maxlength="<?php echo $text_field_maxlength;?>">
 	                <?php else: ?>

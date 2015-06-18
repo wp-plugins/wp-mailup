@@ -86,7 +86,7 @@
 	                    </label>
 	                	<input type="text" name="sub-email" id="sub-email" />
 	                <?php else: ?>
-	                	<input type="text" name="sub-email" id="sub-email" placeholder="<?php  if($wpmailup['emailRequired'] == 'yes'): echo '*'; endif; echo wpml_translate($wpmailup['emailDisplayedName'], 'emailName'); ?>" />
+	                	<input type="text" name="sub-email" id="sub-email" placeholder="<?php echo wpml_translate($wpmailup['emailDisplayedName'], 'emailName'); if($wpmailup['emailRequired'] == 'yes'): echo '*'; endif;?>" />
 	                <?php endif; ?>
                 </p>
             <?php endif; ?>
@@ -102,7 +102,7 @@
 	                	</label>
 	                	<input type="text" name="sub-phone" id="sub-phone" maxlength="<?php echo $text_field_maxlength; ?>" />
 	                <?php else: ?>
-	                	<input type="text" name="sub-phone" id="sub-phone" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php if($wpmailup['mobileRequired'] == 'yes'): echo '*'; endif; echo wpml_translate($wpmailup['mobileDisplayedName'], 'mobileName'); ?>" />
+	                	<input type="text" name="sub-phone" id="sub-phone" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php echo wpml_translate($wpmailup['mobileDisplayedName'], 'mobileName'); if($wpmailup['mobileRequired'] == 'yes'): echo '*'; endif; ?>" />
 	                <?php endif; ?>
            		</p>
             <?php endif; ?>
@@ -118,7 +118,7 @@
 	                	</label>
 	                	<input type="text" name="sub-ext1" id="sub-ext1" maxlength="<?php echo $text_field_maxlength; ?>" />
 	                <?php else: ?>
-	                	<input type="text" name="sub-ext1" id="sub-ext1" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php if($wpmailup['extfield1Required'] == 'yes'): echo '*'; endif; echo wpml_translate($wpmailup['extfield1DisplayedName'], 'field1Name'); ?>" />
+	                	<input type="text" name="sub-ext1" id="sub-ext1" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php echo wpml_translate($wpmailup['extfield1DisplayedName'], 'field1Name'); if($wpmailup['extfield1Required'] == 'yes'): echo '*'; endif; ?>" />
 	                <?php endif; ?>
             	</p>
             <?php endif; ?>
@@ -134,7 +134,7 @@
                     	</label>
                 		<input type="text" name="sub-ext2" id="sub-ext2" maxlength="<?php echo $text_field_maxlength; ?>" />
                 	<?php else: ?>
-	                	<input type="text" name="sub-ext2" id="sub-ext2" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php if($wpmailup['extfield2Required'] == 'yes'): echo '*'; endif; echo wpml_translate($wpmailup['extfield2DisplayedName'], 'field2Name'); ?>" />
+	                	<input type="text" name="sub-ext2" id="sub-ext2" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php echo wpml_translate($wpmailup['extfield2DisplayedName'], 'field2Name'); if($wpmailup['extfield2Required'] == 'yes'): echo '*'; endif; ?>" />
 	                <?php endif; ?>
             	</p>
             <?php endif; ?>
@@ -150,7 +150,7 @@
                     	</label>
                 		<input type="text" name="sub-ext3" id="sub-ext3" maxlength="<?php echo $text_field_maxlength; ?>" />
                 	<?php else: ?>
-	                	<input type="text" name="sub-ext3" id="sub-ext3" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php if($wpmailup['extfield3Required'] == 'yes'): echo '*'; endif; echo wpml_translate($wpmailup['extfield3DisplayedName'], 'field3Name'); ?>" />
+	                	<input type="text" name="sub-ext3" id="sub-ext3" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php echo wpml_translate($wpmailup['extfield3DisplayedName'], 'field3Name'); if($wpmailup['extfield3Required'] == 'yes'): echo '*'; endif; ?>" />
 	                <?php endif; ?>
 
             	</p>
@@ -167,7 +167,7 @@
                     	</label>
                 		<input type="text" name="sub-ext4" id="sub-ext4" maxlength="<?php echo $text_field_maxlength; ?>" />
                 	<?php else: ?>
-	                	<input type="text" name="sub-ext4" id="sub-ext4" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php  if($wpmailup['extfield4Required'] == 'yes'): echo '*'; endif; echo wpml_translate($wpmailup['extfield4DisplayedName'], 'field4Name'); ?>" />
+	                	<input type="text" name="sub-ext4" id="sub-ext4" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php echo wpml_translate($wpmailup['extfield4DisplayedName'], 'field4Name'); if($wpmailup['extfield4Required'] == 'yes'): echo '*'; endif; ?>" />
 	                <?php endif; ?>
             	</p>
             <?php endif; ?>
@@ -183,7 +183,7 @@
                     	</label>
                 		<input type="text" name="sub-ext5" id="sub-ext5" maxlength="<?php echo $text_field_maxlength; ?>" />
                 	<?php else: ?>
-	                	<input type="text" name="sub-ext5" id="sub-ext5" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php if($wpmailup['extfield5Required'] == 'yes'): echo '*'; endif; echo wpml_translate($wpmailup['extfield5DisplayedName'], 'field5Name');  ?>" />
+	                	<input type="text" name="sub-ext5" id="sub-ext5" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php echo wpml_translate($wpmailup['extfield5DisplayedName'], 'field5Name'); if($wpmailup['extfield5Required'] == 'yes'): echo '*'; endif; ?>" />
 	                <?php endif; ?>
             	</p>
             <?php endif; ?>
@@ -199,7 +199,7 @@
 	                	</label>
 						<input  type="text" name="sub-date" id="sub-date" maxlength="<?php echo $text_field_maxlength;?>">
 	                <?php else: ?>
-	                	<input  type="text" name="sub-date" id="sub-date" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php if($wpmailup['dateRequired'] == 'yes'): echo '*'; endif; echo wpml_translate($wpmailup['dateDisplayedName'], 'dateName'); ?>" >
+	                	<input  type="text" name="sub-date" id="sub-date" maxlength="<?php echo $text_field_maxlength; ?>" placeholder="<?php echo wpml_translate($wpmailup['dateDisplayedName'], 'dateName'); if($wpmailup['dateRequired'] == 'yes'): echo '*'; endif; ?>" >
 	                <?php endif; ?>
            		</p>
             <?php endif; ?>

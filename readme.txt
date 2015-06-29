@@ -3,7 +3,7 @@ Contributors: mailup
 Tags: email marketing, e-mail marketing, newsletter sending, newsletter marketing, email signup, e-mail sign-up, subscription form, subscribe form, registration form, sms signup, newsletter, email, smtp, bulk, sms, send, list, subscribe, form, marketing, widget, plugin, feedburner, subscription, email newsletter form, email widget, emails, newsletter form, newsletter plugin, newsletter signup, newsletter widget, newsletters, signup, iscrizione, mailup
 Requires at least: 3.0
 Tested up to: 4.2.2
-Stable tag: 1.3.4
+Stable tag: 1.4.0
 
 Easily add a newsletter sign-up form to your Web site or blog, then run email marketing and SMS campaigns with MailUp.
 
@@ -137,12 +137,12 @@ Make sure that text strings in "Messages" section of admin page do not contain a
 == Changelog ==
 
 = 1.4.0 =
+* Field names on the subscription form can now be displayed either as labels above each field or placeholders directly inside the fields.
+* Added "Date picker" field type. This allows the user to ensure that a date entered in the subscription form is passed to MailUp in a pre-defined format (so it can be used in a data-based filter, for example). Displayed calendar uses US date format.
 * Added multi language support using WPML or Polylang. If you use WPML you have to select the "I am using WPML to translate this website" option to avoid the reset of plugin's translation strings when saving.
-* Added "Test" button to let plugin administrator verify if plugin configuration is correct. This allows a fast discovery of  IP restrictions.
-* Displayed names for input fields can be specified using a placeholder in the subscriber's page. A dedicated option in the plugin admin page enables this setting.
-* A new "Date picker" data field can be used instead of (or in addition to) an existing text field. Use this field if you want to ensure that a date field is always provided to MailUp in the same way (e.g. for filtering purposes) . Displayed calendar uses US format.
-* Fixed bug to properly support HTML entities (ampersand, aphostrophe...) inside the text that is used for labels.
-* Fixed bug on "Reset" button, now it can be used to properly restore initial settings.
+* Added "Test" button to let plugin user check whether there are configuration issues. For example, this will allow the user to quickly find out if an incorrect IP-based restriction set in MailUp is preventing the plugin to communicate with it.
+* Fixed bug to properly support HTML entities (ampersand, apostrophe...) inside the text that is used for labels.
+* Fixed bug on "Reset" button: now it can be used to properly restore initial settings.
 
 = 1.3.4 =
 * Now '+' is supported for international phone prefixes (e.g. both 001 and +1 are supported for USA prefix)
@@ -163,7 +163,7 @@ Make sure that text strings in "Messages" section of admin page do not contain a
 * Added new custom fields
 * Updated CSS styles to fix IE issues
 
-= 1.21 =
+= 1.2.1 =
 * 2 new CSS styles
 * Updated links
 
@@ -320,7 +320,7 @@ Assicurarsi che nel testo dei messaggi configurati nella sezione "Messages" non 
 * Aggiunti nuovi campi anagrafica
 * Aggiornati stili CSS per risolvere problemi con IE
 
-= 1.21 =
+= 1.2.1 =
 * 2 nuovi stili CSS
 * Aggiornamento link
 

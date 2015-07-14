@@ -20,9 +20,9 @@
 					
                     <span class="about-mailup">
                     	Configure your newsletter subscription signup form, then manage your campaigns in <a href="http://www.mailup.com?utm_source=wordpress&utm_medium=textlink&utm_campaign=plugin" target="_blank">MailUp</a>.<br>
-                    	<a href="http://www.mailup.com/loadDocument.asp?docID=103&utm_source=wordpress&utm_medium=textlink&utm_campaign=plugin" target="_blank">Video Tutorials</a>
+                    	<a href="http://help.mailup.com/display/mailupUserGuide/WordPress?utm_source=wordpress&utm_medium=plugin&utm_campaign=wp-mailup-settings" target="_blank">Video Tutorials</a>
                     	&nbsp;|&nbsp;
-                    	<a href="http://www.mailup.com/loadDocument.asp?docID=104&utm_source=wordpress&utm_medium=textlink&utm_campaign=plugin" target="_blank">Free Trial</a>
+                    	<a href="http://www.mailup.com/landing-page/free-trial/?utm_source=wordpress&utm_medium=plugin&utm_campaign=wp-mailup-settings" target="_blank">Free Trial</a>
                     	&nbsp;|&nbsp; 
                     	<a href="http://www.mailup.com?utm_source=wordpress&utm_medium=textlink&utm_campaign=plugin" target="_blank">About MailUp</a>
                     </span>
@@ -41,7 +41,7 @@
                     <table class="setting-table setting-general">
                     	<tbody>
                             <tr>
-                                <td colspan="2">To use this plugin, you need a MailUp account (<a href="http://www.mailup.com/loadDocument.asp?docID=104&utm_source=wordpress&utm_medium=textlink&utm_campaign=plugin" target="_blank" class="nostyle">free trial</a>) and your <a href="http://help.mailup.com/display/mailupapi/MailUp+API+Credentials" target="_blank" class="nostyle">MailUp API credentials</a>.</td>
+                                <td colspan="2">To use this plugin, you need a MailUp account (<a href="http://www.mailup.com/landing-page/free-trial/?utm_source=wordpress&utm_medium=plugin&utm_campaign=wp-mailup-settings" target="_blank" class="nostyle">free trial</a>) and your <a href="http://help.mailup.com/display/mailupapi/MailUp+API+Credentials" target="_blank" class="nostyle">MailUp API credentials</a>.</td>
                             </tr>
                             <tr>
                                 <td class="setting-label"><label for="console-host"><?php _e('MailUp console host'); ?>: </label></td>
